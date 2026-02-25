@@ -3,12 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Drakarian Services Inc. — Custom software, API integrations, and cloud architectures that eliminate repetitive workflows for engineering and operations teams.">
-  <title>Drakarian Services Inc. — Engineering Automation & Integration</title>
+
+  <!-- ===== SEO Meta ===== -->
+  <title>Drakarian Services Inc. — Engineering Automation & System Integration | Montréal</title>
+  <meta name="description" content="Drakarian Services Inc. builds custom software, API integrations, and cloud architectures that eliminate repetitive engineering workflows. Based in Montréal, QC.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://drakarian.tech/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Drakarian Services Inc. — Engineering Automation & Integration">
+  <meta property="og:description" content="Custom software, API integrations, and cloud architectures that eliminate repetitive engineering workflows. Based in Montréal, QC.">
+  <meta property="og:url" content="https://drakarian.tech/">
+  <meta property="og:site_name" content="Drakarian Services Inc.">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:locale:alternate" content="fr_CA">
+  <meta property="og:image" content="https://drakarian.tech/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Drakarian Services Inc. — Engineering Automation & Integration">
+  <meta name="twitter:description" content="Custom software, API integrations, and cloud architectures that eliminate repetitive engineering workflows.">
+  <meta name="twitter:image" content="https://drakarian.tech/og-image.png">
+
+  <!-- Structured Data: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Drakarian Services Inc.",
+    "description": "Engineering automation consultancy specializing in custom software, API integrations, CAD automation, and cloud architectures for manufacturing, R&D, and operations teams.",
+    "url": "https://drakarian.tech",
+    "areaServed": ["CA", "US"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Montréal",
+      "addressRegion": "QC",
+      "addressCountry": "CA"
+    },
+    "serviceType": [
+      "Engineering Automation",
+      "CAD Automation",
+      "System Integration",
+      "Cloud Architecture",
+      "Data Pipeline Development"
+    ],
+    "knowsLanguage": ["en", "fr"]
+  }
+  </script>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <!-- Prevent dark-mode flash: apply saved theme before paint -->
+
+  <!-- Prevent dark-mode flash -->
   <script>
     (function(){
       var t = localStorage.getItem('drak-theme');
@@ -16,12 +65,15 @@
       document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
-  <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-  <link rel="shortcut icon" href="./favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Drakarian" />
-  <link rel="manifest" href="./site.webmanifest" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Drakarian">
+  <link rel="manifest" href="./site.webmanifest">
+
   <style>
     /* ===== Light Theme (default) ===== */
     :root {
@@ -81,14 +133,9 @@
     html { scroll-behavior: smooth; scroll-padding-top: 80px; font-size: 16px; }
 
     body {
-      font-family: var(--font-body);
-      color: var(--color-text);
-      background: var(--color-bg);
-      line-height: 1.7;
-      font-weight: 400;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-      transition: background 0.4s ease, color 0.4s ease;
+      font-family: var(--font-body); color: var(--color-text); background: var(--color-bg);
+      line-height: 1.7; font-weight: 400; -webkit-font-smoothing: antialiased;
+      overflow-x: hidden; transition: background 0.4s ease, color 0.4s ease;
     }
 
     img { max-width: 100%; display: block; }
@@ -131,7 +178,6 @@
 
     /* ===== Toggles ===== */
     .nav__toggles { display:flex; align-items:center; gap:0.6rem; }
-
     .theme-toggle {
       background:none; border:1.5px solid var(--color-border); border-radius:50px;
       cursor:pointer; width:42px; height:24px; position:relative; transition:all var(--transition); padding:0; flex-shrink:0;
@@ -146,7 +192,6 @@
     .theme-toggle__icons svg { width:11px; height:11px; opacity:0.5; }
     .theme-toggle__icons .icon-sun { stroke:#F59E0B; fill:none; }
     .theme-toggle__icons .icon-moon { stroke:#8B949E; fill:none; }
-
     .lang-toggle {
       background:none; border:1.5px solid var(--color-border); border-radius:var(--radius);
       cursor:pointer; padding:0.2rem 0.55rem; font-family:var(--font-body);
@@ -229,7 +274,7 @@
     .step p { font-size:0.95rem; line-height:1.75; max-width:320px; margin:0 auto; }
     @media (max-width: 768px) { .process__steps { grid-template-columns:1fr; max-width:400px; margin:0 auto; } .process__steps::before { display:none; } }
 
-    /* ===== Footer ===== */
+    /* ===== Footer / Contact ===== */
     .footer-cta { padding:var(--space-2xl) 0 var(--space-lg); background:var(--color-bg-dark); color:var(--color-text-on-dark); position:relative; overflow:hidden; transition:background 0.4s ease; }
     [data-theme="dark"] .footer-cta { background:#010409; }
     .footer-cta::before { content:''; position:absolute; bottom:-20%; left:-5%; width:500px; height:500px; background:radial-gradient(circle,rgba(0,82,204,0.12) 0%,transparent 70%); border-radius:50%; pointer-events:none; }
@@ -238,9 +283,112 @@
     .footer-cta__header p { color:var(--color-text-light); font-size:1.05rem; max-width:600px; margin:0 auto; line-height:1.8; }
     .footer-cta__location { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.85rem; color:var(--color-text-light); margin-top:var(--space-sm); }
     .footer-cta__location svg { width:14px; height:14px; stroke:var(--color-text-light); fill:none; }
-    #calendly-embed { width:var(--container-narrow); margin:0 auto var(--space-xl); min-height:700px; background:var(--color-bg-dark-alt); border:1px solid rgba(255,255,255,0.06); border-radius:var(--radius-lg); display:flex; align-items:center; justify-content:center; position:relative; z-index:1; overflow:hidden; }
+
+    /* Contact grid: Calendly + Form side by side */
+    .contact-grid {
+      width: var(--container);
+      margin: 0 auto var(--space-xl);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    #calendly-embed {
+      min-height: 700px;
+      background: var(--color-bg-dark-alt);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
     #calendly-embed .placeholder-text { color:rgba(255,255,255,0.3); font-size:0.9rem; font-weight:500; letter-spacing:0.05em; }
     #calendly-embed .calendly-inline-widget { width:100%; height:100%; min-height:700px; }
+
+    /* Contact form */
+    .contact-form {
+      background: var(--color-bg-dark-alt);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-form__title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .contact-form__subtitle {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      transition: border-color var(--transition);
+      outline: none;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--color-accent); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-group select { cursor: pointer; }
+    .form-group select option { background: var(--color-bg-dark); color: #fff; }
+
+    .contact-form .btn--send {
+      margin-top: auto;
+      padding: 0.85rem 2rem;
+      background: var(--color-accent);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition);
+      width: 100%;
+    }
+    .contact-form .btn--send:hover { background: var(--color-accent-hover); transform: translateY(-1px); }
+    .contact-form__success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      color: #4ADE80;
+      font-weight: 500;
+    }
+    .contact-form__success svg { width: 48px; height: 48px; stroke: #4ADE80; fill: none; margin: 0 auto 1rem; }
+
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
     .footer-bottom { width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding-top:var(--space-lg); border-top:1px solid rgba(255,255,255,0.08); position:relative; z-index:1; }
     .footer-bottom__copy { font-size:0.82rem; color:rgba(255,255,255,0.4); }
     .footer-bottom__links { display:flex; gap:1.5rem; }
@@ -252,11 +400,10 @@
 <body>
 
   <!-- ===== Navigation ===== -->
-  <nav class="nav" id="nav">
+  <nav class="nav" id="nav" aria-label="Main navigation">
     <div class="nav__inner">
       <a href="#" class="nav__logo">Services <span>Drakarian</span> Inc.</a>
 
-      <!-- Desktop nav -->
       <ul class="nav__links">
         <li><a href="#services" data-i18n="nav.services">Services</a></li>
         <li><a href="#process" data-i18n="nav.process">Process</a></li>
@@ -276,9 +423,8 @@
         <li><a href="#contact" class="btn btn--primary" data-i18n="nav.cta">Book an Audit</a></li>
       </ul>
 
-      <!-- Mobile: toggles beside burger -->
       <div class="nav__right-group nav__toggles--mobile">
-        <div class="nav__toggles nav__toggles--mobile">
+        <div class="nav__toggles">
           <button class="theme-toggle" aria-label="Toggle dark mode">
             <div class="theme-toggle__icons">
               <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -295,7 +441,6 @@
     </div>
   </nav>
 
-  <!-- Mobile Menu Overlay -->
   <div class="nav__mobile" id="mobile-menu">
     <a href="#services" class="mobile-link" data-i18n="nav.services">Services</a>
     <a href="#process" class="mobile-link" data-i18n="nav.process">Process</a>
@@ -308,10 +453,10 @@
     <div class="hero__content">
       <div class="hero__tag" data-i18n="hero.tag">Engineering Automation Consultancy</div>
       <h1 data-i18n="hero.h1">Stop bleeding time on <em>manual</em> engineering&nbsp;tasks.</h1>
-      <p data-i18n="hero.p">We build custom software, API integrations, and cloud architectures that eliminate repetitive workflows — so your engineering and operations teams can focus on actual&nbsp;design.</p>
+      <p data-i18n="hero.p">We build custom software, API integrations, and cloud architectures that eliminate repetitive workflows — so your engineering and operations teams can focus on high-value&nbsp;work.</p>
       <div class="hero__actions">
         <a href="#contact" class="btn btn--primary" data-i18n="hero.cta">
-          Book a Free Workflow Audit
+          Book a Free Discovery Call
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
         <a href="#services" class="btn btn--ghost" data-i18n="hero.cta2">Explore Services</a>
@@ -325,24 +470,24 @@
       <div class="animate">
         <div class="problem__label" data-i18n="problem.label">The Problem</div>
         <h2 data-i18n="problem.h2">You shouldn't have to manually bridge the gap between your&nbsp;systems.</h2>
-        <p data-i18n="problem.p">Manufacturing, R&amp;D, and logistics teams often lose thousands of hours and dollars to data bottlenecks. Whether your engineers are stuck doing repetitive setups, your legacy applications aren't talking to your modern web tools, or your team is doing manual data entry across disconnected systems — these inefficiencies are costing&nbsp;you.</p>
+        <p data-i18n="problem.p">Manufacturing, R&amp;D, and logistics teams lose thousands of hours each year to data bottlenecks. Whether your engineers are stuck in repetitive setups, your legacy applications aren't connected to your modern tools, or your team is doing manual data entry across disconnected systems — these inefficiencies are costing&nbsp;you.</p>
       </div>
       <div class="problem__stats">
         <div class="stat animate delay-1">
-          <div class="stat__number">72%</div>
-          <div class="stat__label" data-i18n="stat.1">of engineering time wasted on non-design tasks</div>
+          <div class="stat__number" data-i18n="stat.1.num">Up to 70%</div>
+          <div class="stat__label" data-i18n="stat.1">of engineering time spent on non-design tasks</div>
         </div>
         <div class="stat animate delay-2">
-          <div class="stat__number">$340K</div>
-          <div class="stat__label" data-i18n="stat.2">avg. annual cost of manual data re-entry per team</div>
+          <div class="stat__number">$200K+</div>
+          <div class="stat__label" data-i18n="stat.2">annual cost of manual data re-entry per team</div>
         </div>
         <div class="stat animate delay-1">
-          <div class="stat__number">5×</div>
+          <div class="stat__number" data-i18n="stat.3.num">Up to 5×</div>
           <div class="stat__label" data-i18n="stat.3">faster delivery after workflow automation</div>
         </div>
         <div class="stat animate delay-2">
           <div class="stat__number">0</div>
-          <div class="stat__label" data-i18n="stat.4">human-error incidents with automated pipelines</div>
+          <div class="stat__label" data-i18n="stat.4">manual data-entry errors with automated pipelines</div>
         </div>
       </div>
     </div>
@@ -358,17 +503,17 @@
       <div class="service-card animate delay-1">
         <div class="service-card__icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
         <h3 data-i18n="card1.h3">Engineering &amp; CAD Automation</h3>
-        <p data-i18n="card1.p">We build custom software tools that interact directly with your existing CAD and engineering APIs, automating complex, repetitive design processes and reducing setup times from hours to&nbsp;seconds.</p>
+        <p data-i18n="card1.p">Custom software tools that interact directly with your existing CAD and engineering APIs — automating repetitive design processes and reducing setup times from hours to&nbsp;minutes.</p>
       </div>
       <div class="service-card animate delay-2">
         <div class="service-card__icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 10h2"/><path d="M15 10h2"/></svg></div>
         <h3 data-i18n="card2.h3">System Integration &amp; Modernization</h3>
-        <p data-i18n="card2.p">We architect robust data bridges that securely connect your older, mission-critical legacy infrastructure to modern web tools and cloud&nbsp;environments.</p>
+        <p data-i18n="card2.p">Robust data bridges that securely connect your mission-critical legacy infrastructure to modern web tools and cloud&nbsp;environments.</p>
       </div>
       <div class="service-card animate delay-3">
         <div class="service-card__icon"><svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
         <h3 data-i18n="card3.h3">Cloud Architecture &amp; Data Pipelines</h3>
-        <p data-i18n="card3.p">We design custom, serverless cloud architectures and automated data pipelines to centralize your operations, eliminate human error, and give you real-time&nbsp;visibility.</p>
+        <p data-i18n="card3.p">Serverless cloud architectures and automated data pipelines that centralize your operations, eliminate human error, and give you real-time&nbsp;visibility.</p>
       </div>
     </div>
   </section>
@@ -382,8 +527,8 @@
     <div class="process__steps">
       <div class="step animate delay-1">
         <div class="step__number">1</div>
-        <h3 data-i18n="step1.h3">The Audit</h3>
-        <p data-i18n="step1.p">We define the exact bottleneck and calculate its cost to your business during a free 15-minute discovery&nbsp;call.</p>
+        <h3 data-i18n="step1.h3">The Discovery Call</h3>
+        <p data-i18n="step1.p">We identify the exact bottleneck and estimate its cost to your business during a free 30-minute&nbsp;call.</p>
       </div>
       <div class="step animate delay-2">
         <div class="step__number">2</div>
@@ -398,7 +543,7 @@
     </div>
   </section>
 
-  <!-- ===== Footer CTA & Booking ===== -->
+  <!-- ===== Footer CTA / Contact ===== -->
   <footer class="footer-cta" id="contact">
     <div class="footer-cta__header animate">
       <h2 data-i18n="footer.h2">Ready to automate your&nbsp;bottlenecks?</h2>
@@ -408,12 +553,54 @@
         Montréal, Quebec, Canada
       </div>
     </div>
-    <div id="calendly-embed" class="animate">
-      <!-- Calendly inline widget begin -->
-      <div class="calendly-inline-widget" data-url="https://calendly.com/jblindesdoits-drakarian/30min?background_color=f0efeb&text_color=1e2a38&primary_color=0052cc" style="min-width:320px;height:700px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-      <!-- Calendly inline widget end -->
+
+    <div class="contact-grid">
+      <!-- Calendly Embed -->
+      <div id="calendly-embed" class="animate">
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/jblindesdoits-drakarian/30min?background_color=f0efeb&text_color=1e2a38&primary_color=0052cc" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form animate delay-1" id="contact-form-wrapper">
+        <div class="contact-form__title" data-i18n="form.title">Send us a message</div>
+        <div class="contact-form__subtitle" data-i18n="form.subtitle">Have a question or want to discuss a project? Fill out the form and we'll get back to you within 24&nbsp;hours.</div>
+
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <label for="cf-name" data-i18n="form.name">Name</label>
+            <input type="text" id="cf-name" name="name" required placeholder="Jane Doe">
+          </div>
+          <div class="form-group">
+            <label for="cf-email" data-i18n="form.email">Email</label>
+            <input type="email" id="cf-email" name="email" required placeholder="jane@company.com">
+          </div>
+          <div class="form-group">
+            <label for="cf-subject" data-i18n="form.subject">Subject</label>
+            <select id="cf-subject" name="subject" required>
+              <option value="" disabled selected data-i18n="form.subject.placeholder">Select a topic…</option>
+              <option value="Project Inquiry" data-i18n="form.subject.project">Project Inquiry</option>
+              <option value="Partnership" data-i18n="form.subject.partnership">Partnership</option>
+              <option value="General Question" data-i18n="form.subject.general">General Question</option>
+              <option value="Other" data-i18n="form.subject.other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cf-message" data-i18n="form.message">Message</label>
+            <textarea id="cf-message" name="message" required placeholder="Tell us about your project or question…"></textarea>
+          </div>
+          <button type="submit" class="btn--send" data-i18n="form.send">Send Message</button>
+        </form>
+
+        <div class="contact-form__success" id="form-success">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div data-i18n="form.success">Message sent! We'll be in touch within 24&nbsp;hours.</div>
+        </div>
+      </div>
     </div>
+
     <div class="footer-bottom">
       <div class="footer-bottom__copy" data-i18n="footer.copy">&copy; 2026 Drakarian Services Inc.</div>
       <div class="footer-bottom__links">
@@ -425,37 +612,39 @@
 
   <!-- ===== JavaScript ===== -->
   <script>
-    /* ========== i18n Translation Data ========== */
+    /* ========== i18n ========== */
     const T = {
       en: {
         "nav.services": "Services",
         "nav.process": "Process",
         "nav.contact": "Contact",
-        "nav.cta": "Book an Audit",
+        "nav.cta": "Book a Call",
         "hero.tag": "Engineering Automation Consultancy",
         "hero.h1": "Stop bleeding time on <em>manual</em> engineering\u00a0tasks.",
-        "hero.p": "We build custom software, API integrations, and cloud architectures that eliminate repetitive workflows \u2014 so your engineering and operations teams can focus on actual\u00a0design.",
-        "hero.cta": "Book a Free Workflow Audit",
+        "hero.p": "We build custom software, API integrations, and cloud architectures that eliminate repetitive workflows \u2014 so your engineering and operations teams can focus on high-value\u00a0work.",
+        "hero.cta": "Book a Free Discovery Call",
         "hero.cta2": "Explore Services",
         "problem.label": "The Problem",
         "problem.h2": "You shouldn\u2019t have to manually bridge the gap between your\u00a0systems.",
-        "problem.p": "Manufacturing, R&D, and logistics teams often lose thousands of hours and dollars to data bottlenecks. Whether your engineers are stuck doing repetitive setups, your legacy applications aren\u2019t talking to your modern web tools, or your team is doing manual data entry across disconnected systems \u2014 these inefficiencies are costing\u00a0you.",
-        "stat.1": "of engineering time wasted on non-design tasks",
-        "stat.2": "avg. annual cost of manual data re-entry per team",
+        "problem.p": "Manufacturing, R&D, and logistics teams lose thousands of hours each year to data bottlenecks. Whether your engineers are stuck in repetitive setups, your legacy applications aren\u2019t connected to your modern tools, or your team is doing manual data entry across disconnected systems \u2014 these inefficiencies are costing\u00a0you.",
+        "stat.1.num": "Up to 70%",
+        "stat.1": "of engineering time spent on non-design tasks",
+        "stat.2": "annual cost of manual data re-entry per team",
+        "stat.3.num": "Up to 5\u00d7",
         "stat.3": "faster delivery after workflow automation",
-        "stat.4": "human-error incidents with automated pipelines",
+        "stat.4": "manual data-entry errors with automated pipelines",
         "services.label": "What We Do",
         "services.h2": "Custom solutions for complex technical\u00a0workflows",
         "card1.h3": "Engineering & CAD Automation",
-        "card1.p": "We build custom software tools that interact directly with your existing CAD and engineering APIs, automating complex, repetitive design processes and reducing setup times from hours to\u00a0seconds.",
+        "card1.p": "Custom software tools that interact directly with your existing CAD and engineering APIs \u2014 automating repetitive design processes and reducing setup times from hours to\u00a0minutes.",
         "card2.h3": "System Integration & Modernization",
-        "card2.p": "We architect robust data bridges that securely connect your older, mission-critical legacy infrastructure to modern web tools and cloud\u00a0environments.",
+        "card2.p": "Robust data bridges that securely connect your mission-critical legacy infrastructure to modern web tools and cloud\u00a0environments.",
         "card3.h3": "Cloud Architecture & Data Pipelines",
-        "card3.p": "We design custom, serverless cloud architectures and automated data pipelines to centralize your operations, eliminate human error, and give you real-time\u00a0visibility.",
+        "card3.p": "Serverless cloud architectures and automated data pipelines that centralize your operations, eliminate human error, and give you real-time\u00a0visibility.",
         "process.label": "How We Work",
         "process.h2": "A transparent, predictable\u00a0workflow",
-        "step1.h3": "The Audit",
-        "step1.p": "We define the exact bottleneck and calculate its cost to your business during a free 15-minute discovery\u00a0call.",
+        "step1.h3": "The Discovery Call",
+        "step1.p": "We identify the exact bottleneck and estimate its cost to your business during a free 30-minute\u00a0call.",
         "step2.h3": "The Blueprint",
         "step2.p": "We design a custom architectural roadmap with tiered, flat-rate pricing. No runaway hourly\u00a0billing.",
         "step3.h3": "The Build",
@@ -464,37 +653,52 @@
         "footer.p": "Based in Montr\u00e9al, QC, we partner with forward-thinking companies to build software that delivers immediate ROI. Let\u2019s find out how much time we can save your\u00a0team.",
         "footer.copy": "\u00a9 2026 Drakarian Services Inc.",
         "footer.privacy": "Privacy Policy",
-        "footer.terms": "Terms & Conditions"
+        "footer.terms": "Terms & Conditions",
+        "form.title": "Send us a message",
+        "form.subtitle": "Have a question or want to discuss a project? Fill out the form and we\u2019ll get back to you within 24\u00a0hours.",
+        "form.name": "Name",
+        "form.email": "Email",
+        "form.subject": "Subject",
+        "form.subject.placeholder": "Select a topic\u2026",
+        "form.subject.project": "Project Inquiry",
+        "form.subject.partnership": "Partnership",
+        "form.subject.general": "General Question",
+        "form.subject.other": "Other",
+        "form.message": "Message",
+        "form.send": "Send Message",
+        "form.success": "Message sent! We\u2019ll be in touch within 24\u00a0hours."
       },
       fr: {
         "nav.services": "Services",
         "nav.process": "Processus",
         "nav.contact": "Contact",
-        "nav.cta": "R\u00e9server un audit",
+        "nav.cta": "R\u00e9server un appel",
         "hero.tag": "Cabinet d\u2019automatisation en ing\u00e9nierie",
         "hero.h1": "Arr\u00eatez de perdre du temps sur des t\u00e2ches d\u2019ing\u00e9nierie <em>manuelles</em>.",
-        "hero.p": "Nous concevons des logiciels sur mesure, des int\u00e9grations API et des architectures cloud qui \u00e9liminent les flux de travail r\u00e9p\u00e9titifs \u2014 pour que vos \u00e9quipes se concentrent sur la vraie\u00a0conception.",
-        "hero.cta": "R\u00e9server un audit gratuit",
+        "hero.p": "Nous concevons des logiciels sur mesure, des int\u00e9grations API et des architectures cloud qui \u00e9liminent les flux de travail r\u00e9p\u00e9titifs \u2014 pour que vos \u00e9quipes se concentrent sur le travail \u00e0 haute\u00a0valeur.",
+        "hero.cta": "R\u00e9server un appel d\u00e9couverte gratuit",
         "hero.cta2": "D\u00e9couvrir nos services",
         "problem.label": "Le probl\u00e8me",
         "problem.h2": "Vous ne devriez pas avoir \u00e0 combler manuellement le foss\u00e9 entre vos\u00a0syst\u00e8mes.",
-        "problem.p": "Les \u00e9quipes de fabrication, R&D et logistique perdent souvent des milliers d\u2019heures et de dollars \u00e0 cause de goulots d\u2019\u00e9tranglement. Que vos ing\u00e9nieurs soient bloqu\u00e9s sur des configurations r\u00e9p\u00e9titives, que vos anciens syst\u00e8mes ne communiquent pas avec vos outils web, ou que votre \u00e9quipe fasse de la saisie manuelle entre des syst\u00e8mes d\u00e9connect\u00e9s \u2014 ces inefficacit\u00e9s vous co\u00fbtent\u00a0cher.",
-        "stat.1": "du temps d\u2019ing\u00e9nierie gaspill\u00e9 sur des t\u00e2ches hors conception",
-        "stat.2": "co\u00fbt annuel moyen de la ressaisie manuelle par \u00e9quipe",
+        "problem.p": "Les \u00e9quipes de fabrication, R&D et logistique perdent des milliers d\u2019heures chaque ann\u00e9e \u00e0 cause de goulots d\u2019\u00e9tranglement. Que vos ing\u00e9nieurs soient bloqu\u00e9s sur des configurations r\u00e9p\u00e9titives, que vos anciens syst\u00e8mes ne communiquent pas avec vos outils modernes, ou que votre \u00e9quipe fasse de la saisie manuelle entre des syst\u00e8mes d\u00e9connect\u00e9s \u2014 ces inefficacit\u00e9s vous co\u00fbtent\u00a0cher.",
+        "stat.1.num": "Jusqu\u2019\u00e0 70\u00a0%",
+        "stat.1": "du temps d\u2019ing\u00e9nierie consacr\u00e9 \u00e0 des t\u00e2ches hors conception",
+        "stat.2": "co\u00fbt annuel de la ressaisie manuelle par \u00e9quipe",
+        "stat.3.num": "Jusqu\u2019\u00e0 5\u00d7",
         "stat.3": "plus rapide apr\u00e8s automatisation des flux de travail",
-        "stat.4": "incidents d\u2019erreur humaine avec des pipelines automatis\u00e9s",
+        "stat.4": "erreurs de saisie manuelle avec des pipelines automatis\u00e9s",
         "services.label": "Ce que nous faisons",
         "services.h2": "Des solutions sur mesure pour des flux techniques\u00a0complexes",
         "card1.h3": "Automatisation ing\u00e9nierie et\u00a0CAO",
-        "card1.p": "Nous cr\u00e9ons des outils logiciels sur mesure qui interagissent directement avec vos API CAO existantes, automatisant les processus de conception r\u00e9p\u00e9titifs et r\u00e9duisant les temps de configuration de plusieurs heures \u00e0 quelques\u00a0secondes.",
+        "card1.p": "Des outils logiciels sur mesure qui interagissent directement avec vos API CAO existantes \u2014 automatisant les processus de conception r\u00e9p\u00e9titifs et r\u00e9duisant les temps de configuration de plusieurs heures \u00e0 quelques\u00a0minutes.",
         "card2.h3": "Int\u00e9gration et modernisation des\u00a0syst\u00e8mes",
-        "card2.p": "Nous concevons des ponts de donn\u00e9es robustes qui connectent de mani\u00e8re s\u00e9curis\u00e9e votre infrastructure ancienne et critique \u00e0 des outils web modernes et des environnements\u00a0cloud.",
+        "card2.p": "Des ponts de donn\u00e9es robustes qui connectent de mani\u00e8re s\u00e9curis\u00e9e votre infrastructure critique \u00e0 des outils web modernes et des environnements\u00a0cloud.",
         "card3.h3": "Architecture cloud et pipelines de\u00a0donn\u00e9es",
-        "card3.p": "Nous concevons des architectures cloud serverless et des pipelines de donn\u00e9es automatis\u00e9s pour centraliser vos op\u00e9rations, \u00e9liminer les erreurs humaines et offrir une visibilit\u00e9 en temps\u00a0r\u00e9el.",
+        "card3.p": "Des architectures cloud serverless et des pipelines automatis\u00e9s pour centraliser vos op\u00e9rations, \u00e9liminer les erreurs humaines et offrir une visibilit\u00e9 en temps\u00a0r\u00e9el.",
         "process.label": "Notre approche",
         "process.h2": "Un processus transparent et\u00a0pr\u00e9visible",
-        "step1.h3": "L\u2019audit",
-        "step1.p": "Nous identifions le goulot d\u2019\u00e9tranglement exact et calculons son co\u00fbt lors d\u2019un appel d\u00e9couverte gratuit de 15\u00a0minutes.",
+        "step1.h3": "L\u2019appel d\u00e9couverte",
+        "step1.p": "Nous identifions le goulot d\u2019\u00e9tranglement exact et estimons son co\u00fbt lors d\u2019un appel gratuit de 30\u00a0minutes.",
         "step2.h3": "Le plan",
         "step2.p": "Nous concevons une feuille de route architecturale avec tarification forfaitaire par paliers. Aucune facturation horaire\u00a0incontr\u00f4l\u00e9e.",
         "step3.h3": "La r\u00e9alisation",
@@ -503,11 +707,23 @@
         "footer.p": "Bas\u00e9s \u00e0 Montr\u00e9al, QC, nous accompagnons les entreprises visionnaires dans la cr\u00e9ation de logiciels \u00e0 retour sur investissement imm\u00e9diat. D\u00e9couvrons combien de temps nous pouvons faire gagner \u00e0 votre\u00a0\u00e9quipe.",
         "footer.copy": "\u00a9 2026 Services Drakarian Inc.",
         "footer.privacy": "Politique de confidentialit\u00e9",
-        "footer.terms": "Conditions g\u00e9n\u00e9rales"
+        "footer.terms": "Conditions g\u00e9n\u00e9rales",
+        "form.title": "Envoyez-nous un message",
+        "form.subtitle": "Une question ou un projet \u00e0 discuter\u00a0? Remplissez le formulaire et nous vous r\u00e9pondrons sous 24\u00a0heures.",
+        "form.name": "Nom",
+        "form.email": "Courriel",
+        "form.subject": "Sujet",
+        "form.subject.placeholder": "Choisir un sujet\u2026",
+        "form.subject.project": "Demande de projet",
+        "form.subject.partnership": "Partenariat",
+        "form.subject.general": "Question g\u00e9n\u00e9rale",
+        "form.subject.other": "Autre",
+        "form.message": "Message",
+        "form.send": "Envoyer le message",
+        "form.success": "Message envoy\u00e9\u00a0! Nous vous recontacterons sous 24\u00a0heures."
       }
     };
 
-    /* ========== Language Engine ========== */
     let currentLang = localStorage.getItem('drak-lang') || 'en';
 
     function setLanguage(lang) {
@@ -519,18 +735,21 @@
         const key = el.getAttribute('data-i18n');
         const val = T[lang][key];
         if (!val) return;
-        // Preserve SVG children inside buttons/links
         const svg = el.querySelector('svg');
-        el.innerHTML = val;
-        if (svg) el.appendChild(svg);
+        // For <option> and <select>, use textContent to avoid breaking elements
+        if (el.tagName === 'OPTION') {
+          el.textContent = val;
+        } else {
+          el.innerHTML = val;
+          if (svg) el.appendChild(svg);
+        }
       });
 
-      // Update all lang-toggle button labels to show the OTHER language
       const label = lang === 'en' ? 'FR' : 'EN';
       document.querySelectorAll('.lang-toggle').forEach(b => b.textContent = label);
     }
 
-    /* ========== Theme Engine ========== */
+    /* ========== Theme ========== */
     function setTheme(theme) {
       document.documentElement.setAttribute('data-theme', theme);
       localStorage.setItem('drak-theme', theme);
@@ -538,10 +757,9 @@
 
     /* ========== DOM Ready ========== */
     document.addEventListener('DOMContentLoaded', () => {
-      // Apply saved language
       setLanguage(currentLang);
 
-      // Theme toggle (all instances)
+      // Theme toggles
       document.querySelectorAll('.theme-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
           const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
@@ -549,11 +767,9 @@
         });
       });
 
-      // Language toggle (all instances)
+      // Language toggles
       document.querySelectorAll('.lang-toggle').forEach(btn => {
-        btn.addEventListener('click', () => {
-          setLanguage(currentLang === 'en' ? 'fr' : 'en');
-        });
+        btn.addEventListener('click', () => setLanguage(currentLang === 'en' ? 'fr' : 'en'));
       });
 
       // Sticky nav
@@ -576,11 +792,41 @@
         });
       });
 
-      // Scroll-triggered animations
+      // Scroll animations
       const observer = new IntersectionObserver(entries => {
         entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
       }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
       document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+      // Contact form submission
+      const form = document.getElementById('contact-form');
+      const formSuccess = document.getElementById('form-success');
+      if (form) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const btn = form.querySelector('.btn--send');
+          btn.textContent = '…';
+          btn.disabled = true;
+
+          try {
+            const res = await fetch(form.action, {
+              method: 'POST',
+              body: new FormData(form),
+              headers: { 'Accept': 'application/json' }
+            });
+            if (res.ok) {
+              form.style.display = 'none';
+              formSuccess.style.display = 'block';
+            } else {
+              btn.textContent = currentLang === 'fr' ? 'Erreur — réessayer' : 'Error — retry';
+              btn.disabled = false;
+            }
+          } catch {
+            btn.textContent = currentLang === 'fr' ? 'Erreur — réessayer' : 'Error — retry';
+            btn.disabled = false;
+          }
+        });
+      }
     });
   </script>
 </body>
