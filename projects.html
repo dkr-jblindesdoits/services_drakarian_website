@@ -164,30 +164,30 @@
       <div class="project__diagram">
         <div class="arch-flow">
           <div class="arch-block" style="border-left:3px solid #01579b;">
-            <div class="arch-block__title">Designer's View</div>
+            <div class="arch-block__title" data-i18n="d1.b1.t">Designer's View</div>
             <ul class="arch-block__items">
-              <li>Open SolidWorks Assembly</li>
-              <li>Run Automation Tool</li>
-              <li>Ready-to-Simulate Model</li>
+              <li data-i18n="d1.b1.1">Open SolidWorks Assembly</li>
+              <li data-i18n="d1.b1.2">Run Automation Tool</li>
+              <li data-i18n="d1.b1.3">Ready-to-Simulate Model</li>
             </ul>
           </div>
           <div class="arch-arrow">→</div>
           <div class="arch-block" style="border-left:3px solid #4a148c;">
-            <div class="arch-block__title">VB.NET Logic Engine</div>
+            <div class="arch-block__title" data-i18n="d1.b2.t">VB.NET Logic Engine</div>
             <ul class="arch-block__items">
-              <li>Assembly Scanner (Part Numbers)</li>
-              <li>Database Query → Material Mapping</li>
-              <li>Assign Flow Sim Properties</li>
-              <li>Handle Bolts/Nuts → Defaults</li>
-              <li>Log Warnings for Missing Data</li>
+              <li data-i18n="d1.b2.1">Assembly Scanner (Part Numbers)</li>
+              <li data-i18n="d1.b2.2">Database Query → Material Mapping</li>
+              <li data-i18n="d1.b2.3">Assign Flow Sim Properties</li>
+              <li data-i18n="d1.b2.4">Handle Bolts/Nuts → Defaults</li>
+              <li data-i18n="d1.b2.5">Log Warnings for Missing Data</li>
             </ul>
           </div>
           <div class="arch-arrow">→</div>
           <div class="arch-block" style="border-left:3px solid #e65100;">
-            <div class="arch-block__title">SolidWorks Flow Sim API</div>
+            <div class="arch-block__title" data-i18n="d1.b3.t">SolidWorks Flow Sim API</div>
             <ul class="arch-block__items">
-              <li>Update Component Materials</li>
-              <li>Apply Simulation Parameters</li>
+              <li data-i18n="d1.b3.1">Update Component Materials</li>
+              <li data-i18n="d1.b3.2">Apply Simulation Parameters</li>
             </ul>
           </div>
         </div>
@@ -212,28 +212,28 @@
       <div class="project__diagram">
         <div class="arch-flow">
           <div class="arch-block" style="border-left:3px solid #455a64;">
-            <div class="arch-block__title">Source</div>
+            <div class="arch-block__title" data-i18n="d2.b1.t">Source</div>
             <ul class="arch-block__items">
-              <li>Bluestar Configurator</li>
-              <li>XML Generation</li>
-              <li>Azure File Storage</li>
+              <li data-i18n="d2.b1.1">Bluestar Configurator</li>
+              <li data-i18n="d2.b1.2">XML Generation</li>
+              <li data-i18n="d2.b1.3">Azure File Storage</li>
             </ul>
           </div>
           <div class="arch-arrow">→</div>
           <div class="arch-block" style="border-left:3px solid #7b1fa2;">
-            <div class="arch-block__title">Azure Functions: ETL</div>
+            <div class="arch-block__title" data-i18n="d2.b2.t">Azure Functions: ETL</div>
             <ul class="arch-block__items">
-              <li>Blob Trigger → XML Parser</li>
-              <li>Transformation Engine</li>
-              <li>BOM Reconstruction</li>
+              <li data-i18n="d2.b2.1">Blob Trigger → XML Parser</li>
+              <li data-i18n="d2.b2.2">Transformation Engine</li>
+              <li data-i18n="d2.b2.3">BOM Reconstruction</li>
             </ul>
           </div>
           <div class="arch-arrow">→</div>
           <div class="arch-block" style="border-left:3px solid #1b5e20;">
-            <div class="arch-block__title">Data &amp; Analytics</div>
+            <div class="arch-block__title" data-i18n="d2.b3.t">Data &amp; Analytics</div>
             <ul class="arch-block__items">
-              <li>SQL Database (Insert/Update)</li>
-              <li>Power BI Reports (DirectQuery)</li>
+              <li data-i18n="d2.b3.1">SQL Database (Insert/Update)</li>
+              <li data-i18n="d2.b3.2">Power BI Reports (DirectQuery)</li>
             </ul>
           </div>
         </div>
@@ -258,34 +258,34 @@
       <div class="project__diagram">
         <div class="arch-flow">
           <div class="arch-block" style="border-left:3px solid #455a64;">
-            <div class="arch-block__title">Source</div>
+            <div class="arch-block__title" data-i18n="d3.b1.t">Source</div>
             <ul class="arch-block__items">
-              <li>Palma API</li>
-              <li>Scheduled Extraction</li>
+              <li data-i18n="d3.b1.1">Palma API</li>
+              <li data-i18n="d3.b1.2">Scheduled Extraction</li>
             </ul>
           </div>
           <div class="arch-arrow">→</div>
           <div class="arch-block" style="border-left:3px solid #e65100;">
-            <div class="arch-block__title">Bronze — Raw</div>
+            <div class="arch-block__title" data-i18n="d3.b2.t">Bronze — Raw</div>
             <ul class="arch-block__items">
-              <li>Raw JSON Ingestion</li>
-              <li>No transformations</li>
+              <li data-i18n="d3.b2.1">Raw JSON Ingestion</li>
+              <li data-i18n="d3.b2.2">No transformations</li>
             </ul>
           </div>
           <div class="arch-arrow">→</div>
           <div class="arch-block" style="border-left:3px solid #0277bd;">
-            <div class="arch-block__title">Silver — Validated</div>
+            <div class="arch-block__title" data-i18n="d3.b3.t">Silver — Validated</div>
             <ul class="arch-block__items">
-              <li>Cleansed &amp; Filtered</li>
-              <li>Delta Parquet Format</li>
+              <li data-i18n="d3.b3.1">Cleansed &amp; Filtered</li>
+              <li data-i18n="d3.b3.2">Delta Parquet Format</li>
             </ul>
           </div>
           <div class="arch-arrow">→</div>
           <div class="arch-block" style="border-left:3px solid #fbc02d;">
-            <div class="arch-block__title">Gold — Analytics</div>
+            <div class="arch-block__title" data-i18n="d3.b4.t">Gold — Analytics</div>
             <ul class="arch-block__items">
-              <li>Star Schema Aggregations</li>
-              <li>Direct Lake → Power BI</li>
+              <li data-i18n="d3.b4.1">Star Schema Aggregations</li>
+              <li data-i18n="d3.b4.2">Direct Lake → Power BI</li>
             </ul>
           </div>
         </div>
@@ -328,13 +328,7 @@
           <span class="other-card__tag">FastAPI</span><span class="other-card__tag">WordPress</span><span class="other-card__tag">Web Scraping</span>
         </div>
       </div>
-      <div class="other-card">
-        <h3 data-i18n="o3.h3">Curated Travel Application</h3>
-        <p data-i18n="o3.p">A mobile application delivering curated "Playlists of Moments" — built with a FastAPI backend serving structured travel data to a cross-platform mobile client.</p>
-        <div class="other-card__tags">
-          <span class="other-card__tag">FastAPI</span><span class="other-card__tag">Flutter</span><span class="other-card__tag">Mobile</span>
-        </div>
-      </div>
+
     </div>
   </section>
 
@@ -370,7 +364,17 @@
         "o1.h3": "Carbon Footprint Calculator", "o1.p": "A full-stack Django web application with user authentication and custom forms for dynamically calculating CO2 emissions.",
         "o2.h3": "Deal Aggregator Platform", "o2.p": "Automated web scraping with FastAPI to aggregate retail promotions, served through a WordPress frontend.",
         "o3.h3": "Curated Travel Application", "o3.p": "A mobile app delivering curated \u201cPlaylists of Moments\u201d with a FastAPI backend and cross-platform mobile client.",
-        "footer.copy": "\u00a9 2026 Drakarian Services Inc.", "footer.cta": "Start a Project"
+        "footer.copy": "\u00a9 2026 Drakarian Services Inc.", "footer.cta": "Start a Project",
+        "d1.b1.t": "Designer's View", "d1.b1.1": "Open SolidWorks Assembly", "d1.b1.2": "Run Automation Tool", "d1.b1.3": "Ready-to-Simulate Model",
+        "d1.b2.t": "VB.NET Logic Engine", "d1.b2.1": "Assembly Scanner (Part Numbers)", "d1.b2.2": "Database Query \u2192 Material Mapping", "d1.b2.3": "Assign Flow Sim Properties", "d1.b2.4": "Handle Bolts/Nuts \u2192 Defaults", "d1.b2.5": "Log Warnings for Missing Data",
+        "d1.b3.t": "SolidWorks Flow Sim API", "d1.b3.1": "Update Component Materials", "d1.b3.2": "Apply Simulation Parameters",
+        "d2.b1.t": "Source", "d2.b1.1": "Bluestar Configurator", "d2.b1.2": "XML Generation", "d2.b1.3": "Azure File Storage",
+        "d2.b2.t": "Azure Functions: ETL", "d2.b2.1": "Blob Trigger \u2192 XML Parser", "d2.b2.2": "Transformation Engine", "d2.b2.3": "BOM Reconstruction",
+        "d2.b3.t": "Data & Analytics", "d2.b3.1": "SQL Database (Insert/Update)", "d2.b3.2": "Power BI Reports (DirectQuery)",
+        "d3.b1.t": "Source", "d3.b1.1": "Palma API", "d3.b1.2": "Scheduled Extraction",
+        "d3.b2.t": "Bronze \u2014 Raw", "d3.b2.1": "Raw JSON Ingestion", "d3.b2.2": "No transformations",
+        "d3.b3.t": "Silver \u2014 Validated", "d3.b3.1": "Cleansed & Filtered", "d3.b3.2": "Delta Parquet Format",
+        "d3.b4.t": "Gold \u2014 Analytics", "d3.b4.1": "Star Schema Aggregations", "d3.b4.2": "Direct Lake \u2192 Power BI"
       },
       fr: {
         "back": "Retour \u00e0 l\u2019accueil",
@@ -391,7 +395,17 @@
         "o1.h3": "Calculateur d\u2019empreinte carbone", "o1.p": "Application web Django full-stack avec authentification et formulaires personnalis\u00e9s pour calculer dynamiquement les \u00e9missions de CO2.",
         "o2.h3": "Plateforme d\u2019agr\u00e9gation de promotions", "o2.p": "Syst\u00e8me de scraping automatis\u00e9 avec FastAPI pour agr\u00e9ger des promotions, servi via un frontend WordPress.",
         "o3.h3": "Application voyage curated", "o3.p": "Application mobile proposant des \u00ab\u00a0Playlists de Moments\u00a0\u00bb avec un backend FastAPI et un client mobile multiplateforme.",
-        "footer.copy": "\u00a9 2026 Services Drakarian Inc.", "footer.cta": "D\u00e9marrer un projet"
+        "footer.copy": "\u00a9 2026 Services Drakarian Inc.", "footer.cta": "D\u00e9marrer un projet",
+        "d1.b1.t": "Vue du concepteur", "d1.b1.1": "Ouvrir l\u2019assemblage SolidWorks", "d1.b1.2": "Lancer l\u2019outil d\u2019automatisation", "d1.b1.3": "Mod\u00e8le pr\u00eat \u00e0 simuler",
+        "d1.b2.t": "Moteur logique VB.NET", "d1.b2.1": "Scan d\u2019assemblage (r\u00e9f\u00e9rences pi\u00e8ces)", "d1.b2.2": "Requ\u00eate base de donn\u00e9es \u2192 Mapping mat\u00e9riaux", "d1.b2.3": "Assignation propri\u00e9t\u00e9s Flow Sim", "d1.b2.4": "Boulons/\u00e9crous \u2192 Valeurs par d\u00e9faut", "d1.b2.5": "Journalisation des donn\u00e9es manquantes",
+        "d1.b3.t": "API SolidWorks Flow Sim", "d1.b3.1": "Mise \u00e0 jour des mat\u00e9riaux", "d1.b3.2": "Application des param\u00e8tres de simulation",
+        "d2.b1.t": "Source", "d2.b1.1": "Configurateur Bluestar", "d2.b1.2": "G\u00e9n\u00e9ration XML", "d2.b1.3": "Stockage fichiers Azure",
+        "d2.b2.t": "Azure Functions : ETL", "d2.b2.1": "D\u00e9clencheur Blob \u2192 Analyseur XML", "d2.b2.2": "Moteur de transformation", "d2.b2.3": "Reconstruction de la nomenclature",
+        "d2.b3.t": "Donn\u00e9es et analytique", "d2.b3.1": "Base SQL (Insert/Update)", "d2.b3.2": "Rapports Power BI (DirectQuery)",
+        "d3.b1.t": "Source", "d3.b1.1": "API Palma", "d3.b1.2": "Extraction planifi\u00e9e",
+        "d3.b2.t": "Bronze \u2014 Brut", "d3.b2.1": "Ingestion JSON brut", "d3.b2.2": "Aucune transformation",
+        "d3.b3.t": "Silver \u2014 Valid\u00e9", "d3.b3.1": "Nettoy\u00e9 et filtr\u00e9", "d3.b3.2": "Format Delta Parquet",
+        "d3.b4.t": "Gold \u2014 Analytique", "d3.b4.1": "Agr\u00e9gations en sch\u00e9ma \u00e9toile", "d3.b4.2": "Direct Lake \u2192 Power BI"
       }
     };
     let currentLang = localStorage.getItem('drak-lang') || 'en';
