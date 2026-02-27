@@ -18,13 +18,13 @@
   <meta property="og:site_name" content="Drakarian Services Inc.">
   <meta property="og:locale" content="en_CA">
   <meta property="og:locale:alternate" content="fr_CA">
-  <meta property="og:image" content="https://drakarian.tech/og-image.png">
+  <!-- <meta property="og:image" content="https://drakarian.tech/og-image.png"> -->
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Drakarian Services Inc. — Engineering Automation & Integration">
   <meta name="twitter:description" content="Custom software, API integrations, and cloud architectures that eliminate repetitive engineering workflows.">
-  <meta name="twitter:image" content="https://drakarian.tech/og-image.png">
+  <!-- <meta name="twitter:image" content="https://drakarian.tech/og-image.png"> -->
 
   <!-- Structured Data: LocalBusiness -->
   <script type="application/ld+json">
@@ -395,6 +395,35 @@
     .footer-bottom__links a { font-size:0.82rem; color:rgba(255,255,255,0.4); transition:color var(--transition); }
     .footer-bottom__links a:hover { color:#fff; }
     @media (max-width: 640px) { .footer-bottom { flex-direction:column; gap:1rem; text-align:center; } }
+
+    /* ===== Founder ===== */
+    .founder { padding:var(--space-2xl) 0; }
+    .founder__inner { width:var(--container); margin:0 auto; display:grid; grid-template-columns:auto 1fr; gap:var(--space-xl); align-items:center; max-width:900px; }
+    .founder__photo { width:180px; height:180px; border-radius:50%; overflow:hidden; border:3px solid var(--color-border-light); flex-shrink:0; }
+    .founder__photo img { width:100%; height:100%; object-fit:cover; }
+    .founder__label { font-size:0.78rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent); margin-bottom:var(--space-xs); }
+    .founder__name { font-family:var(--font-heading); font-size:1.8rem; margin-bottom:0.25rem; }
+    .founder__role { font-size:0.9rem; color:var(--color-text-secondary); margin-bottom:var(--space-sm); }
+    .founder__bio { font-size:1rem; line-height:1.85; color:var(--color-text-secondary); }
+    @media (max-width: 768px) {
+      .founder__inner { grid-template-columns:1fr; text-align:center; justify-items:center; gap:var(--space-lg); }
+    }
+
+    /* ===== Project Teasers ===== */
+    .projects-teaser { padding:var(--space-2xl) 0; background:var(--color-bg-alt); position:relative; transition:background 0.4s ease; }
+    .projects-teaser::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--color-border),transparent); }
+    .projects-teaser__grid { width:var(--container); margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    .project-card { background:var(--color-card-bg); border:1px solid var(--color-border-light); border-radius:var(--radius-lg); padding:2rem 1.75rem; transition:all 0.4s cubic-bezier(0.16,1,0.3,1); position:relative; overflow:hidden; display:flex; flex-direction:column; }
+    .project-card:hover { border-color:var(--color-accent); transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,82,204,0.08); }
+    .project-card__tags { display:flex; flex-wrap:wrap; gap:0.4rem; margin-bottom:var(--space-sm); }
+    .project-card__tag { font-size:0.7rem; font-weight:600; letter-spacing:0.04em; padding:0.2rem 0.6rem; background:var(--color-accent-subtle); color:var(--color-accent); border-radius:50px; }
+    .project-card h3 { font-family:var(--font-heading); font-size:1.2rem; margin-bottom:0.5rem; }
+    .project-card p { font-size:0.9rem; line-height:1.7; color:var(--color-text-secondary); flex-grow:1; }
+    .project-card__link { display:inline-flex; align-items:center; gap:0.3rem; font-size:0.85rem; font-weight:500; color:var(--color-accent); margin-top:var(--space-sm); transition:gap var(--transition); }
+    .project-card__link:hover { gap:0.6rem; }
+    .project-card__link svg { width:14px; height:14px; }
+    .projects-teaser__cta { text-align:center; margin-top:var(--space-lg); }
+    @media (max-width: 900px) { .projects-teaser__grid { grid-template-columns:1fr; max-width:500px; margin:0 auto; } }
   </style>
 </head>
 <body>
@@ -406,6 +435,7 @@
 
       <ul class="nav__links">
         <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
         <li><a href="#process" data-i18n="nav.process">Process</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         <li>
@@ -443,6 +473,7 @@
 
   <div class="nav__mobile" id="mobile-menu">
     <a href="#services" class="mobile-link" data-i18n="nav.services">Services</a>
+    <a href="#projects" class="mobile-link" data-i18n="nav.projects">Projects</a>
     <a href="#process" class="mobile-link" data-i18n="nav.process">Process</a>
     <a href="#contact" class="mobile-link" data-i18n="nav.contact">Contact</a>
     <a href="#contact" class="btn btn--primary mobile-link" data-i18n="nav.cta">Book an Audit</a>
@@ -543,6 +574,62 @@
     </div>
   </section>
 
+  <!-- ===== Project Teasers ===== -->
+  <section class="projects-teaser" id="projects">
+    <div class="section-header animate">
+      <div class="section-header__label" data-i18n="projects.label">Selected Projects</div>
+      <h2 data-i18n="projects.h2">Real solutions we've built and&nbsp;delivered</h2>
+    </div>
+    <div class="projects-teaser__grid">
+      <div class="project-card animate delay-1">
+        <div class="project-card__tags">
+          <span class="project-card__tag">VB.NET</span>
+          <span class="project-card__tag">SolidWorks API</span>
+        </div>
+        <h3 data-i18n="proj1.h3">Automated CAD Flow Simulation Tool</h3>
+        <p data-i18n="proj1.p">A standalone application that interfaces with the SolidWorks API to automate thermal flow simulation setup — cutting a multi-hour manual process to a single&nbsp;click.</p>
+        <a href="./projects.html#cad-automation" class="project-card__link" data-i18n="proj.viewmore">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <div class="project-card animate delay-2">
+        <div class="project-card__tags">
+          <span class="project-card__tag">Python</span>
+          <span class="project-card__tag">Azure Functions</span>
+          <span class="project-card__tag">SQL</span>
+        </div>
+        <h3 data-i18n="proj2.h3">BOM Pipeline &amp; Product Configuration</h3>
+        <p data-i18n="proj2.p">A serverless cloud pipeline that parses massive XML exports to reconstruct complex 150% Bills of Materials and loads structured data into SQL&nbsp;databases.</p>
+        <a href="./projects.html#bom-pipeline" class="project-card__link" data-i18n="proj.viewmore">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <div class="project-card animate delay-3">
+        <div class="project-card__tags">
+          <span class="project-card__tag">Python</span>
+          <span class="project-card__tag">Microsoft Fabric</span>
+        </div>
+        <h3 data-i18n="proj3.h3">Scalable Medallion Data Pipeline</h3>
+        <p data-i18n="proj3.p">A multi-tiered data architecture implementing Bronze/Silver/Gold layers within Microsoft Fabric — creating a centralized source for product data&nbsp;reporting.</p>
+        <a href="./projects.html#data-pipeline" class="project-card__link" data-i18n="proj.viewmore">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+    </div>
+    <div class="projects-teaser__cta animate">
+      <a href="./projects.html" class="btn btn--ghost" data-i18n="projects.cta">View All Projects</a>
+    </div>
+  </section>
+
+  <!-- ===== Founder ===== -->
+  <section class="founder" id="about">
+    <div class="founder__inner animate">
+      <div class="founder__photo">
+        <img src="./jean-portrait.jpg" alt="Jean Blin-Desdoits — Founder, Drakarian Services Inc." width="180" height="180" loading="lazy">
+      </div>
+      <div>
+        <div class="founder__label" data-i18n="founder.label">Meet the Founder</div>
+        <div class="founder__name">Jean Blin-Desoits</div>
+        <div class="founder__role" data-i18n="founder.role">Founder &amp; Lead Engineer — Drakarian Services Inc.</div>
+        <p class="founder__bio" data-i18n="founder.bio">I'm a Montréal-based software engineer with a Master's degree and five years of experience in backend architecture and engineering automation. I founded Drakarian Services to help businesses transform their most labor-intensive technical processes into streamlined, high-performance workflows — from serverless data pipelines to custom CAD automation&nbsp;tools.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== Footer CTA / Contact ===== -->
   <footer class="footer-cta" id="contact">
     <div class="footer-cta__header animate">
@@ -568,7 +655,7 @@
         <div class="contact-form__title" data-i18n="form.title">Send us a message</div>
         <div class="contact-form__subtitle" data-i18n="form.subtitle">Have a question or want to discuss a project? Fill out the form and we'll get back to you within 24&nbsp;hours.</div>
 
-        <form id="contact-form" action="https://formspree.io/f/xkovynke" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div class="form-group">
             <label for="cf-name" data-i18n="form.name">Name</label>
             <input type="text" id="cf-name" name="name" required placeholder="Jane Doe">
@@ -666,7 +753,21 @@
         "form.subject.other": "Other",
         "form.message": "Message",
         "form.send": "Send Message",
-        "form.success": "Message sent! We\u2019ll be in touch within 24\u00a0hours."
+        "form.success": "Message sent! We\u2019ll be in touch within 24\u00a0hours.",
+        "nav.projects": "Projects",
+        "projects.label": "Selected Projects",
+        "projects.h2": "Real solutions we\u2019ve built and\u00a0delivered",
+        "projects.cta": "View All Projects",
+        "proj1.h3": "Automated CAD Flow Simulation Tool",
+        "proj1.p": "A standalone application that interfaces with the SolidWorks API to automate thermal flow simulation setup \u2014 cutting a multi-hour manual process to a single\u00a0click.",
+        "proj2.h3": "BOM Pipeline & Product Configuration",
+        "proj2.p": "A serverless cloud pipeline that parses massive XML exports to reconstruct complex 150% Bills of Materials and loads structured data into SQL\u00a0databases.",
+        "proj3.h3": "Scalable Medallion Data Pipeline",
+        "proj3.p": "A multi-tiered data architecture implementing Bronze/Silver/Gold layers within Microsoft Fabric \u2014 creating a centralized source for product data\u00a0reporting.",
+        "proj.viewmore": "View details",
+        "founder.label": "Meet the Founder",
+        "founder.role": "Founder & Lead Engineer \u2014 Drakarian Services Inc.",
+        "founder.bio": "I\u2019m a Montr\u00e9al-based software engineer with a Master\u2019s degree and five years of experience in backend architecture and engineering automation. I founded Drakarian Services to help businesses transform their most labor-intensive technical processes into streamlined, high-performance workflows \u2014 from serverless data pipelines to custom CAD automation\u00a0tools."
       },
       fr: {
         "nav.services": "Services",
@@ -720,7 +821,21 @@
         "form.subject.other": "Autre",
         "form.message": "Message",
         "form.send": "Envoyer le message",
-        "form.success": "Message envoy\u00e9\u00a0! Nous vous recontacterons sous 24\u00a0heures."
+        "form.success": "Message envoy\u00e9\u00a0! Nous vous recontacterons sous 24\u00a0heures.",
+        "nav.projects": "Projets",
+        "projects.label": "Projets s\u00e9lectionn\u00e9s",
+        "projects.h2": "Des solutions concr\u00e8tes que nous avons con\u00e7ues et\u00a0livr\u00e9es",
+        "projects.cta": "Voir tous les projets",
+        "proj1.h3": "Outil d\u2019automatisation de simulation thermique CAO",
+        "proj1.p": "Une application autonome qui interagit avec l\u2019API SolidWorks pour automatiser la configuration de simulations thermiques \u2014 r\u00e9duisant un processus de plusieurs heures \u00e0 un seul\u00a0clic.",
+        "proj2.h3": "Pipeline BOM et configuration produit",
+        "proj2.p": "Un pipeline cloud serverless qui analyse d\u2019\u00e9normes exports XML pour reconstruire des nomenclatures 150\u00a0% complexes et charger les donn\u00e9es structur\u00e9es en bases\u00a0SQL.",
+        "proj3.h3": "Pipeline de donn\u00e9es Medallion \u00e9volutif",
+        "proj3.p": "Une architecture de donn\u00e9es multi-niveaux impl\u00e9mentant les couches Bronze/Silver/Gold dans Microsoft Fabric \u2014 cr\u00e9ant une source centralis\u00e9e pour le reporting\u00a0produit.",
+        "proj.viewmore": "Voir les d\u00e9tails",
+        "founder.label": "Le fondateur",
+        "founder.role": "Fondateur et ing\u00e9nieur principal \u2014 Services Drakarian Inc.",
+        "founder.bio": "Je suis un ing\u00e9nieur logiciel bas\u00e9 \u00e0 Montr\u00e9al, titulaire d\u2019une ma\u00eetrise et fort de cinq ans d\u2019exp\u00e9rience en architecture backend et automatisation d\u2019ing\u00e9nierie. J\u2019ai fond\u00e9 Services Drakarian pour aider les entreprises \u00e0 transformer leurs processus techniques les plus laborieux en flux de travail performants \u2014 des pipelines de donn\u00e9es serverless aux outils d\u2019automatisation\u00a0CAO."
       }
     };
 

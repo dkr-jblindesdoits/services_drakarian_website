@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Drakarian Services Inc.</title>
+  <meta name="description" content="Engineering automation projects by Drakarian Services Inc. — CAD automation, serverless data pipelines, system integration, and cloud architecture case studies.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://drakarian.tech/projects.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <script>
+    (function(){
+      var t = localStorage.getItem('drak-theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <style>
+    :root {
+      --color-bg: #FAFAF8; --color-bg-alt: #F0EFEB; --color-bg-dark: #0F1923; --color-bg-dark-alt: #162231;
+      --color-text: #1E2A38; --color-text-secondary: #4A5568; --color-text-light: #CBD5E0; --color-text-on-dark: #E8ECF0;
+      --color-accent: #0052CC; --color-accent-hover: #003D99; --color-accent-subtle: rgba(0,82,204,0.08);
+      --color-border: #D8D6D0; --color-border-light: #E8E6E2; --color-card-bg: #FFFFFF;
+      --color-nav-scrolled: rgba(250,250,248,0.92); --color-stat-bg: #FFFFFF;
+      --font-heading: 'Instrument Serif', Georgia, serif; --font-body: 'DM Sans', -apple-system, sans-serif;
+      --container: min(1200px, 90vw); --container-narrow: min(900px, 90vw);
+      --space-xs: 0.5rem; --space-sm: 1rem; --space-md: 1.5rem; --space-lg: 3rem; --space-xl: 5rem; --space-2xl: 8rem;
+      --radius: 6px; --radius-lg: 12px; --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    [data-theme="dark"] {
+      --color-bg: #0D1117; --color-bg-alt: #151B23; --color-bg-dark: #010409; --color-bg-dark-alt: #0D1117;
+      --color-text: #E6EDF3; --color-text-secondary: #8B949E; --color-text-light: #8B949E; --color-text-on-dark: #E6EDF3;
+      --color-accent: #4493F8; --color-accent-hover: #6DB1FF; --color-accent-subtle: rgba(68,147,248,0.1);
+      --color-border: #30363D; --color-border-light: #21262D; --color-card-bg: #151B23;
+      --color-nav-scrolled: rgba(13,17,23,0.92); --color-stat-bg: #151B23;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; font-size: 16px; }
+    body { font-family: var(--font-body); color: var(--color-text); background: var(--color-bg); line-height: 1.7; font-weight: 400; -webkit-font-smoothing: antialiased; overflow-x: hidden; transition: background 0.4s ease, color 0.4s ease; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; }
+    p { color: var(--color-text-secondary); transition: color 0.4s ease; }
+
+    /* Nav (simplified for subpage) */
+    .nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:1rem 0; transition:all var(--transition); background: var(--color-nav-scrolled); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--color-border-light); }
+    .nav__inner { width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
+    .nav__logo { font-family:var(--font-body); font-size:1.05rem; font-weight:600; letter-spacing:-0.02em; color:var(--color-text); }
+    .nav__logo span { color:var(--color-accent); }
+    .nav__back { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.88rem; font-weight:500; color:var(--color-text-secondary); transition:color var(--transition); }
+    .nav__back:hover { color:var(--color-accent); }
+    .nav__back svg { width:16px; height:16px; }
+    .nav__toggles { display:flex; align-items:center; gap:0.6rem; }
+    .theme-toggle { background:none; border:1.5px solid var(--color-border); border-radius:50px; cursor:pointer; width:42px; height:24px; position:relative; transition:all var(--transition); padding:0; flex-shrink:0; }
+    .theme-toggle:hover { border-color:var(--color-accent); }
+    .theme-toggle__thumb { width:16px; height:16px; border-radius:50%; background:var(--color-text); position:absolute; top:2.5px; left:3px; transition:all 0.4s cubic-bezier(0.68,-0.55,0.27,1.55); }
+    [data-theme="dark"] .theme-toggle__thumb { left:21px; background:var(--color-accent); }
+    .theme-toggle__icons { position:absolute; inset:0; display:flex; align-items:center; justify-content:space-between; padding:0 5px; pointer-events:none; }
+    .theme-toggle__icons svg { width:11px; height:11px; opacity:0.5; }
+    .theme-toggle__icons .icon-sun { stroke:#F59E0B; fill:none; }
+    .theme-toggle__icons .icon-moon { stroke:#8B949E; fill:none; }
+    .lang-toggle { background:none; border:1.5px solid var(--color-border); border-radius:var(--radius); cursor:pointer; padding:0.2rem 0.55rem; font-family:var(--font-body); font-size:0.72rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--color-text-secondary); transition:all var(--transition); line-height:1.5; flex-shrink:0; }
+    .lang-toggle:hover { border-color:var(--color-accent); color:var(--color-accent); }
+
+    /* Page header */
+    .page-header { padding:calc(var(--space-2xl) + 2rem) 0 var(--space-xl); text-align:center; }
+    .page-header h1 { font-size:clamp(2.2rem,4.5vw,3.2rem); margin-bottom:var(--space-sm); }
+    .page-header p { font-size:1.05rem; max-width:600px; margin:0 auto; line-height:1.8; }
+
+    /* Project sections */
+    .project { padding:var(--space-xl) 0; border-top:1px solid var(--color-border-light); }
+    .project:nth-child(even) { background: var(--color-bg-alt); }
+    .project__inner { width:var(--container-narrow); margin:0 auto; }
+    .project__category { font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent); margin-bottom:var(--space-xs); }
+    .project h2 { font-size:clamp(1.6rem,3vw,2.2rem); margin-bottom:var(--space-sm); }
+    .project__meta { display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:var(--space-md); }
+    .project__tag { font-size:0.72rem; font-weight:600; letter-spacing:0.04em; padding:0.25rem 0.7rem; background:var(--color-accent-subtle); color:var(--color-accent); border-radius:50px; }
+    .project__desc { font-size:1rem; line-height:1.85; margin-bottom:var(--space-lg); max-width:750px; }
+    .project__diagram { background:var(--color-card-bg); border:1px solid var(--color-border-light); border-radius:var(--radius-lg); padding:2rem; margin-bottom:var(--space-md); overflow-x:auto; }
+    .project__diagram-label { font-size:0.78rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--color-text-secondary); margin-bottom:var(--space-sm); }
+
+    /* Mermaid diagram styling */
+    .project__diagram svg { max-width:100%; height:auto; }
+
+    /* Diagram as styled HTML boxes */
+    .arch-flow { display:flex; align-items:stretch; gap:1rem; flex-wrap:wrap; }
+    .arch-block { flex:1; min-width:160px; background:var(--color-bg-alt); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:1.25rem; }
+    [data-theme="dark"] .arch-block { background:var(--color-bg); }
+    .arch-block__title { font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-accent); margin-bottom:0.5rem; }
+    .arch-block__items { list-style:none; }
+    .arch-block__items li { font-size:0.85rem; color:var(--color-text-secondary); padding:0.3rem 0; border-bottom:1px solid var(--color-border-light); }
+    .arch-block__items li:last-child { border:none; }
+    .arch-arrow { display:flex; align-items:center; justify-content:center; color:var(--color-accent); font-size:1.5rem; min-width:30px; flex-shrink:0; }
+    @media (max-width: 600px) { .arch-flow { flex-direction:column; } .arch-arrow { transform:rotate(90deg); } }
+
+    /* Other projects */
+    .other-projects { padding:var(--space-xl) 0; }
+    .other-projects__grid { width:var(--container-narrow); margin:0 auto; display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:1.5rem; }
+    .other-card { background:var(--color-card-bg); border:1px solid var(--color-border-light); border-radius:var(--radius-lg); padding:1.75rem; }
+    .other-card h3 { font-family:var(--font-heading); font-size:1.15rem; margin-bottom:0.4rem; }
+    .other-card p { font-size:0.88rem; line-height:1.7; }
+    .other-card__tags { display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.75rem; }
+    .other-card__tag { font-size:0.68rem; font-weight:500; padding:0.15rem 0.5rem; background:var(--color-accent-subtle); color:var(--color-accent); border-radius:50px; }
+
+    /* Footer */
+    .footer { padding:var(--space-lg) 0; background:var(--color-bg-dark); }
+    .footer__inner { width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
+    .footer__copy { font-size:0.82rem; color:rgba(255,255,255,0.4); }
+    .footer__cta { display:inline-flex; align-items:center; gap:0.5rem; padding:0.7rem 1.5rem; background:var(--color-accent); color:#fff; border-radius:var(--radius); font-size:0.88rem; font-weight:500; transition:all var(--transition); }
+    .footer__cta:hover { background:var(--color-accent-hover); transform:translateY(-1px); }
+    .footer__cta svg { width:14px; height:14px; }
+    @media (max-width: 640px) { .footer__inner { flex-direction:column; gap:1rem; text-align:center; } }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="./" class="nav__logo">Services <span>Drakarian</span> Inc.</a>
+      <div style="display:flex;align-items:center;gap:1.5rem;">
+        <a href="./" class="nav__back" data-i18n="back">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+          Back to Home
+        </a>
+        <div class="nav__toggles">
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <div class="theme-toggle__icons">
+              <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </div>
+            <div class="theme-toggle__thumb"></div>
+          </button>
+          <button class="lang-toggle">FR</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1 data-i18n="page.h1">Projects &amp; Case Studies</h1>
+    <p data-i18n="page.p">A selection of engineering automation and data pipeline projects delivered for manufacturing, R&amp;D, and operations&nbsp;teams.</p>
+  </header>
+
+  <!-- ===== Project 1: CAD Automation ===== -->
+  <section class="project" id="cad-automation">
+    <div class="project__inner">
+      <div class="project__category" data-i18n="p1.cat">Engineering &amp; CAD Automation</div>
+      <h2 data-i18n="p1.h2">Automated CAD Flow Simulation Tool</h2>
+      <div class="project__meta">
+        <span class="project__tag">VB.NET</span>
+        <span class="project__tag">SolidWorks API</span>
+        <span class="project__tag">Standalone Application</span>
+      </div>
+      <p class="project__desc" data-i18n="p1.desc">This standalone executable interfaces directly with the SolidWorks API to programmatically automate thermal flow simulation setup. Design engineers who previously spent hours manually configuring simulation parameters for each assembly can now trigger the entire process with a single click. The tool scans assemblies, queries a material database, applies the correct flow simulation properties to each component, and handles edge cases like fasteners and missing data — all automatically.</p>
+
+      <div class="project__diagram-label" data-i18n="p1.diagram">System Architecture</div>
+      <div class="project__diagram">
+        <div class="arch-flow">
+          <div class="arch-block" style="border-left:3px solid #01579b;">
+            <div class="arch-block__title">Designer's View</div>
+            <ul class="arch-block__items">
+              <li>Open SolidWorks Assembly</li>
+              <li>Run Automation Tool</li>
+              <li>Ready-to-Simulate Model</li>
+            </ul>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-block" style="border-left:3px solid #4a148c;">
+            <div class="arch-block__title">VB.NET Logic Engine</div>
+            <ul class="arch-block__items">
+              <li>Assembly Scanner (Part Numbers)</li>
+              <li>Database Query → Material Mapping</li>
+              <li>Assign Flow Sim Properties</li>
+              <li>Handle Bolts/Nuts → Defaults</li>
+              <li>Log Warnings for Missing Data</li>
+            </ul>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-block" style="border-left:3px solid #e65100;">
+            <div class="arch-block__title">SolidWorks Flow Sim API</div>
+            <ul class="arch-block__items">
+              <li>Update Component Materials</li>
+              <li>Apply Simulation Parameters</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Project 2: BOM Pipeline ===== -->
+  <section class="project" id="bom-pipeline">
+    <div class="project__inner">
+      <div class="project__category" data-i18n="p2.cat">Cloud Architecture &amp; Data Pipelines</div>
+      <h2 data-i18n="p2.h2">BOM Pipeline &amp; Product Configuration</h2>
+      <div class="project__meta">
+        <span class="project__tag">Python</span>
+        <span class="project__tag">Azure Functions</span>
+        <span class="project__tag">XML</span>
+        <span class="project__tag">SQL</span>
+      </div>
+      <p class="project__desc" data-i18n="p2.desc">A serverless data pipeline triggered by massive XML file exports from the Bluestar product configurator. Python scripts running on Azure Functions parse the raw XML, fully reconstruct complex 150% Bills of Materials, and load the structured output into SQL databases for downstream reporting. The system includes real-time monitoring through Microsoft Teams notifications for errors, validation issues, and data integrity checks — and feeds directly into Power BI dashboards.</p>
+
+      <div class="project__diagram-label" data-i18n="p2.diagram">Pipeline Architecture</div>
+      <div class="project__diagram">
+        <div class="arch-flow">
+          <div class="arch-block" style="border-left:3px solid #455a64;">
+            <div class="arch-block__title">Source</div>
+            <ul class="arch-block__items">
+              <li>Bluestar Configurator</li>
+              <li>XML Generation</li>
+              <li>Azure File Storage</li>
+            </ul>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-block" style="border-left:3px solid #7b1fa2;">
+            <div class="arch-block__title">Azure Functions: ETL</div>
+            <ul class="arch-block__items">
+              <li>Blob Trigger → XML Parser</li>
+              <li>Transformation Engine</li>
+              <li>BOM Reconstruction</li>
+            </ul>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-block" style="border-left:3px solid #1b5e20;">
+            <div class="arch-block__title">Data &amp; Analytics</div>
+            <ul class="arch-block__items">
+              <li>SQL Database (Insert/Update)</li>
+              <li>Power BI Reports (DirectQuery)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Project 3: Medallion Pipeline ===== -->
+  <section class="project" id="data-pipeline">
+    <div class="project__inner">
+      <div class="project__category" data-i18n="p3.cat">Cloud Architecture &amp; Data Pipelines</div>
+      <h2 data-i18n="p3.h2">Scalable Medallion Data Pipeline</h2>
+      <div class="project__meta">
+        <span class="project__tag">Python Notebooks</span>
+        <span class="project__tag">Microsoft Fabric</span>
+        <span class="project__tag">Delta Parquet</span>
+        <span class="project__tag">Power BI</span>
+      </div>
+      <p class="project__desc" data-i18n="p3.desc">A strict Medallion architecture implementation where data flows sequentially through Bronze (raw JSON ingestion), Silver (cleansed and validated Delta Parquet tables), and Gold (business-level star schema aggregations) layers. The entire pipeline is orchestrated using Python Notebooks within Microsoft Fabric, with the Gold layer feeding Power BI reports via Direct Lake mode for near-instant query performance.</p>
+
+      <div class="project__diagram-label" data-i18n="p3.diagram">Medallion Architecture</div>
+      <div class="project__diagram">
+        <div class="arch-flow">
+          <div class="arch-block" style="border-left:3px solid #455a64;">
+            <div class="arch-block__title">Source</div>
+            <ul class="arch-block__items">
+              <li>Palma API</li>
+              <li>Scheduled Extraction</li>
+            </ul>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-block" style="border-left:3px solid #e65100;">
+            <div class="arch-block__title">Bronze — Raw</div>
+            <ul class="arch-block__items">
+              <li>Raw JSON Ingestion</li>
+              <li>No transformations</li>
+            </ul>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-block" style="border-left:3px solid #0277bd;">
+            <div class="arch-block__title">Silver — Validated</div>
+            <ul class="arch-block__items">
+              <li>Cleansed &amp; Filtered</li>
+              <li>Delta Parquet Format</li>
+            </ul>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-block" style="border-left:3px solid #fbc02d;">
+            <div class="arch-block__title">Gold — Analytics</div>
+            <ul class="arch-block__items">
+              <li>Star Schema Aggregations</li>
+              <li>Direct Lake → Power BI</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Project 4: API Portal ===== -->
+  <section class="project" id="api-portal">
+    <div class="project__inner">
+      <div class="project__category" data-i18n="p4.cat">System Integration &amp; Modernization</div>
+      <h2 data-i18n="p4.h2">Centralized Engineering API Portal</h2>
+      <div class="project__meta">
+        <span class="project__tag">REST API</span>
+        <span class="project__tag">Internal Tooling</span>
+        <span class="project__tag">Enterprise</span>
+      </div>
+      <p class="project__desc" data-i18n="p4.desc">An internal web application and REST API built for a global lighting manufacturer. The system serves as a centralized hub for engineering data, providing programmatic access to retrieve, convert, and manage critical technical specifications and component data. It eliminates manual lookups across disconnected spreadsheets and legacy systems, giving engineering teams a single source of truth accessible from any internal tool or script.</p>
+    </div>
+  </section>
+
+  <!-- ===== Other Projects ===== -->
+  <section class="other-projects">
+    <div style="width:var(--container-narrow);margin:0 auto;">
+      <div style="font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-xs);" data-i18n="other.label">Other Projects</div>
+      <h2 style="font-family:var(--font-heading);font-size:1.8rem;margin-bottom:var(--space-lg);" data-i18n="other.h2">Additional work</h2>
+    </div>
+    <div class="other-projects__grid">
+      <div class="other-card">
+        <h3 data-i18n="o1.h3">Carbon Footprint Calculator</h3>
+        <p data-i18n="o1.p">A full-stack Django web application with user authentication and custom forms for dynamically calculating CO2 emissions based on user-input data.</p>
+        <div class="other-card__tags">
+          <span class="other-card__tag">Python</span><span class="other-card__tag">Django</span><span class="other-card__tag">Full-Stack</span>
+        </div>
+      </div>
+      <div class="other-card">
+        <h3 data-i18n="o2.h3">Deal Aggregator Platform</h3>
+        <p data-i18n="o2.p">An automated web scraping system using FastAPI to aggregate promotions across multiple retail sites, with a WordPress frontend for consumer-facing display.</p>
+        <div class="other-card__tags">
+          <span class="other-card__tag">FastAPI</span><span class="other-card__tag">WordPress</span><span class="other-card__tag">Web Scraping</span>
+        </div>
+      </div>
+      <div class="other-card">
+        <h3 data-i18n="o3.h3">Curated Travel Application</h3>
+        <p data-i18n="o3.p">A mobile application delivering curated "Playlists of Moments" — built with a FastAPI backend serving structured travel data to a cross-platform mobile client.</p>
+        <div class="other-card__tags">
+          <span class="other-card__tag">FastAPI</span><span class="other-card__tag">Flutter</span><span class="other-card__tag">Mobile</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__copy" data-i18n="footer.copy">&copy; 2026 Drakarian Services Inc.</div>
+      <a href="./#contact" class="footer__cta" data-i18n="footer.cta">
+        Start a Project
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const T = {
+      en: {
+        "back": "Back to Home",
+        "page.h1": "Projects & Case Studies",
+        "page.p": "A selection of engineering automation and data pipeline projects delivered for manufacturing, R&D, and operations\u00a0teams.",
+        "p1.cat": "Engineering & CAD Automation", "p1.h2": "Automated CAD Flow Simulation Tool",
+        "p1.desc": "This standalone executable interfaces directly with the SolidWorks API to programmatically automate thermal flow simulation setup. Design engineers who previously spent hours manually configuring simulation parameters can now trigger the entire process with a single click. The tool scans assemblies, queries a material database, applies flow simulation properties, and handles edge cases like fasteners and missing data \u2014 all automatically.",
+        "p1.diagram": "System Architecture",
+        "p2.cat": "Cloud Architecture & Data Pipelines", "p2.h2": "BOM Pipeline & Product Configuration",
+        "p2.desc": "A serverless data pipeline triggered by massive XML file exports from the Bluestar product configurator. Python scripts on Azure Functions parse raw XML, reconstruct complex 150% Bills of Materials, and load structured output into SQL databases. Includes real-time Teams notifications for errors and validation, feeding directly into Power BI dashboards.",
+        "p2.diagram": "Pipeline Architecture",
+        "p3.cat": "Cloud Architecture & Data Pipelines", "p3.h2": "Scalable Medallion Data Pipeline",
+        "p3.desc": "A strict Medallion architecture: data flows through Bronze (raw JSON), Silver (cleansed Delta Parquet), and Gold (star schema) layers. Orchestrated with Python Notebooks in Microsoft Fabric, with Gold feeding Power BI via Direct Lake mode for near-instant query performance.",
+        "p3.diagram": "Medallion Architecture",
+        "p4.cat": "System Integration & Modernization", "p4.h2": "Centralized Engineering API Portal",
+        "p4.desc": "An internal REST API and web application built for a global lighting manufacturer. Centralizes engineering data access \u2014 eliminating manual lookups across disconnected spreadsheets and legacy systems, providing a single source of truth for technical specifications.",
+        "other.label": "Other Projects", "other.h2": "Additional work",
+        "o1.h3": "Carbon Footprint Calculator", "o1.p": "A full-stack Django web application with user authentication and custom forms for dynamically calculating CO2 emissions.",
+        "o2.h3": "Deal Aggregator Platform", "o2.p": "Automated web scraping with FastAPI to aggregate retail promotions, served through a WordPress frontend.",
+        "o3.h3": "Curated Travel Application", "o3.p": "A mobile app delivering curated \u201cPlaylists of Moments\u201d with a FastAPI backend and cross-platform mobile client.",
+        "footer.copy": "\u00a9 2026 Drakarian Services Inc.", "footer.cta": "Start a Project"
+      },
+      fr: {
+        "back": "Retour \u00e0 l\u2019accueil",
+        "page.h1": "Projets et \u00e9tudes de cas",
+        "page.p": "Une s\u00e9lection de projets d\u2019automatisation et de pipelines de donn\u00e9es livr\u00e9s pour des \u00e9quipes de fabrication, R&D et\u00a0op\u00e9rations.",
+        "p1.cat": "Automatisation ing\u00e9nierie et CAO", "p1.h2": "Outil d\u2019automatisation de simulation thermique CAO",
+        "p1.desc": "Cet ex\u00e9cutable autonome interagit directement avec l\u2019API SolidWorks pour automatiser la configuration de simulations thermiques. Les ing\u00e9nieurs qui passaient des heures \u00e0 configurer manuellement les param\u00e8tres peuvent d\u00e9sormais lancer le processus en un seul clic. L\u2019outil scanne les assemblages, interroge une base de mat\u00e9riaux, applique les propri\u00e9t\u00e9s de simulation et g\u00e8re les cas particuliers \u2014 automatiquement.",
+        "p1.diagram": "Architecture du syst\u00e8me",
+        "p2.cat": "Architecture cloud et pipelines", "p2.h2": "Pipeline BOM et configuration produit",
+        "p2.desc": "Un pipeline serverless d\u00e9clench\u00e9 par d\u2019\u00e9normes exports XML du configurateur Bluestar. Des scripts Python sur Azure Functions analysent le XML brut, reconstruisent des nomenclatures 150\u00a0% complexes et chargent les donn\u00e9es structur\u00e9es en bases SQL. Inclut des notifications Teams en temps r\u00e9el et alimente des tableaux de bord Power BI.",
+        "p2.diagram": "Architecture du pipeline",
+        "p3.cat": "Architecture cloud et pipelines", "p3.h2": "Pipeline de donn\u00e9es Medallion \u00e9volutif",
+        "p3.desc": "Une architecture Medallion stricte\u00a0: les donn\u00e9es transitent par les couches Bronze (JSON brut), Silver (Delta Parquet valid\u00e9) et Gold (sch\u00e9ma en \u00e9toile). Orchestr\u00e9 avec des notebooks Python dans Microsoft Fabric, Gold alimentant Power BI en mode Direct Lake.",
+        "p3.diagram": "Architecture Medallion",
+        "p4.cat": "Int\u00e9gration et modernisation", "p4.h2": "Portail API d\u2019ing\u00e9nierie centralis\u00e9",
+        "p4.desc": "Une API REST interne et application web con\u00e7ue pour un fabricant mondial d\u2019\u00e9clairage. Centralise l\u2019acc\u00e8s aux donn\u00e9es d\u2019ing\u00e9nierie \u2014 \u00e9liminant les recherches manuelles dans des tableurs d\u00e9connect\u00e9s et syst\u00e8mes h\u00e9rit\u00e9s.",
+        "other.label": "Autres projets", "other.h2": "Travaux compl\u00e9mentaires",
+        "o1.h3": "Calculateur d\u2019empreinte carbone", "o1.p": "Application web Django full-stack avec authentification et formulaires personnalis\u00e9s pour calculer dynamiquement les \u00e9missions de CO2.",
+        "o2.h3": "Plateforme d\u2019agr\u00e9gation de promotions", "o2.p": "Syst\u00e8me de scraping automatis\u00e9 avec FastAPI pour agr\u00e9ger des promotions, servi via un frontend WordPress.",
+        "o3.h3": "Application voyage curated", "o3.p": "Application mobile proposant des \u00ab\u00a0Playlists de Moments\u00a0\u00bb avec un backend FastAPI et un client mobile multiplateforme.",
+        "footer.copy": "\u00a9 2026 Services Drakarian Inc.", "footer.cta": "D\u00e9marrer un projet"
+      }
+    };
+    let currentLang = localStorage.getItem('drak-lang') || 'en';
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('drak-lang', lang);
+      document.documentElement.lang = lang === 'fr' ? 'fr-CA' : 'en-CA';
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const val = T[lang][el.getAttribute('data-i18n')];
+        if (!val) return;
+        const svg = el.querySelector('svg');
+        if (el.tagName === 'OPTION') { el.textContent = val; } else { el.innerHTML = val; if (svg) el.appendChild(svg); }
+      });
+      document.querySelectorAll('.lang-toggle').forEach(b => b.textContent = lang === 'en' ? 'FR' : 'EN');
+    }
+    function setTheme(theme) { document.documentElement.setAttribute('data-theme', theme); localStorage.setItem('drak-theme', theme); }
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguage(currentLang);
+      document.querySelectorAll('.theme-toggle').forEach(btn => btn.addEventListener('click', () => setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')));
+      document.querySelectorAll('.lang-toggle').forEach(btn => btn.addEventListener('click', () => setLanguage(currentLang === 'en' ? 'fr' : 'en')));
+    });
+  </script>
+</body>
+</html>
