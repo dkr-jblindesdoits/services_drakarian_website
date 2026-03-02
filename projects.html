@@ -47,25 +47,38 @@
     h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; }
     p { color: var(--color-text-secondary); transition: color 0.4s ease; }
 
-    /* Nav (simplified for subpage) */
-    .nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:1rem 0; transition:all var(--transition); background: var(--color-nav-scrolled); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--color-border-light); }
+    /* Nav - same as index */
+    .nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:1rem 0; transition:all var(--transition); background:transparent; }
+    .nav.scrolled { background: var(--color-nav-scrolled); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--color-border-light); padding:0.7rem 0; }
     .nav__inner { width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
     .nav__logo { font-family:var(--font-body); font-size:1.05rem; font-weight:600; letter-spacing:-0.02em; color:var(--color-text); }
     .nav__logo span { color:var(--color-accent); }
-    .nav__back { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.88rem; font-weight:500; color:var(--color-text-secondary); transition:color var(--transition); }
-    .nav__back:hover { color:var(--color-accent); }
-    .nav__back svg { width:16px; height:16px; }
-    .nav__toggles { display:flex; align-items:center; gap:0.6rem; }
-    .theme-toggle { background:none; border:1.5px solid var(--color-border); border-radius:50px; cursor:pointer; width:42px; height:24px; position:relative; transition:all var(--transition); padding:0; flex-shrink:0; }
-    .theme-toggle:hover { border-color:var(--color-accent); }
-    .theme-toggle__thumb { width:16px; height:16px; border-radius:50%; background:var(--color-text); position:absolute; top:2.5px; left:3px; transition:all 0.4s cubic-bezier(0.68,-0.55,0.27,1.55); }
-    [data-theme="dark"] .theme-toggle__thumb { left:21px; background:var(--color-accent); }
-    .theme-toggle__icons { position:absolute; inset:0; display:flex; align-items:center; justify-content:space-between; padding:0 5px; pointer-events:none; }
-    .theme-toggle__icons svg { width:11px; height:11px; opacity:0.5; }
-    .theme-toggle__icons .icon-sun { stroke:#F59E0B; fill:none; }
-    .theme-toggle__icons .icon-moon { stroke:#8B949E; fill:none; }
-    .lang-toggle { background:none; border:1.5px solid var(--color-border); border-radius:var(--radius); cursor:pointer; padding:0.2rem 0.55rem; font-family:var(--font-body); font-size:0.72rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--color-text-secondary); transition:all var(--transition); line-height:1.5; flex-shrink:0; }
-    .lang-toggle:hover { border-color:var(--color-accent); color:var(--color-accent); }
+    .nav__links { display:flex; align-items:center; gap:2rem; list-style:none; }
+    .nav__links a:not(.btn) { font-size:0.88rem; font-weight:500; color:var(--color-text-secondary); transition:color var(--transition); }
+    .nav__links a:not(.btn):hover { color:var(--color-text); }
+    .btn { display:inline-flex; align-items:center; gap:0.5rem; padding:0.85rem 1.8rem; border-radius:var(--radius); font-family:var(--font-body); font-size:0.9rem; font-weight:500; letter-spacing:0.02em; cursor:pointer; border:none; transition:all var(--transition); white-space:nowrap; }
+    .btn--primary { background:var(--color-accent); color:#fff; }
+    .btn--primary:hover { background:var(--color-accent-hover); transform:translateY(-1px); box-shadow:0 4px 20px rgba(0,82,204,0.3); }
+    [data-theme="dark"] .btn--primary:hover { box-shadow:0 4px 20px rgba(68,147,248,0.25); }
+    .btn svg { width:16px; height:16px; }
+    .nav__right-group { display:flex; align-items:center; gap:0.6rem; }
+    .nav__burger { display:none; background:none; border:none; cursor:pointer; padding:0.5rem; z-index:1001; }
+    .nav__burger span { display:block; width:22px; height:1.5px; background:var(--color-text); margin:5px 0; transition:all var(--transition); }
+    .nav__burger.active span:nth-child(1) { transform:rotate(45deg) translate(4px,4px); }
+    .nav__burger.active span:nth-child(2) { opacity:0; }
+    .nav__burger.active span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+    .nav__mobile { display:none; position:fixed; inset:0; background:var(--color-bg); z-index:999; flex-direction:column; align-items:center; justify-content:center; gap:2rem; transition:background 0.4s ease; }
+    .nav__mobile.active { display:flex; }
+    .nav__mobile a { font-family:var(--font-heading); font-size:2rem; color:var(--color-text); }
+    @media (max-width: 768px) { .nav__links { display:none; } .nav__burger { display:block; } }
+    @media (min-width: 769px) { .nav__toggles--mobile { display:none !important; } }
+
+    /* Breadcrumb */
+    .breadcrumb { padding-top:calc(70px + 1.5rem); padding-bottom:0; width:var(--container); margin:0 auto; }
+    .breadcrumb a { display:inline-flex; align-items:center; gap:0.35rem; font-size:0.82rem; font-weight:500; color:var(--color-text-secondary); transition:color var(--transition); }
+    .breadcrumb a:hover { color:var(--color-accent); }
+    .breadcrumb svg { width:14px; height:14px; }
+    .breadcrumb span { font-size:0.82rem; color:var(--color-text-secondary); }
 
     /* Page header */
     .page-header { padding:calc(var(--space-2xl) + 2rem) 0 var(--space-xl); text-align:center; }
@@ -119,15 +132,32 @@
 </head>
 <body>
 
-  <!-- Nav -->
-  <nav class="nav">
+  <!-- ===== Navigation (same as index) ===== -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
     <div class="nav__inner">
       <a href="./" class="nav__logo">Services <span>Drakarian</span> Inc.</a>
-      <div style="display:flex;align-items:center;gap:1.5rem;">
-        <a href="./" class="nav__back" data-i18n="back">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
-          Back to Home
-        </a>
+
+      <ul class="nav__links">
+        <li><a href="./#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="./#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="./#process" data-i18n="nav.process">Process</a></li>
+        <li><a href="./#contact" data-i18n="nav.contact">Contact</a></li>
+        <li>
+          <div class="nav__toggles">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+              <div class="theme-toggle__icons">
+                <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              </div>
+              <div class="theme-toggle__thumb"></div>
+            </button>
+            <button class="lang-toggle">FR</button>
+          </div>
+        </li>
+        <li><a href="./#contact" class="btn btn--primary" data-i18n="nav.cta">Book a Call</a></li>
+      </ul>
+
+      <div class="nav__right-group nav__toggles--mobile">
         <div class="nav__toggles">
           <button class="theme-toggle" aria-label="Toggle dark mode">
             <div class="theme-toggle__icons">
@@ -138,9 +168,30 @@
           </button>
           <button class="lang-toggle">FR</button>
         </div>
+        <button class="nav__burger" id="burger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <div class="nav__mobile" id="mobile-menu">
+    <a href="./#services" class="mobile-link" data-i18n="nav.services">Services</a>
+    <a href="./#projects" class="mobile-link" data-i18n="nav.projects">Projects</a>
+    <a href="./#process" class="mobile-link" data-i18n="nav.process">Process</a>
+    <a href="./#contact" class="mobile-link" data-i18n="nav.contact">Contact</a>
+    <a href="./#contact" class="btn btn--primary mobile-link" data-i18n="nav.cta">Book a Call</a>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="./" data-i18n="breadcrumb.home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Home
+    </a>
+    <span>&nbsp;/&nbsp;</span>
+    <span data-i18n="breadcrumb.projects">Projects</span>
+  </div>
 
   <!-- Header -->
   <header class="page-header">
@@ -365,6 +416,8 @@
         "o2.h3": "Deal Aggregator Platform", "o2.p": "Automated web scraping with FastAPI to aggregate retail promotions, served through a WordPress frontend.",
         "o3.h3": "Curated Travel Application", "o3.p": "A mobile app delivering curated \u201cPlaylists of Moments\u201d with a FastAPI backend and cross-platform mobile client.",
         "footer.copy": "\u00a9 2026 Drakarian Services Inc.", "footer.cta": "Start a Project",
+        "nav.services": "Services", "nav.projects": "Projects", "nav.process": "Process", "nav.contact": "Contact", "nav.cta": "Book a Call",
+        "breadcrumb.home": "Home", "breadcrumb.projects": "Projects",
         "d1.b1.t": "Designer's View", "d1.b1.1": "Open SolidWorks Assembly", "d1.b1.2": "Run Automation Tool", "d1.b1.3": "Ready-to-Simulate Model",
         "d1.b2.t": "VB.NET Logic Engine", "d1.b2.1": "Assembly Scanner (Part Numbers)", "d1.b2.2": "Database Query \u2192 Material Mapping", "d1.b2.3": "Assign Flow Sim Properties", "d1.b2.4": "Handle Bolts/Nuts \u2192 Defaults", "d1.b2.5": "Log Warnings for Missing Data",
         "d1.b3.t": "SolidWorks Flow Sim API", "d1.b3.1": "Update Component Materials", "d1.b3.2": "Apply Simulation Parameters",
@@ -396,6 +449,8 @@
         "o2.h3": "Plateforme d\u2019agr\u00e9gation de promotions", "o2.p": "Syst\u00e8me de scraping automatis\u00e9 avec FastAPI pour agr\u00e9ger des promotions, servi via un frontend WordPress.",
         "o3.h3": "Application voyage curated", "o3.p": "Application mobile proposant des \u00ab\u00a0Playlists de Moments\u00a0\u00bb avec un backend FastAPI et un client mobile multiplateforme.",
         "footer.copy": "\u00a9 2026 Services Drakarian Inc.", "footer.cta": "D\u00e9marrer un projet",
+        "nav.services": "Services", "nav.projects": "Projets", "nav.process": "Processus", "nav.contact": "Contact", "nav.cta": "R\u00e9server un appel",
+        "breadcrumb.home": "Accueil", "breadcrumb.projects": "Projets",
         "d1.b1.t": "Vue du concepteur", "d1.b1.1": "Ouvrir l\u2019assemblage SolidWorks", "d1.b1.2": "Lancer l\u2019outil d\u2019automatisation", "d1.b1.3": "Mod\u00e8le pr\u00eat \u00e0 simuler",
         "d1.b2.t": "Moteur logique VB.NET", "d1.b2.1": "Scan d\u2019assemblage (r\u00e9f\u00e9rences pi\u00e8ces)", "d1.b2.2": "Requ\u00eate base de donn\u00e9es \u2192 Mapping mat\u00e9riaux", "d1.b2.3": "Assignation propri\u00e9t\u00e9s Flow Sim", "d1.b2.4": "Boulons/\u00e9crous \u2192 Valeurs par d\u00e9faut", "d1.b2.5": "Journalisation des donn\u00e9es manquantes",
         "d1.b3.t": "API SolidWorks Flow Sim", "d1.b3.1": "Mise \u00e0 jour des mat\u00e9riaux", "d1.b3.2": "Application des param\u00e8tres de simulation",
@@ -426,6 +481,28 @@
       setLanguage(currentLang);
       document.querySelectorAll('.theme-toggle').forEach(btn => btn.addEventListener('click', () => setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')));
       document.querySelectorAll('.lang-toggle').forEach(btn => btn.addEventListener('click', () => setLanguage(currentLang === 'en' ? 'fr' : 'en')));
+
+      // Sticky nav
+      const nav = document.getElementById('nav');
+      if (nav) window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+
+      // Mobile burger
+      const burger = document.getElementById('burger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (burger && mobileMenu) {
+        burger.addEventListener('click', () => {
+          burger.classList.toggle('active');
+          mobileMenu.classList.toggle('active');
+          document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+          link.addEventListener('click', () => {
+            burger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+          });
+        });
+      }
     });
   </script>
 </body>

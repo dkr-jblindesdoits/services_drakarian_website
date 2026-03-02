@@ -26,30 +26,123 @@
   <meta name="twitter:description" content="Custom software, API integrations, and cloud architectures that eliminate repetitive engineering workflows.">
   <!-- <meta name="twitter:image" content="https://drakarian.tech/og-image.png"> -->
 
-  <!-- Structured Data: LocalBusiness -->
+  <!-- Structured Data: Organization + Person + Services + FAQ + Speakable -->
   <script type="application/ld+json">
-  {
+  [{
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Drakarian Services Inc.",
-    "description": "Engineering automation consultancy specializing in custom software, API integrations, CAD automation, and cloud architectures for manufacturing, R&D, and operations teams.",
+    "description": "Montréal-based engineering automation consultancy that builds custom software, API integrations, CAD automation tools, and cloud data pipelines for manufacturing, R&D, and operations teams.",
     "url": "https://drakarian.tech",
-    "areaServed": ["CA", "US"],
+    "logo": "https://drakarian.tech/favicon-96x96.png",
+    "image": "https://drakarian.tech/og-image.png",
+    "areaServed": [{"@type": "Country", "name": "Canada"}, {"@type": "Country", "name": "United States"}],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Montréal",
       "addressRegion": "QC",
       "addressCountry": "CA"
     },
-    "serviceType": [
-      "Engineering Automation",
-      "CAD Automation",
-      "System Integration",
-      "Cloud Architecture",
-      "Data Pipeline Development"
-    ],
-    "knowsLanguage": ["en", "fr"]
-  }
+    "founder": {
+      "@type": "Person",
+      "name": "Jean Blin-Desdoits",
+      "jobTitle": "Founder & Lead Engineer",
+      "description": "Software engineer with a Master's degree and five years of experience in backend architecture and engineering automation.",
+      "image": "https://drakarian.tech/jean-portrait.jpg",
+      "worksFor": {"@type": "Organization", "name": "Drakarian Services Inc."},
+      "knowsAbout": ["Engineering Automation", "CAD Automation", "Data Pipelines", "Cloud Architecture", "Python", "VB.NET", "Azure", "Microsoft Fabric"]
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Engineering Automation Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Engineering & CAD Automation",
+            "description": "Custom software tools that interact directly with CAD and engineering APIs to automate repetitive design processes and reduce setup times from hours to minutes."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "System Integration & Modernization",
+            "description": "Robust data bridges that securely connect mission-critical legacy infrastructure to modern web tools and cloud environments."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cloud Architecture & Data Pipelines",
+            "description": "Serverless cloud architectures and automated data pipelines that centralize operations, eliminate human error, and provide real-time visibility."
+          }
+        }
+      ]
+    },
+    "knowsLanguage": ["en", "fr"],
+    "priceRange": "$$",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".hero__content", ".section-header", ".founder__bio"]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is engineering automation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Engineering automation is the use of custom software to eliminate repetitive, manual tasks in engineering workflows. This includes automating CAD processes, building data pipelines that connect disconnected systems, and creating cloud architectures that centralize operations — allowing engineering teams to focus on high-value design work instead of manual data entry and configuration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is CAD automation and how does it work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CAD automation uses custom software that interfaces directly with CAD application APIs (such as SolidWorks, CATIA, or AutoCAD) to programmatically perform tasks that engineers typically do manually. This can include automated simulation setup, batch processing of assemblies, material assignment, and drawing generation — reducing tasks that take hours to just minutes or seconds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What industries benefit from workflow automation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Manufacturing, aerospace, automotive, energy, construction, and any industry with engineering teams that rely on CAD software, Bills of Materials, or complex data workflows. Companies with legacy systems that don't communicate with modern tools see the highest ROI from automation — often recovering their investment within the first few months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does engineering automation cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Drakarian Services offers flat-rate, tiered pricing based on project scope — not hourly billing. Every engagement begins with a free 30-minute discovery call to identify the specific bottleneck and estimate ROI before any commitment. This transparent approach ensures you know exactly what you're paying for upfront."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a Medallion data architecture?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Medallion architecture is a multi-layered data pipeline pattern where data flows through Bronze (raw ingestion), Silver (cleansed and validated), and Gold (business-level aggregations) layers. This approach ensures data quality, traceability, and enables real-time analytics. Drakarian Services implements Medallion architectures using tools like Microsoft Fabric, Python, and Delta Parquet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Drakarian Services located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Drakarian Services Inc. is based in Montréal, Quebec, Canada. We serve clients across North America, working remotely with teams in both English and French."
+        }
+      }
+    ]
+  }]
   </script>
 
   <!-- Fonts -->
@@ -424,6 +517,18 @@
     .project-card__link svg { width:14px; height:14px; }
     .projects-teaser__cta { text-align:center; margin-top:var(--space-lg); }
     @media (max-width: 900px) { .projects-teaser__grid { grid-template-columns:1fr; max-width:500px; margin:0 auto; } }
+
+    /* ===== FAQ ===== */
+    .faq { padding:var(--space-2xl) 0; background:var(--color-bg-alt); position:relative; transition:background 0.4s ease; }
+    .faq::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--color-border),transparent); }
+    .faq__list { width:var(--container-narrow); margin:0 auto; }
+    .faq__item { border-bottom:1px solid var(--color-border-light); }
+    .faq__question { width:100%; background:none; border:none; padding:1.5rem 0; display:flex; align-items:center; justify-content:space-between; cursor:pointer; font-family:var(--font-body); font-size:1.05rem; font-weight:500; color:var(--color-text); text-align:left; gap:1rem; transition:color var(--transition); }
+    .faq__question:hover { color:var(--color-accent); }
+    .faq__question svg { width:20px; height:20px; flex-shrink:0; stroke:var(--color-text-secondary); transition:transform 0.3s ease; }
+    .faq__question[aria-expanded="true"] svg { transform:rotate(45deg); }
+    .faq__answer { max-height:0; overflow:hidden; transition:max-height 0.4s cubic-bezier(0.16,1,0.3,1); }
+    .faq__answer p { padding-bottom:1.5rem; font-size:0.95rem; line-height:1.85; max-width:700px; }
   </style>
 </head>
 <body>
@@ -484,7 +589,7 @@
     <div class="hero__content">
       <div class="hero__tag" data-i18n="hero.tag">Engineering Automation Consultancy</div>
       <h1 data-i18n="hero.h1">Stop bleeding time on <em>manual</em> engineering&nbsp;tasks.</h1>
-      <p data-i18n="hero.p">We build custom software, API integrations, and cloud architectures that eliminate repetitive workflows — so your engineering and operations teams can focus on high-value&nbsp;work.</p>
+      <p data-i18n="hero.p">Drakarian Services Inc. builds custom software, API integrations, and cloud architectures that eliminate repetitive workflows — so your engineering and operations teams can focus on high-value&nbsp;work.</p>
       <div class="hero__actions">
         <a href="#contact" class="btn btn--primary" data-i18n="hero.cta">
           Book a Free Discovery Call
@@ -630,6 +735,64 @@
     </div>
   </section>
 
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq">
+    <div class="section-header animate">
+      <div class="section-header__label" data-i18n="faq.label">Frequently Asked Questions</div>
+      <h2 data-i18n="faq.h2">Common questions about engineering&nbsp;automation</h2>
+    </div>
+    <div class="faq__list">
+      <div class="faq__item animate">
+        <button class="faq__question" aria-expanded="false" data-i18n="faq.q1">What is engineering automation?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </button>
+        <div class="faq__answer">
+          <p data-i18n="faq.a1">Engineering automation is the use of custom software to eliminate repetitive, manual tasks in engineering workflows. This includes automating CAD processes, building data pipelines that connect disconnected systems, and creating cloud architectures that centralize operations — allowing engineering teams to focus on high-value design work instead of manual data entry and&nbsp;configuration.</p>
+        </div>
+      </div>
+      <div class="faq__item animate">
+        <button class="faq__question" aria-expanded="false" data-i18n="faq.q2">What is CAD automation and how does it work?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </button>
+        <div class="faq__answer">
+          <p data-i18n="faq.a2">CAD automation uses custom software that interfaces directly with CAD application APIs (such as SolidWorks, CATIA, or AutoCAD) to programmatically perform tasks that engineers typically do manually. This can include automated simulation setup, batch processing of assemblies, material assignment, and drawing generation — reducing tasks that take hours to just minutes or&nbsp;seconds.</p>
+        </div>
+      </div>
+      <div class="faq__item animate">
+        <button class="faq__question" aria-expanded="false" data-i18n="faq.q3">What industries benefit from workflow automation?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </button>
+        <div class="faq__answer">
+          <p data-i18n="faq.a3">Manufacturing, aerospace, automotive, energy, construction, and any industry with engineering teams that rely on CAD software, Bills of Materials, or complex data workflows. Companies with legacy systems that don't communicate with modern tools see the highest ROI from automation — often recovering their investment within the first few&nbsp;months.</p>
+        </div>
+      </div>
+      <div class="faq__item animate">
+        <button class="faq__question" aria-expanded="false" data-i18n="faq.q4">How much does engineering automation cost?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </button>
+        <div class="faq__answer">
+          <p data-i18n="faq.a4">Drakarian Services offers flat-rate, tiered pricing based on project scope — not hourly billing. Every engagement begins with a free 30-minute discovery call to identify the specific bottleneck and estimate ROI before any commitment. This transparent approach ensures you know exactly what you're paying for&nbsp;upfront.</p>
+        </div>
+      </div>
+      <div class="faq__item animate">
+        <button class="faq__question" aria-expanded="false" data-i18n="faq.q5">What is a Medallion data architecture?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </button>
+        <div class="faq__answer">
+          <p data-i18n="faq.a5">A Medallion architecture is a multi-layered data pipeline pattern where data flows through Bronze (raw ingestion), Silver (cleansed and validated), and Gold (business-level aggregations) layers. This approach ensures data quality, traceability, and enables real-time analytics. Drakarian Services implements Medallion architectures using tools like Microsoft Fabric, Python, and Delta&nbsp;Parquet.</p>
+        </div>
+      </div>
+      <div class="faq__item animate">
+        <button class="faq__question" aria-expanded="false" data-i18n="faq.q6">Where is Drakarian Services located?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </button>
+        <div class="faq__answer">
+          <p data-i18n="faq.a6">Drakarian Services Inc. is based in Montréal, Quebec, Canada. We serve clients across North America, working remotely with teams in both English and&nbsp;French.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== Footer CTA / Contact ===== -->
   <footer class="footer-cta" id="contact">
     <div class="footer-cta__header animate">
@@ -708,7 +871,7 @@
         "nav.cta": "Book a Call",
         "hero.tag": "Engineering Automation Consultancy",
         "hero.h1": "Stop bleeding time on <em>manual</em> engineering\u00a0tasks.",
-        "hero.p": "We build custom software, API integrations, and cloud architectures that eliminate repetitive workflows \u2014 so your engineering and operations teams can focus on high-value\u00a0work.",
+        "hero.p": "Drakarian Services Inc. builds custom software, API integrations, and cloud architectures that eliminate repetitive workflows \u2014 so your engineering and operations teams can focus on high-value\u00a0work.",
         "hero.cta": "Book a Free Discovery Call",
         "hero.cta2": "Explore Services",
         "problem.label": "The Problem",
@@ -767,7 +930,21 @@
         "proj.viewmore": "View details",
         "founder.label": "Meet the Founder",
         "founder.role": "Founder & Lead Engineer \u2014 Drakarian Services Inc.",
-        "founder.bio": "I\u2019m a Montr\u00e9al-based software engineer with a Master\u2019s degree and five years of experience in backend architecture and engineering automation. I founded Drakarian Services to help businesses transform their most labor-intensive technical processes into streamlined, high-performance workflows \u2014 from serverless data pipelines to custom CAD automation\u00a0tools."
+        "founder.bio": "I\u2019m a Montr\u00e9al-based software engineer with a Master\u2019s degree and five years of experience in backend architecture and engineering automation. I founded Drakarian Services to help businesses transform their most labor-intensive technical processes into streamlined, high-performance workflows \u2014 from serverless data pipelines to custom CAD automation\u00a0tools.",
+        "faq.label": "Frequently Asked Questions",
+        "faq.h2": "Common questions about engineering\u00a0automation",
+        "faq.q1": "What is engineering automation?",
+        "faq.a1": "Engineering automation is the use of custom software to eliminate repetitive, manual tasks in engineering workflows. This includes automating CAD processes, building data pipelines that connect disconnected systems, and creating cloud architectures that centralize operations \u2014 allowing engineering teams to focus on high-value design work instead of manual data entry and\u00a0configuration.",
+        "faq.q2": "What is CAD automation and how does it work?",
+        "faq.a2": "CAD automation uses custom software that interfaces directly with CAD application APIs (such as SolidWorks, CATIA, or AutoCAD) to programmatically perform tasks that engineers typically do manually. This can include automated simulation setup, batch processing of assemblies, material assignment, and drawing generation \u2014 reducing tasks that take hours to just minutes or\u00a0seconds.",
+        "faq.q3": "What industries benefit from workflow automation?",
+        "faq.a3": "Manufacturing, aerospace, automotive, energy, construction, and any industry with engineering teams that rely on CAD software, Bills of Materials, or complex data workflows. Companies with legacy systems that don\u2019t communicate with modern tools see the highest ROI from automation \u2014 often recovering their investment within the first few\u00a0months.",
+        "faq.q4": "How much does engineering automation cost?",
+        "faq.a4": "Drakarian Services offers flat-rate, tiered pricing based on project scope \u2014 not hourly billing. Every engagement begins with a free 30-minute discovery call to identify the specific bottleneck and estimate ROI before any commitment. This transparent approach ensures you know exactly what you\u2019re paying for\u00a0upfront.",
+        "faq.q5": "What is a Medallion data architecture?",
+        "faq.a5": "A Medallion architecture is a multi-layered data pipeline pattern where data flows through Bronze (raw ingestion), Silver (cleansed and validated), and Gold (business-level aggregations) layers. This approach ensures data quality, traceability, and enables real-time analytics. Drakarian Services implements Medallion architectures using tools like Microsoft Fabric, Python, and Delta\u00a0Parquet.",
+        "faq.q6": "Where is Drakarian Services located?",
+        "faq.a6": "Drakarian Services Inc. is based in Montr\u00e9al, Quebec, Canada. We serve clients across North America, working remotely with teams in both English and\u00a0French."
       },
       fr: {
         "nav.services": "Services",
@@ -835,7 +1012,21 @@
         "proj.viewmore": "Voir les d\u00e9tails",
         "founder.label": "Le fondateur",
         "founder.role": "Fondateur et ing\u00e9nieur principal \u2014 Services Drakarian Inc.",
-        "founder.bio": "Je suis un ing\u00e9nieur logiciel bas\u00e9 \u00e0 Montr\u00e9al, titulaire d\u2019une ma\u00eetrise et fort de cinq ans d\u2019exp\u00e9rience en architecture backend et automatisation d\u2019ing\u00e9nierie. J\u2019ai fond\u00e9 Services Drakarian pour aider les entreprises \u00e0 transformer leurs processus techniques les plus laborieux en flux de travail performants \u2014 des pipelines de donn\u00e9es serverless aux outils d\u2019automatisation\u00a0CAO."
+        "founder.bio": "Je suis un ing\u00e9nieur logiciel bas\u00e9 \u00e0 Montr\u00e9al, titulaire d\u2019une ma\u00eetrise et fort de cinq ans d\u2019exp\u00e9rience en architecture backend et automatisation d\u2019ing\u00e9nierie. J\u2019ai fond\u00e9 Services Drakarian pour aider les entreprises \u00e0 transformer leurs processus techniques les plus laborieux en flux de travail performants \u2014 des pipelines de donn\u00e9es serverless aux outils d\u2019automatisation\u00a0CAO.",
+        "faq.label": "Questions fr\u00e9quentes",
+        "faq.h2": "Questions courantes sur l\u2019automatisation en\u00a0ing\u00e9nierie",
+        "faq.q1": "Qu\u2019est-ce que l\u2019automatisation en ing\u00e9nierie\u00a0?",
+        "faq.a1": "L\u2019automatisation en ing\u00e9nierie consiste \u00e0 utiliser des logiciels sur mesure pour \u00e9liminer les t\u00e2ches r\u00e9p\u00e9titives et manuelles des flux de travail d\u2019ing\u00e9nierie. Cela inclut l\u2019automatisation des processus CAO, la cr\u00e9ation de pipelines de donn\u00e9es connectant des syst\u00e8mes d\u00e9connect\u00e9s, et la mise en place d\u2019architectures cloud centralisant les op\u00e9rations \u2014 permettant aux \u00e9quipes de se concentrer sur la conception \u00e0 haute\u00a0valeur.",
+        "faq.q2": "Qu\u2019est-ce que l\u2019automatisation CAO et comment \u00e7a fonctionne\u00a0?",
+        "faq.a2": "L\u2019automatisation CAO utilise des logiciels interagissant directement avec les API d\u2019applications CAO (comme SolidWorks, CATIA ou AutoCAD) pour ex\u00e9cuter programmatiquement des t\u00e2ches habituellement manuelles. Cela inclut la configuration automatique de simulations, le traitement par lots d\u2019assemblages, l\u2019attribution de mat\u00e9riaux et la g\u00e9n\u00e9ration de dessins \u2014 r\u00e9duisant des heures de travail \u00e0 quelques minutes ou\u00a0secondes.",
+        "faq.q3": "Quelles industries b\u00e9n\u00e9ficient de l\u2019automatisation des flux de travail\u00a0?",
+        "faq.a3": "La fabrication, l\u2019a\u00e9rospatiale, l\u2019automobile, l\u2019\u00e9nergie, la construction et toute industrie disposant d\u2019\u00e9quipes d\u2019ing\u00e9nierie utilisant des logiciels CAO, des nomenclatures ou des flux de donn\u00e9es complexes. Les entreprises avec des syst\u00e8mes h\u00e9rit\u00e9s non connect\u00e9s aux outils modernes voient le meilleur retour sur investissement \u2014 souvent r\u00e9cup\u00e9r\u00e9 d\u00e8s les premiers\u00a0mois.",
+        "faq.q4": "Combien co\u00fbte l\u2019automatisation en ing\u00e9nierie\u00a0?",
+        "faq.a4": "Services Drakarian propose une tarification forfaitaire par paliers bas\u00e9e sur la port\u00e9e du projet \u2014 pas de facturation horaire. Chaque engagement commence par un appel d\u00e9couverte gratuit de 30 minutes pour identifier le goulot d\u2019\u00e9tranglement et estimer le retour sur investissement avant tout\u00a0engagement.",
+        "faq.q5": "Qu\u2019est-ce qu\u2019une architecture de donn\u00e9es Medallion\u00a0?",
+        "faq.a5": "Une architecture Medallion est un mod\u00e8le de pipeline de donn\u00e9es multi-niveaux o\u00f9 les donn\u00e9es transitent par les couches Bronze (ingestion brute), Silver (nettoy\u00e9es et valid\u00e9es) et Gold (agr\u00e9gations m\u00e9tier). Cette approche garantit la qualit\u00e9, la tra\u00e7abilit\u00e9 et permet l\u2019analytique en temps r\u00e9el. Services Drakarian impl\u00e9mente ces architectures avec Microsoft Fabric, Python et Delta\u00a0Parquet.",
+        "faq.q6": "O\u00f9 se trouve Services Drakarian\u00a0?",
+        "faq.a6": "Services Drakarian Inc. est bas\u00e9 \u00e0 Montr\u00e9al, Qu\u00e9bec, Canada. Nous servons des clients partout en Am\u00e9rique du Nord, travaillant \u00e0 distance en anglais et en\u00a0fran\u00e7ais."
       }
     };
 
@@ -912,6 +1103,23 @@
         entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
       }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
       document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+      // FAQ accordion
+      document.querySelectorAll('.faq__question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          // Close all
+          document.querySelectorAll('.faq__question').forEach(b => {
+            b.setAttribute('aria-expanded', 'false');
+            b.nextElementSibling.style.maxHeight = null;
+          });
+          // Open clicked (if was closed)
+          if (!expanded) {
+            btn.setAttribute('aria-expanded', 'true');
+            btn.nextElementSibling.style.maxHeight = btn.nextElementSibling.scrollHeight + 'px';
+          }
+        });
+      });
 
       // Contact form submission
       const form = document.getElementById('contact-form');

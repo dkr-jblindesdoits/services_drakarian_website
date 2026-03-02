@@ -1,0 +1,30 @@
+# Drakarian Services Inc.
+
+> Montréal-based engineering automation consultancy that builds custom software, API integrations, CAD automation tools, and cloud data pipelines for manufacturing, R&D, and operations teams. Founded by Jean Blin des Doits.
+
+Drakarian Services eliminates repetitive manual workflows for engineering teams. We specialize in three core areas: Engineering & CAD Automation (custom tools interfacing with SolidWorks, CATIA, and other CAD APIs), System Integration & Modernization (connecting legacy infrastructure to modern web tools), and Cloud Architecture & Data Pipelines (serverless architectures using Azure, Microsoft Fabric, and Python).
+
+We offer flat-rate, tiered pricing with no hourly billing. Every engagement starts with a free 30-minute discovery call. We serve clients across North America in both English and French.
+
+## Services
+
+- [Engineering & CAD Automation](https://drakarian.tech/#services): Custom software that interfaces with CAD APIs to automate simulation setup, batch processing, material assignment, and drawing generation.
+- [System Integration & Modernization](https://drakarian.tech/#services): Data bridges connecting legacy systems to modern web tools and cloud environments.
+- [Cloud Architecture & Data Pipelines](https://drakarian.tech/#services): Serverless architectures and automated pipelines using Medallion patterns (Bronze/Silver/Gold layers) for centralized reporting.
+
+## Projects
+
+- [Automated CAD Flow Simulation Tool](https://drakarian.tech/projects.html#cad-automation): VB.NET application interfacing with SolidWorks API to automate thermal flow simulation setup, reducing multi-hour manual processes to a single click.
+- [BOM Pipeline & Product Configuration](https://drakarian.tech/projects.html#bom-pipeline): Serverless Azure Functions pipeline parsing massive XML exports to reconstruct 150% Bills of Materials, loading into SQL databases with Teams monitoring.
+- [Scalable Medallion Data Pipeline](https://drakarian.tech/projects.html#data-pipeline): Multi-tiered Bronze/Silver/Gold architecture in Microsoft Fabric with Python Notebooks, feeding Power BI via Direct Lake mode.
+- [Centralized Engineering API Portal](https://drakarian.tech/projects.html#api-portal): Internal REST API for a global lighting manufacturer, centralizing engineering data access and eliminating manual lookups.
+
+## Key Facts
+
+- Location: Montréal, Quebec, Canada
+- Founder: Jean Blin des Doits (Master's degree, 5 years experience in backend architecture and engineering automation)
+- Languages: English, French
+- Pricing: Flat-rate tiers, free 30-minute discovery call
+- Technologies: Python, VB.NET, Azure Functions, Microsoft Fabric, SolidWorks API, SQL, FastAPI, Django, Delta Parquet, Power BI
+- Industries served: Manufacturing, aerospace, automotive, energy, construction, R&D, logistics
+- Website: https://drakarian.tech
