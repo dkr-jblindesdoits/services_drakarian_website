@@ -21,6 +21,10 @@
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="shortcut icon" href="./favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+
+  <!-- Cookie Consent (GDPR / Law 25) -->
+  <link rel="stylesheet" href="./cookie-consent.css">
+
   <style>
     :root {
       --color-bg: #FAFAF8; --color-bg-alt: #F0EFEB; --color-bg-dark: #0F1923; --color-bg-dark-alt: #162231;
@@ -412,6 +416,8 @@
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__copy" data-i18n="footer.copy">&copy; 2026 Drakarian Services Inc.</div>
+      <!-- Cookie consent preferences reset link -->
+      <button class="cc-prefs-link">Cookie Preferences</button>
       <a href="./#contact" class="footer__cta" data-i18n="footer.cta">
         Start a Project
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -500,6 +506,9 @@
         if (el.tagName === 'OPTION') { el.textContent = val; } else { el.innerHTML = val; if (svg) el.appendChild(svg); }
       });
       document.querySelectorAll('.lang-toggle').forEach(b => b.textContent = lang === 'en' ? 'FR' : 'EN');
+
+      // Update cookie consent link text on language switch
+      if (typeof window.cookieConsentUpdateLang === 'function') window.cookieConsentUpdateLang();
     }
     function setTheme(theme) { document.documentElement.setAttribute('data-theme', theme); localStorage.setItem('drak-theme', theme); }
     document.addEventListener('DOMContentLoaded', () => {
@@ -530,5 +539,8 @@
       }
     });
   </script>
+
+  <!-- Cookie Consent (GDPR / Law 25) -->
+  <script src="./cookie-consent.js"></script>
 </body>
 </html>
