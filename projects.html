@@ -111,8 +111,8 @@
     .page-header p { font-size:1.05rem; max-width:600px; margin:0 auto; line-height:1.8; }
 
     /* Project sections */
-    .project { padding:var(--space-xl) 0; border-top:1px solid var(--color-border-light); }
-    .project:nth-child(even) { background: var(--color-bg-alt); }
+    .project { padding:var(--space-xl) 0; border-top:1px solid var(--color-border-light);}
+    .project:nth-child(odd) { background: var(--color-bg-alt); }
     .project__inner { width:var(--container-narrow); margin:0 auto; }
     .project__category { font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent); margin-bottom:var(--space-xs); }
     .project h2 { font-size:clamp(1.6rem,3vw,2.2rem); margin-bottom:var(--space-sm); }
@@ -127,7 +127,7 @@
 
     /* Diagram as styled HTML boxes */
     .arch-flow { display:flex; align-items:stretch; gap:1rem; flex-wrap:wrap; }
-    .arch-block { flex:1; min-width:160px; background:var(--color-bg-alt); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:1.25rem; }
+    .arch-block { flex:1; min-width:160px; background:var(--color-bg); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:1.25rem; }
     [data-theme="dark"] .arch-block { background:var(--color-bg); }
     .arch-block__title { font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-accent); margin-bottom:0.5rem; }
     .arch-block__items { list-style:none; }
