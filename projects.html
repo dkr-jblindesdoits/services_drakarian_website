@@ -61,6 +61,31 @@
     .btn--primary:hover { background:var(--color-accent-hover); transform:translateY(-1px); box-shadow:0 4px 20px rgba(0,82,204,0.3); }
     [data-theme="dark"] .btn--primary:hover { box-shadow:0 4px 20px rgba(68,147,248,0.25); }
     .btn svg { width:16px; height:16px; }
+
+    /* Toggles */
+    .nav__toggles { display:flex; align-items:center; gap:0.6rem; }
+    .theme-toggle {
+      background:none; border:1.5px solid var(--color-border); border-radius:50px;
+      cursor:pointer; width:42px; height:24px; position:relative; transition:all var(--transition); padding:0; flex-shrink:0;
+    }
+    .theme-toggle:hover { border-color:var(--color-accent); }
+    .theme-toggle__thumb {
+      width:16px; height:16px; border-radius:50%; background:var(--color-text);
+      position:absolute; top:2.5px; left:3px; transition:all 0.4s cubic-bezier(0.68,-0.55,0.27,1.55);
+    }
+    [data-theme="dark"] .theme-toggle__thumb { left:21px; background:var(--color-accent); }
+    .theme-toggle__icons { position:absolute; inset:0; display:flex; align-items:center; justify-content:space-between; padding:0 5px; pointer-events:none; }
+    .theme-toggle__icons svg { width:11px; height:11px; opacity:0.5; }
+    .theme-toggle__icons .icon-sun { stroke:#F59E0B; fill:none; }
+    .theme-toggle__icons .icon-moon { stroke:#8B949E; fill:none; }
+    .lang-toggle {
+      background:none; border:1.5px solid var(--color-border); border-radius:var(--radius);
+      cursor:pointer; padding:0.2rem 0.55rem; font-family:var(--font-body);
+      font-size:0.72rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
+      color:var(--color-text-secondary); transition:all var(--transition); line-height:1.5; flex-shrink:0;
+    }
+    .lang-toggle:hover { border-color:var(--color-accent); color:var(--color-accent); }
+
     .nav__right-group { display:flex; align-items:center; gap:0.6rem; }
     .nav__burger { display:none; background:none; border:none; cursor:pointer; padding:0.5rem; z-index:1001; }
     .nav__burger span { display:block; width:22px; height:1.5px; background:var(--color-text); margin:5px 0; transition:all var(--transition); }
