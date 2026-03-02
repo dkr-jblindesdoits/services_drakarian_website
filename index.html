@@ -490,7 +490,7 @@
     @media (max-width: 640px) { .footer-bottom { flex-direction:column; gap:1rem; text-align:center; } }
 
     /* ===== Founder ===== */
-    .founder { padding:var(--space-2xl) 0; }
+    .founder { padding:var(--space-2xl) 0; background:var(--color-bg-alt);}
     .founder__inner { width:var(--container); margin:0 auto; display:grid; grid-template-columns:auto 1fr; gap:var(--space-xl); align-items:center; max-width:900px; }
     .founder__photo { width:180px; height:180px; border-radius:50%; overflow:hidden; border:3px solid var(--color-border-light); flex-shrink:0; }
     .founder__photo img { width:100%; height:100%; object-fit:cover; }
@@ -503,7 +503,7 @@
     }
 
     /* ===== Project Teasers ===== */
-    .projects-teaser { padding:var(--space-2xl) 0; background:var(--color-bg-alt); position:relative; transition:background 0.4s ease; }
+    .projects-teaser { padding:var(--space-2xl) 0; background:var(--color-bg); position:relative; transition:background 0.4s ease; }
     .projects-teaser::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--color-border),transparent); }
     .projects-teaser__grid { width:var(--container); margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
     .project-card { background:var(--color-card-bg); border:1px solid var(--color-border-light); border-radius:var(--radius-lg); padding:2rem 1.75rem; transition:all 0.4s cubic-bezier(0.16,1,0.3,1); position:relative; overflow:hidden; display:flex; flex-direction:column; }
@@ -519,7 +519,7 @@
     @media (max-width: 900px) { .projects-teaser__grid { grid-template-columns:1fr; max-width:500px; margin:0 auto; } }
 
     /* ===== FAQ ===== */
-    .faq { padding:var(--space-2xl) 0; background:var(--color-bg-alt); position:relative; transition:background 0.4s ease; }
+    .faq { padding:var(--space-2xl) 0; background:var(--color-bg); position:relative; transition:background 0.4s ease; }
     .faq::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--color-border),transparent); }
     .faq__list { width:var(--container-narrow); margin:0 auto; }
     .faq__item { border-bottom:1px solid var(--color-border-light); }
