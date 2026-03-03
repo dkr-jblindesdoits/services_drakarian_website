@@ -12,7 +12,7 @@
   /* ---------- i18n ---------- */
   var STRINGS = {
     en: {
-      bannerText: 'This site uses third-party cookies to embed our scheduling widget (Calendly). You can accept or decline — the rest of the site works without cookies.',
+      bannerText: 'This site uses third-party cookies to embed our scheduling widget (Calendly). You can accept or decline — the rest of the site works without cookies. <a href="./cookie-policy.html" style="color:var(--color-accent);text-decoration:underline;text-underline-offset:2px">Learn more</a>',
       accept: 'Accept',
       decline: 'Decline',
       fallbackText: 'The scheduling widget is disabled because third-party cookies were declined. You can book directly on Calendly:',
@@ -20,7 +20,7 @@
       prefsLink: 'Cookie Preferences'
     },
     fr: {
-      bannerText: 'Ce site utilise des cookies tiers pour intégrer notre outil de prise de rendez-vous (Calendly). Vous pouvez accepter ou refuser — le reste du site fonctionne sans cookies.',
+      bannerText: 'Ce site utilise des cookies tiers pour intégrer notre outil de prise de rendez-vous (Calendly). Vous pouvez accepter ou refuser — le reste du site fonctionne sans cookies. <a href="./politique-cookies.html" style="color:var(--color-accent);text-decoration:underline;text-underline-offset:2px">En savoir plus</a>',
       accept: 'Accepter',
       decline: 'Refuser',
       fallbackText: 'Le widget de planification est désactivé car les cookies tiers ont été refusés. Vous pouvez réserver directement sur Calendly\u00a0:',

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions — Drakarian Services Inc.</title>
+  <meta name="description" content="Terms and Conditions for Drakarian Services Inc. — read the terms governing your use of our website and services.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://drakarian.tech/terms-and-conditions.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <script>
+    (function(){
+      var t = localStorage.getItem('drak-theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+
+  <!-- Cookie Consent (GDPR / Law 25) -->
+  <link rel="stylesheet" href="./cookie-consent.css">
+
+  <style>
+    :root {
+      --color-bg: #FAFAF8; --color-bg-alt: #F0EFEB; --color-bg-dark: #0F1923; --color-bg-dark-alt: #162231;
+      --color-text: #1E2A38; --color-text-secondary: #4A5568; --color-text-light: #CBD5E0; --color-text-on-dark: #E8ECF0;
+      --color-accent: #0052CC; --color-accent-hover: #003D99; --color-accent-subtle: rgba(0,82,204,0.08);
+      --color-border: #D8D6D0; --color-border-light: #E8E6E2; --color-card-bg: #FFFFFF;
+      --color-nav-scrolled: rgba(250,250,248,0.92); --color-stat-bg: #FFFFFF;
+      --font-heading: 'Instrument Serif', Georgia, serif; --font-body: 'DM Sans', -apple-system, sans-serif;
+      --container: min(1200px, 90vw); --container-narrow: min(900px, 90vw);
+      --space-xs: 0.5rem; --space-sm: 1rem; --space-md: 1.5rem; --space-lg: 3rem; --space-xl: 5rem; --space-2xl: 8rem;
+      --radius: 6px; --radius-lg: 12px; --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    [data-theme="dark"] {
+      --color-bg: #0D1117; --color-bg-alt: #151B23; --color-bg-dark: #010409; --color-bg-dark-alt: #0D1117;
+      --color-text: #E6EDF3; --color-text-secondary: #8B949E; --color-text-light: #8B949E; --color-text-on-dark: #E6EDF3;
+      --color-accent: #4493F8; --color-accent-hover: #6DB1FF; --color-accent-subtle: rgba(68,147,248,0.1);
+      --color-border: #30363D; --color-border-light: #21262D; --color-card-bg: #151B23;
+      --color-nav-scrolled: rgba(13,17,23,0.92); --color-stat-bg: #151B23;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; font-size: 16px; }
+    body { font-family: var(--font-body); color: var(--color-text); background: var(--color-bg); line-height: 1.7; font-weight: 400; -webkit-font-smoothing: antialiased; overflow-x: hidden; transition: background 0.4s ease, color 0.4s ease; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; }
+    p { color: var(--color-text-secondary); transition: color 0.4s ease; }
+
+    /* Nav */
+    .nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:1rem 0; transition:all var(--transition); background:transparent; }
+    .nav.scrolled { background: var(--color-nav-scrolled); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--color-border-light); padding:0.7rem 0; }
+    .nav__inner { width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
+    .nav__logo { font-family:var(--font-body); font-size:1.05rem; font-weight:600; letter-spacing:-0.02em; color:var(--color-text); }
+    .nav__logo span { color:var(--color-accent); }
+    .nav__links { display:flex; align-items:center; gap:2rem; list-style:none; }
+    .nav__links a:not(.btn) { font-size:0.88rem; font-weight:500; color:var(--color-text-secondary); transition:color var(--transition); }
+    .nav__links a:not(.btn):hover { color:var(--color-text); }
+    .btn { display:inline-flex; align-items:center; gap:0.5rem; padding:0.85rem 1.8rem; border-radius:var(--radius); font-family:var(--font-body); font-size:0.9rem; font-weight:500; letter-spacing:0.02em; cursor:pointer; border:none; transition:all var(--transition); white-space:nowrap; }
+    .btn--primary { background:var(--color-accent); color:#fff; }
+    .btn--primary:hover { background:var(--color-accent-hover); transform:translateY(-1px); box-shadow:0 4px 20px rgba(0,82,204,0.3); }
+    [data-theme="dark"] .btn--primary:hover { box-shadow:0 4px 20px rgba(68,147,248,0.25); }
+    .btn svg { width:16px; height:16px; }
+    .nav__toggles { display:flex; align-items:center; gap:0.6rem; }
+    .theme-toggle { background:none; border:1.5px solid var(--color-border); border-radius:50px; cursor:pointer; width:42px; height:24px; position:relative; transition:all var(--transition); padding:0; flex-shrink:0; }
+    .theme-toggle:hover { border-color:var(--color-accent); }
+    .theme-toggle__thumb { width:16px; height:16px; border-radius:50%; background:var(--color-text); position:absolute; top:2.5px; left:3px; transition:all 0.4s cubic-bezier(0.68,-0.55,0.27,1.55); }
+    [data-theme="dark"] .theme-toggle__thumb { left:21px; background:var(--color-accent); }
+    .theme-toggle__icons { position:absolute; inset:0; display:flex; align-items:center; justify-content:space-between; padding:0 5px; pointer-events:none; }
+    .theme-toggle__icons svg { width:11px; height:11px; opacity:0.5; }
+    .theme-toggle__icons .icon-sun { stroke:#F59E0B; fill:none; }
+    .theme-toggle__icons .icon-moon { stroke:#8B949E; fill:none; }
+    .lang-toggle { background:none; border:1.5px solid var(--color-border); border-radius:var(--radius); cursor:pointer; padding:0.2rem 0.55rem; font-family:var(--font-body); font-size:0.72rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--color-text-secondary); transition:all var(--transition); line-height:1.5; flex-shrink:0; }
+    .lang-toggle:hover { border-color:var(--color-accent); color:var(--color-accent); }
+    .nav__right-group { display:flex; align-items:center; gap:0.6rem; }
+    .nav__burger { display:none; background:none; border:none; cursor:pointer; padding:0.5rem; z-index:1001; }
+    .nav__burger span { display:block; width:22px; height:1.5px; background:var(--color-text); margin:5px 0; transition:all var(--transition); }
+    .nav__burger.active span:nth-child(1) { transform:rotate(45deg) translate(4px,4px); }
+    .nav__burger.active span:nth-child(2) { opacity:0; }
+    .nav__burger.active span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+    .nav__mobile { display:none; position:fixed; inset:0; background:var(--color-bg); z-index:999; flex-direction:column; align-items:center; justify-content:center; gap:2rem; transition:background 0.4s ease; }
+    .nav__mobile.active { display:flex; }
+    .nav__mobile a { font-family:var(--font-heading); font-size:2rem; color:var(--color-text); }
+    @media (max-width: 768px) { .nav__links { display:none; } .nav__burger { display:block; } }
+    @media (min-width: 769px) { .nav__toggles--mobile { display:none !important; } }
+
+    /* Breadcrumb */
+    .breadcrumb { padding-top:calc(70px + 1.5rem); padding-bottom:0; width:var(--container); margin:0 auto; }
+    .breadcrumb a { display:inline-flex; align-items:center; gap:0.35rem; font-size:0.82rem; font-weight:500; color:var(--color-text-secondary); transition:color var(--transition); }
+    .breadcrumb a:hover { color:var(--color-accent); }
+    .breadcrumb svg { width:14px; height:14px; }
+    .breadcrumb span { font-size:0.82rem; color:var(--color-text-secondary); }
+
+    /* Page header */
+    .page-header { padding:var(--space-lg) 0 var(--space-lg); text-align:center; }
+    .page-header h1 { font-size:clamp(2.2rem,4.5vw,3.2rem); margin-bottom:var(--space-sm); }
+
+    /* Legal content */
+    .policy { width:var(--container-narrow); margin:0 auto; padding:0 0 var(--space-xl); }
+    .policy h2 { font-size:clamp(1.4rem,2.5vw,1.8rem); margin-top:var(--space-lg); margin-bottom:var(--space-sm); }
+    .policy h3 { font-size:clamp(1.1rem,2vw,1.3rem); margin-top:var(--space-md); margin-bottom:var(--space-xs); }
+    .policy p { font-size:0.95rem; line-height:1.85; margin-bottom:var(--space-sm); }
+    .policy ul { list-style:none; margin-bottom:var(--space-sm); padding-left:0; }
+    .policy ul li { font-size:0.95rem; line-height:1.85; color:var(--color-text-secondary); padding:0.3rem 0 0.3rem 1.2rem; position:relative; }
+    .policy ul li::before { content:'\2022'; color:var(--color-accent); position:absolute; left:0; }
+    .policy ul li strong { color:var(--color-text); }
+    .policy a { color:var(--color-accent); text-decoration:underline; text-underline-offset:2px; }
+    .policy a:hover { color:var(--color-accent-hover); }
+    .policy .updated { font-size:0.88rem; color:var(--color-text-secondary); margin-bottom:var(--space-md); }
+
+    /* Footer */
+    .footer { padding:var(--space-lg) 0; background:var(--color-bg-dark); }
+    .footer__inner { width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+    .footer__copy { font-size:0.82rem; color:rgba(255,255,255,0.4); }
+    .footer__links { display:flex; gap:1.5rem; flex-wrap:wrap; }
+    .footer__links a { font-size:0.82rem; color:rgba(255,255,255,0.4); transition:color var(--transition); }
+    .footer__links a:hover { color:#fff; }
+    .footer__cta { display:inline-flex; align-items:center; gap:0.5rem; padding:0.7rem 1.5rem; background:var(--color-accent); color:#fff; border-radius:var(--radius); font-size:0.88rem; font-weight:500; transition:all var(--transition); }
+    .footer__cta:hover { background:var(--color-accent-hover); transform:translateY(-1px); }
+    .footer__cta svg { width:14px; height:14px; }
+    @media (max-width: 640px) { .footer__inner { flex-direction:column; text-align:center; } .footer__links { justify-content:center; } }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="./" class="nav__logo">Services <span>Drakarian</span> Inc.</a>
+      <ul class="nav__links">
+        <li><a href="./#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="./#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="./#process" data-i18n="nav.process">Process</a></li>
+        <li><a href="./#contact" data-i18n="nav.contact">Contact</a></li>
+        <li>
+          <div class="nav__toggles">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+              <div class="theme-toggle__icons">
+                <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              </div>
+              <div class="theme-toggle__thumb"></div>
+            </button>
+            <button class="lang-toggle">FR</button>
+          </div>
+        </li>
+        <li><a href="./#contact" class="btn btn--primary" data-i18n="nav.cta">Book a Call</a></li>
+      </ul>
+      <div class="nav__right-group nav__toggles--mobile">
+        <div class="nav__toggles">
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <div class="theme-toggle__icons">
+              <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </div>
+            <div class="theme-toggle__thumb"></div>
+          </button>
+          <button class="lang-toggle">FR</button>
+        </div>
+        <button class="nav__burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile" id="mobile-menu">
+    <a href="./#services" class="mobile-link" data-i18n="nav.services">Services</a>
+    <a href="./#projects" class="mobile-link" data-i18n="nav.projects">Projects</a>
+    <a href="./#process" class="mobile-link" data-i18n="nav.process">Process</a>
+    <a href="./#contact" class="mobile-link" data-i18n="nav.contact">Contact</a>
+    <a href="./#contact" class="btn btn--primary mobile-link" data-i18n="nav.cta">Book a Call</a>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="./" data-i18n="breadcrumb.home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Home
+    </a>
+    <span>&nbsp;/&nbsp;</span>
+    <span data-i18n="breadcrumb.page">Terms and Conditions</span>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1 data-i18n="page.h1">Terms and Conditions</h1>
+  </header>
+
+  <!-- Content -->
+  <article class="policy">
+    <p class="updated">Last updated: March 02, 2026</p>
+    <p>Please read these terms and conditions carefully before using Our Service.</p>
+
+    <h2>Interpretation and Definitions</h2>
+    <h3>Interpretation</h3>
+    <p>The words whose initial letters are capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+    <h3>Definitions</h3>
+    <p>For the purposes of these Terms and Conditions:</p>
+    <ul>
+      <li><strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</li>
+      <li><strong>Country</strong> refers to: Quebec, Canada</li>
+      <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in these Terms and Conditions) refers to Services Drakarian Inc., 913-1310 rue Ottawa, H3C 0W9, Montr&eacute;al, QC, Canada.</li>
+      <li><strong>Device</strong> means any device that can access the Service such as a computer, a cell phone or a digital tablet.</li>
+      <li><strong>Feedback</strong> means feedback, innovations or suggestions sent by You regarding the attributes, performance or features of our Service.</li>
+      <li><strong>Service</strong> refers to the Website.</li>
+      <li><strong>Terms and Conditions</strong> (also referred to as "Terms") means these Terms and Conditions, including any documents expressly incorporated by reference, which govern Your access to and use of the Service and form the entire agreement between You and the Company regarding the Service.</li>
+      <li><strong>Third-Party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third party that is displayed, included, made available, or linked to through the Service.</li>
+      <li><strong>Website</strong> refers to Services Drakarian Inc., accessible from <a href="https://www.drakarian.tech" rel="external nofollow noopener" target="_blank">www.drakarian.tech</a></li>
+      <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
+    </ul>
+
+    <h2>Acknowledgment</h2>
+    <p>These are the Terms and Conditions governing the use of this Service and the agreement between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.</p>
+    <p>Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service.</p>
+    <p>By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.</p>
+    <p>You represent that you are over the age of 18. The Company does not permit those under 18 to use the Service.</p>
+    <p>Your access to and use of the Service is also subject to Our Privacy Policy, which describes how We collect, use, and disclose personal information. Please read Our Privacy Policy carefully before using Our Service.</p>
+
+    <h2>Intellectual Property</h2>
+    <p>The Service and its original content (excluding Content provided by You or other users), features and functionality are and will remain the exclusive property of the Company and its licensors.</p>
+    <p>The Service is protected by copyright, trademark, and other laws of both the Country and foreign countries.</p>
+    <p>Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of the Company.</p>
+
+    <h2>Your Feedback to Us</h2>
+    <p>You assign all rights, title and interest in any Feedback You provide the Company. If for any reason such assignment is ineffective, You agree to grant the Company a non-exclusive, perpetual, irrevocable, royalty free, worldwide right and license to use, reproduce, disclose, sub-license, distribute, modify and exploit such Feedback without restriction.</p>
+
+    <h2>Links to Other Websites</h2>
+    <p>Our Service may contain links to third-party websites or services that are not owned or controlled by the Company.</p>
+    <p>The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such websites or services.</p>
+    <p>We strongly advise You to read the terms and conditions and privacy policies of any third-party websites or services that You visit.</p>
+    <h3>Links from a Third-Party Social Media Service</h3>
+    <p>The Service may display, include, make available, or link to content or services provided by a Third-Party Social Media Service. A Third-Party Social Media Service is not owned or controlled by the Company, and the Company does not endorse or assume responsibility for any Third-Party Social Media Service.</p>
+    <p>You acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with Your access to or use of any Third-Party Social Media Service, including any content, goods, or services made available through them. Your use of any Third-Party Social Media Service is governed by that Third-Party Social Media Service's terms and privacy policies.</p>
+
+    <h2>Termination</h2>
+    <p>We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions.</p>
+    <p>Upon termination, Your right to use the Service will cease immediately.</p>
+
+    <h2>Limitation of Liability</h2>
+    <p>Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of these Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.</p>
+    <p>To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of these Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.</p>
+    <p>Some states do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party's liability will be limited to the greatest extent permitted by law.</p>
+
+    <h2>"AS IS" and "AS AVAILABLE" Disclaimer</h2>
+    <p>The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice. Without limitation to the foregoing, the Company provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.</p>
+    <p>Without limiting the foregoing, neither the Company nor any of the company's provider makes any representation or warranty of any kind, express or implied: (i) as to the operation or availability of the Service, or the information, content, and materials or products included thereon; (ii) that the Service will be uninterrupted or error-free; (iii) as to the accuracy, reliability, or currency of any information or content provided through the Service; or (iv) that the Service, its servers, the content, or e-mails sent from or on behalf of the Company are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.</p>
+    <p>Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You. But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law.</p>
+
+    <h2>Governing Law</h2>
+    <p>The laws of the Country, excluding its conflicts of law rules, shall govern these Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.</p>
+
+    <h2>Disputes Resolution</h2>
+    <p>If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.</p>
+
+    <h2>For European Union (EU) Users</h2>
+    <p>If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which You are resident.</p>
+
+    <h2>United States Legal Compliance</h2>
+    <p>You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a "terrorist supporting" country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.</p>
+
+    <h2>Severability and Waiver</h2>
+    <h3>Severability</h3>
+    <p>If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.</p>
+    <h3>Waiver</h3>
+    <p>Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not affect a party's ability to exercise such right or require such performance at any time thereafter nor shall the waiver of a breach constitute a waiver of any subsequent breach.</p>
+
+    <h2>Translation Interpretation</h2>
+    <p>These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute.</p>
+
+    <h2>Changes to These Terms and Conditions</h2>
+    <p>We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at Our sole discretion.</p>
+    <p>By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the Service.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have any questions about these Terms and Conditions, You can contact us:</p>
+    <ul>
+      <li>By email: <a href="mailto:privacy@drakarian.tech">privacy@drakarian.tech</a></li>
+    </ul>
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__copy" data-i18n="footer.copy">&copy; 2026 Drakarian Services Inc.</div>
+      <div class="footer__links">
+        <a href="./privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="./terms-and-conditions.html" data-i18n="footer.terms">Terms &amp; Conditions</a>
+        <a href="./cookie-policy.html" data-i18n="footer.cookies">Cookies Policy</a>
+      </div>
+      <button class="cc-prefs-link">Cookie Preferences</button>
+      <a href="./#contact" class="footer__cta" data-i18n="footer.cta">
+        Start a Project
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const T = {
+      en: {
+        "page.h1": "Terms and Conditions",
+        "breadcrumb.home": "Home", "breadcrumb.page": "Terms and Conditions",
+        "footer.copy": "\u00a9 2026 Drakarian Services Inc.", "footer.cta": "Start a Project",
+        "footer.privacy": "Privacy Policy", "footer.terms": "Terms & Conditions", "footer.cookies": "Cookies Policy",
+        "nav.services": "Services", "nav.projects": "Projects", "nav.process": "Process", "nav.contact": "Contact", "nav.cta": "Book a Call"
+      },
+      fr: {
+        "page.h1": "Conditions d\u2019utilisation",
+        "breadcrumb.home": "Accueil", "breadcrumb.page": "Conditions d\u2019utilisation",
+        "footer.copy": "\u00a9 2026 Services Drakarian Inc.", "footer.cta": "D\u00e9marrer un projet",
+        "footer.privacy": "Politique de confidentialit\u00e9", "footer.terms": "Conditions d\u2019utilisation", "footer.cookies": "Politique de cookies",
+        "nav.services": "Services", "nav.projects": "Projets", "nav.process": "Processus", "nav.contact": "Contact", "nav.cta": "R\u00e9server un appel"
+      }
+    };
+    /* Legal page link map — EN↔FR href switching */
+    const LEGAL_HREFS = {
+      "footer.privacy": { en: "./privacy-policy.html", fr: "./politique-confidentialite.html" },
+      "footer.terms":   { en: "./terms-and-conditions.html", fr: "./conditions-utilisation.html" },
+      "footer.cookies": { en: "./cookie-policy.html", fr: "./politique-cookies.html" }
+    };
+    let currentLang = localStorage.getItem('drak-lang') || 'en';
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('drak-lang', lang);
+      document.documentElement.lang = lang === 'fr' ? 'fr-CA' : 'en-CA';
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const val = T[lang][el.getAttribute('data-i18n')];
+        if (!val) return;
+        const svg = el.querySelector('svg');
+        if (el.tagName === 'OPTION') { el.textContent = val; } else { el.innerHTML = val; if (svg) el.appendChild(svg); }
+      });
+      document.querySelectorAll('.lang-toggle').forEach(b => b.textContent = lang === 'en' ? 'FR' : 'EN');
+      if (typeof window.cookieConsentUpdateLang === 'function') window.cookieConsentUpdateLang();
+      /* Update legal page hrefs */
+      Object.keys(LEGAL_HREFS).forEach(key => {
+        const el = document.querySelector('[data-i18n="' + key + '"]');
+        if (el) el.href = LEGAL_HREFS[key][lang];
+      });
+      /* Redirect to French version */
+      if (lang === 'fr') { window.location.href = './conditions-utilisation.html'; }
+    }
+    function setTheme(theme) { document.documentElement.setAttribute('data-theme', theme); localStorage.setItem('drak-theme', theme); }
+    document.addEventListener('DOMContentLoaded', () => {
+      if (currentLang === 'fr') { window.location.href = './conditions-utilisation.html'; return; }
+      setLanguage(currentLang);
+      document.querySelectorAll('.theme-toggle').forEach(btn => btn.addEventListener('click', () => setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')));
+      document.querySelectorAll('.lang-toggle').forEach(btn => btn.addEventListener('click', () => setLanguage(currentLang === 'en' ? 'fr' : 'en')));
+      const nav = document.getElementById('nav');
+      if (nav) window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+      const burger = document.getElementById('burger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (burger && mobileMenu) {
+        burger.addEventListener('click', () => { burger.classList.toggle('active'); mobileMenu.classList.toggle('active'); document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : ''; });
+        document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { burger.classList.remove('active'); mobileMenu.classList.remove('active'); document.body.style.overflow = ''; }); });
+      }
+    });
+  </script>
+  <script src="./cookie-consent.js"></script>
+</body>
+</html>

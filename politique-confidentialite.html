@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialit&eacute; — Services Drakarian Inc.</title>
+  <meta name="description" content="Politique de confidentialit&eacute; de Services Drakarian Inc. — d&eacute;couvrez comment nous collectons, utilisons et prot&eacute;geons vos donn&eacute;es personnelles.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://drakarian.tech/politique-confidentialite.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <script>
+    (function(){
+      var t = localStorage.getItem('drak-theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="stylesheet" href="./cookie-consent.css">
+  <style>
+    :root {
+      --color-bg: #FAFAF8; --color-bg-alt: #F0EFEB; --color-bg-dark: #0F1923; --color-bg-dark-alt: #162231;
+      --color-text: #1E2A38; --color-text-secondary: #4A5568; --color-text-light: #CBD5E0; --color-text-on-dark: #E8ECF0;
+      --color-accent: #0052CC; --color-accent-hover: #003D99; --color-accent-subtle: rgba(0,82,204,0.08);
+      --color-border: #D8D6D0; --color-border-light: #E8E6E2; --color-card-bg: #FFFFFF;
+      --color-nav-scrolled: rgba(250,250,248,0.92); --color-stat-bg: #FFFFFF;
+      --font-heading: 'Instrument Serif', Georgia, serif; --font-body: 'DM Sans', -apple-system, sans-serif;
+      --container: min(1200px, 90vw); --container-narrow: min(900px, 90vw);
+      --space-xs: 0.5rem; --space-sm: 1rem; --space-md: 1.5rem; --space-lg: 3rem; --space-xl: 5rem; --space-2xl: 8rem;
+      --radius: 6px; --radius-lg: 12px; --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    [data-theme="dark"] {
+      --color-bg: #0D1117; --color-bg-alt: #151B23; --color-bg-dark: #010409; --color-bg-dark-alt: #0D1117;
+      --color-text: #E6EDF3; --color-text-secondary: #8B949E; --color-text-light: #8B949E; --color-text-on-dark: #E6EDF3;
+      --color-accent: #4493F8; --color-accent-hover: #6DB1FF; --color-accent-subtle: rgba(68,147,248,0.1);
+      --color-border: #30363D; --color-border-light: #21262D; --color-card-bg: #151B23;
+      --color-nav-scrolled: rgba(13,17,23,0.92); --color-stat-bg: #151B23;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; font-size: 16px; }
+    body { font-family: var(--font-body); color: var(--color-text); background: var(--color-bg); line-height: 1.7; font-weight: 400; -webkit-font-smoothing: antialiased; overflow-x: hidden; transition: background 0.4s ease, color 0.4s ease; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; }
+    p { color: var(--color-text-secondary); transition: color 0.4s ease; }
+    .nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:1rem 0; transition:all var(--transition); background:transparent; }
+    .nav.scrolled { background: var(--color-nav-scrolled); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--color-border-light); padding:0.7rem 0; }
+    .nav__inner { width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
+    .nav__logo { font-family:var(--font-body); font-size:1.05rem; font-weight:600; letter-spacing:-0.02em; color:var(--color-text); }
+    .nav__logo span { color:var(--color-accent); }
+    .nav__links { display:flex; align-items:center; gap:2rem; list-style:none; }
+    .nav__links a:not(.btn) { font-size:0.88rem; font-weight:500; color:var(--color-text-secondary); transition:color var(--transition); }
+    .nav__links a:not(.btn):hover { color:var(--color-text); }
+    .btn { display:inline-flex; align-items:center; gap:0.5rem; padding:0.85rem 1.8rem; border-radius:var(--radius); font-family:var(--font-body); font-size:0.9rem; font-weight:500; letter-spacing:0.02em; cursor:pointer; border:none; transition:all var(--transition); white-space:nowrap; }
+    .btn--primary { background:var(--color-accent); color:#fff; }
+    .btn--primary:hover { background:var(--color-accent-hover); transform:translateY(-1px); box-shadow:0 4px 20px rgba(0,82,204,0.3); }
+    [data-theme="dark"] .btn--primary:hover { box-shadow:0 4px 20px rgba(68,147,248,0.25); }
+    .btn svg { width:16px; height:16px; }
+    .nav__toggles { display:flex; align-items:center; gap:0.6rem; }
+    .theme-toggle { background:none; border:1.5px solid var(--color-border); border-radius:50px; cursor:pointer; width:42px; height:24px; position:relative; transition:all var(--transition); padding:0; flex-shrink:0; }
+    .theme-toggle:hover { border-color:var(--color-accent); }
+    .theme-toggle__thumb { width:16px; height:16px; border-radius:50%; background:var(--color-text); position:absolute; top:2.5px; left:3px; transition:all 0.4s cubic-bezier(0.68,-0.55,0.27,1.55); }
+    [data-theme="dark"] .theme-toggle__thumb { left:21px; background:var(--color-accent); }
+    .theme-toggle__icons { position:absolute; inset:0; display:flex; align-items:center; justify-content:space-between; padding:0 5px; pointer-events:none; }
+    .theme-toggle__icons svg { width:11px; height:11px; opacity:0.5; }
+    .theme-toggle__icons .icon-sun { stroke:#F59E0B; fill:none; }
+    .theme-toggle__icons .icon-moon { stroke:#8B949E; fill:none; }
+    .lang-toggle { background:none; border:1.5px solid var(--color-border); border-radius:var(--radius); cursor:pointer; padding:0.2rem 0.55rem; font-family:var(--font-body); font-size:0.72rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--color-text-secondary); transition:all var(--transition); line-height:1.5; flex-shrink:0; }
+    .lang-toggle:hover { border-color:var(--color-accent); color:var(--color-accent); }
+    .nav__right-group { display:flex; align-items:center; gap:0.6rem; }
+    .nav__burger { display:none; background:none; border:none; cursor:pointer; padding:0.5rem; z-index:1001; }
+    .nav__burger span { display:block; width:22px; height:1.5px; background:var(--color-text); margin:5px 0; transition:all var(--transition); }
+    .nav__burger.active span:nth-child(1) { transform:rotate(45deg) translate(4px,4px); }
+    .nav__burger.active span:nth-child(2) { opacity:0; }
+    .nav__burger.active span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+    .nav__mobile { display:none; position:fixed; inset:0; background:var(--color-bg); z-index:999; flex-direction:column; align-items:center; justify-content:center; gap:2rem; transition:background 0.4s ease; }
+    .nav__mobile.active { display:flex; }
+    .nav__mobile a { font-family:var(--font-heading); font-size:2rem; color:var(--color-text); }
+    @media (max-width: 768px) { .nav__links { display:none; } .nav__burger { display:block; } }
+    @media (min-width: 769px) { .nav__toggles--mobile { display:none !important; } }
+    .breadcrumb { padding-top:calc(70px + 1.5rem); padding-bottom:0; width:var(--container); margin:0 auto; }
+    .breadcrumb a { display:inline-flex; align-items:center; gap:0.35rem; font-size:0.82rem; font-weight:500; color:var(--color-text-secondary); transition:color var(--transition); }
+    .breadcrumb a:hover { color:var(--color-accent); }
+    .breadcrumb svg { width:14px; height:14px; }
+    .breadcrumb span { font-size:0.82rem; color:var(--color-text-secondary); }
+    .page-header { padding:var(--space-lg) 0 var(--space-lg); text-align:center; }
+    .page-header h1 { font-size:clamp(2.2rem,4.5vw,3.2rem); margin-bottom:var(--space-sm); }
+    .policy { width:var(--container-narrow); margin:0 auto; padding:0 0 var(--space-xl); }
+    .policy h2 { font-size:clamp(1.4rem,2.5vw,1.8rem); margin-top:var(--space-lg); margin-bottom:var(--space-sm); }
+    .policy h3 { font-size:clamp(1.1rem,2vw,1.3rem); margin-top:var(--space-md); margin-bottom:var(--space-xs); }
+    .policy h4 { font-family:var(--font-body); font-size:0.95rem; font-weight:600; margin-top:var(--space-md); margin-bottom:var(--space-xs); }
+    .policy p { font-size:0.95rem; line-height:1.85; margin-bottom:var(--space-sm); }
+    .policy ul { list-style:none; margin-bottom:var(--space-sm); padding-left:0; }
+    .policy ul li { font-size:0.95rem; line-height:1.85; color:var(--color-text-secondary); padding:0.3rem 0 0.3rem 1.2rem; position:relative; }
+    .policy ul li::before { content:'\2022'; color:var(--color-accent); position:absolute; left:0; }
+    .policy ul li strong { color:var(--color-text); }
+    .policy ul li ul { margin-top:0.3rem; margin-bottom:0; }
+    .policy a { color:var(--color-accent); text-decoration:underline; text-underline-offset:2px; }
+    .policy a:hover { color:var(--color-accent-hover); }
+    .policy .updated { font-size:0.88rem; color:var(--color-text-secondary); margin-bottom:var(--space-md); }
+    .footer { padding:var(--space-lg) 0; background:var(--color-bg-dark); }
+    .footer__inner { width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+    .footer__copy { font-size:0.82rem; color:rgba(255,255,255,0.4); }
+    .footer__links { display:flex; gap:1.5rem; flex-wrap:wrap; }
+    .footer__links a { font-size:0.82rem; color:rgba(255,255,255,0.4); transition:color var(--transition); }
+    .footer__links a:hover { color:#fff; }
+    .footer__cta { display:inline-flex; align-items:center; gap:0.5rem; padding:0.7rem 1.5rem; background:var(--color-accent); color:#fff; border-radius:var(--radius); font-size:0.88rem; font-weight:500; transition:all var(--transition); }
+    .footer__cta:hover { background:var(--color-accent-hover); transform:translateY(-1px); }
+    .footer__cta svg { width:14px; height:14px; }
+    @media (max-width: 640px) { .footer__inner { flex-direction:column; text-align:center; } .footer__links { justify-content:center; } }
+  </style>
+</head>
+<body>
+  <nav class="nav" id="nav" aria-label="Navigation principale">
+    <div class="nav__inner">
+      <a href="./" class="nav__logo">Services <span>Drakarian</span> Inc.</a>
+      <ul class="nav__links">
+        <li><a href="./#services">Services</a></li>
+        <li><a href="./#projects">Projets</a></li>
+        <li><a href="./#process">Processus</a></li>
+        <li><a href="./#contact">Contact</a></li>
+        <li>
+          <div class="nav__toggles">
+            <button class="theme-toggle" aria-label="Basculer le mode sombre">
+              <div class="theme-toggle__icons">
+                <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              </div>
+              <div class="theme-toggle__thumb"></div>
+            </button>
+            <button class="lang-toggle">EN</button>
+          </div>
+        </li>
+        <li><a href="./#contact" class="btn btn--primary">R&eacute;server un appel</a></li>
+      </ul>
+      <div class="nav__right-group nav__toggles--mobile">
+        <div class="nav__toggles">
+          <button class="theme-toggle" aria-label="Basculer le mode sombre">
+            <div class="theme-toggle__icons">
+              <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </div>
+            <div class="theme-toggle__thumb"></div>
+          </button>
+          <button class="lang-toggle">EN</button>
+        </div>
+        <button class="nav__burger" id="burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile" id="mobile-menu">
+    <a href="./#services" class="mobile-link">Services</a>
+    <a href="./#projects" class="mobile-link">Projets</a>
+    <a href="./#process" class="mobile-link">Processus</a>
+    <a href="./#contact" class="mobile-link">Contact</a>
+    <a href="./#contact" class="btn btn--primary mobile-link">R&eacute;server un appel</a>
+  </div>
+
+  <div class="breadcrumb">
+    <a href="./">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Accueil
+    </a>
+    <span>&nbsp;/&nbsp;</span>
+    <span>Politique de confidentialit&eacute;</span>
+  </div>
+
+  <header class="page-header">
+    <h1>Politique de confidentialit&eacute;</h1>
+  </header>
+
+  <article class="policy">
+    <p class="updated">Derni&egrave;re mise &agrave; jour : 2 mars 2026</p>
+
+    <p>Cette Politique de confidentialit&eacute; d&eacute;crit nos politiques et proc&eacute;dures concernant la collecte, l'utilisation et la divulgation de vos informations lorsque vous utilisez le Service, et vous informe de vos droits en mati&egrave;re de protection de la vie priv&eacute;e ainsi que de la mani&egrave;re dont la loi vous prot&egrave;ge.</p>
+    <p>Nous utilisons vos donn&eacute;es personnelles pour fournir et am&eacute;liorer le Service. En utilisant le Service, vous acceptez la collecte et l'utilisation des informations conform&eacute;ment &agrave; la pr&eacute;sente Politique de confidentialit&eacute;.</p>
+
+    <h2>Interpr&eacute;tation et d&eacute;finitions</h2>
+
+    <h3>Interpr&eacute;tation</h3>
+    <p>Les mots dont la premi&egrave;re lettre est en majuscule ont des significations d&eacute;finies dans les conditions suivantes. Les d&eacute;finitions suivantes ont la m&ecirc;me signification qu'elles apparaissent au singulier ou au pluriel.</p>
+
+    <h3>D&eacute;finitions</h3>
+    <p>Aux fins de la pr&eacute;sente Politique de confidentialit&eacute; :</p>
+    <ul>
+      <li><p><strong>Compte</strong> d&eacute;signe un compte unique cr&eacute;&eacute; pour vous permettre d'acc&eacute;der &agrave; notre Service ou &agrave; certaines parties de celui-ci.</p></li>
+      <li><p><strong>Affili&eacute;</strong> d&eacute;signe une entit&eacute; qui contr&ocirc;le, est contr&ocirc;l&eacute;e par, ou est sous contr&ocirc;le commun avec une partie, o&ugrave; &laquo;&nbsp;contr&ocirc;le&nbsp;&raquo; signifie la propri&eacute;t&eacute; de 50&nbsp;% ou plus des actions, participations ou autres titres donnant droit de vote pour l'&eacute;lection des administrateurs ou autre autorit&eacute; de gestion.</p></li>
+      <li>
+        <p><strong>Soci&eacute;t&eacute;</strong> (d&eacute;sign&eacute;e par &laquo;&nbsp;la Soci&eacute;t&eacute;&nbsp;&raquo;, &laquo;&nbsp;Nous&nbsp;&raquo;, &laquo;&nbsp;Notre&nbsp;&raquo; ou &laquo;&nbsp;Nos&nbsp;&raquo; dans la pr&eacute;sente Politique de confidentialit&eacute;) d&eacute;signe Services Drakarian Inc., 913-1310 rue Ottawa, H3C 0W9, Montr&eacute;al, QC, Canada.</p>
+        <p>Aux fins du RGPD, la Soci&eacute;t&eacute; est le Responsable du traitement des donn&eacute;es.</p>
+      </li>
+      <li><p><strong>Cookies</strong> d&eacute;signe les petits fichiers plac&eacute;s sur votre appareil par un site Web, contenant les d&eacute;tails de votre historique de navigation sur ce site, parmi leurs nombreuses utilisations.</p></li>
+      <li><p><strong>Pays</strong> d&eacute;signe : Qu&eacute;bec, Canada</p></li>
+      <li><p><strong>Responsable du traitement des donn&eacute;es</strong>, aux fins du RGPD (R&egrave;glement g&eacute;n&eacute;ral sur la protection des donn&eacute;es), d&eacute;signe la Soci&eacute;t&eacute; en tant que personne morale qui, seule ou conjointement avec d'autres, d&eacute;termine les finalit&eacute;s et les moyens du traitement des donn&eacute;es personnelles.</p></li>
+      <li><p><strong>Appareil</strong> d&eacute;signe tout appareil pouvant acc&eacute;der au Service, tel qu'un ordinateur, un t&eacute;l&eacute;phone cellulaire ou une tablette num&eacute;rique.</p></li>
+      <li><p><strong>RGPD</strong> d&eacute;signe le R&egrave;glement g&eacute;n&eacute;ral sur la protection des donn&eacute;es de l'Union europ&eacute;enne.</p></li>
+      <li>
+        <p><strong>Donn&eacute;es personnelles</strong> (ou &laquo;&nbsp;Renseignements personnels&nbsp;&raquo;) d&eacute;signe toute information se rapportant &agrave; un individu identifi&eacute; ou identifiable.</p>
+        <p>Aux fins du RGPD, les Donn&eacute;es personnelles d&eacute;signent toute information vous concernant, telle qu'un nom, un num&eacute;ro d'identification, des donn&eacute;es de localisation, un identifiant en ligne ou un ou plusieurs facteurs sp&eacute;cifiques &agrave; votre identit&eacute; physique, physiologique, g&eacute;n&eacute;tique, mentale, &eacute;conomique, culturelle ou sociale.</p>
+        <p>Nous utilisons &laquo;&nbsp;Donn&eacute;es personnelles&nbsp;&raquo; et &laquo;&nbsp;Renseignements personnels&nbsp;&raquo; de mani&egrave;re interchangeable, sauf si une loi utilise un terme sp&eacute;cifique.</p>
+      </li>
+      <li><p><strong>Service</strong> d&eacute;signe le Site Web.</p></li>
+      <li><p><strong>Fournisseur de services</strong> d&eacute;signe toute personne physique ou morale qui traite les donn&eacute;es pour le compte de la Soci&eacute;t&eacute;. Il d&eacute;signe les entreprises tierces ou les personnes employ&eacute;es par la Soci&eacute;t&eacute; pour faciliter le Service, fournir le Service au nom de la Soci&eacute;t&eacute;, ex&eacute;cuter des services li&eacute;s au Service ou aider la Soci&eacute;t&eacute; &agrave; analyser la fa&ccedil;on dont le Service est utilis&eacute;. Aux fins du RGPD, les Fournisseurs de services sont consid&eacute;r&eacute;s comme des Sous-traitants.</p></li>
+      <li><p><strong>Donn&eacute;es d'utilisation</strong> d&eacute;signe les donn&eacute;es collect&eacute;es automatiquement, g&eacute;n&eacute;r&eacute;es soit par l'utilisation du Service, soit par l'infrastructure du Service elle-m&ecirc;me (par exemple, la dur&eacute;e d'une visite de page).</p></li>
+      <li><p><strong>Site Web</strong> d&eacute;signe Services Drakarian Inc., accessible depuis <a href="https://www.drakarian.tech" rel="external nofollow noopener" target="_blank">www.drakarian.tech</a>.</p></li>
+      <li>
+        <p><strong>Vous</strong> d&eacute;signe la personne physique acc&eacute;dant au Service ou l'utilisant, ou la soci&eacute;t&eacute;, ou toute autre entit&eacute; juridique au nom de laquelle cette personne acc&egrave;de au Service ou l'utilise, selon le cas.</p>
+        <p>Dans le cadre du RGPD, vous pouvez &ecirc;tre d&eacute;sign&eacute; comme la Personne concern&eacute;e ou l'Utilisateur, en tant qu'individu utilisant le Service.</p>
+      </li>
+    </ul>
+
+    <h2>Collecte et utilisation de vos donn&eacute;es personnelles</h2>
+
+    <h3>Types de donn&eacute;es collect&eacute;es</h3>
+
+    <h4>Donn&eacute;es personnelles</h4>
+    <p>Lors de l'utilisation de notre Service, nous pouvons vous demander de nous fournir certaines informations personnellement identifiables pouvant &ecirc;tre utilis&eacute;es pour vous contacter ou vous identifier. Ces informations peuvent inclure, sans s'y limiter :</p>
+    <ul>
+      <li>Adresse courriel</li>
+      <li>Pr&eacute;nom et nom de famille</li>
+    </ul>
+
+    <h4>Donn&eacute;es d'utilisation</h4>
+    <p>Les donn&eacute;es d'utilisation sont collect&eacute;es automatiquement lors de l'utilisation du Service.</p>
+    <p>Les donn&eacute;es d'utilisation peuvent inclure des informations telles que l'adresse de protocole Internet de votre appareil (p.&nbsp;ex. adresse IP), le type et la version du navigateur, les pages de notre Service que vous visitez, la date et l'heure de votre visite, le temps pass&eacute; sur ces pages, les identifiants uniques d'appareils et d'autres donn&eacute;es de diagnostic.</p>
+    <p>Lorsque vous acc&eacute;dez au Service via un appareil mobile, nous pouvons collecter automatiquement certaines informations, notamment le type d'appareil mobile utilis&eacute;, l'identifiant unique de votre appareil mobile, l'adresse IP de votre appareil mobile, votre syst&egrave;me d'exploitation mobile, le type de navigateur Internet mobile que vous utilisez, ainsi que d'autres donn&eacute;es de diagnostic.</p>
+    <p>Nous pouvons &eacute;galement collecter les informations que votre navigateur envoie chaque fois que vous visitez notre Service ou y acc&eacute;dez via un appareil mobile.</p>
+
+    <h4>Technologies de suivi et cookies</h4>
+    <p>Nous utilisons des cookies et des technologies de suivi similaires pour suivre l'activit&eacute; sur notre Service et stocker certaines informations. Les technologies de suivi que nous utilisons comprennent des balises, des &eacute;tiquettes et des scripts pour collecter et suivre des informations et am&eacute;liorer et analyser notre Service. Les technologies que nous utilisons peuvent inclure :</p>
+    <ul>
+      <li><strong>Cookies ou cookies de navigateur.</strong> Un cookie est un petit fichier plac&eacute; sur votre appareil. Vous pouvez demander &agrave; votre navigateur de refuser tous les cookies ou de vous avertir lorsqu'un cookie est envoy&eacute;. Toutefois, si vous n'acceptez pas les cookies, il est possible que vous ne puissiez pas utiliser certaines parties de notre Service.</li>
+      <li><strong>Balises Web.</strong> Certaines sections de notre Service et de nos courriels peuvent contenir de petits fichiers &eacute;lectroniques connus sous le nom de balises Web (&eacute;galement appel&eacute;s gifs transparents, pixels invisibles et gifs &agrave; pixel unique) qui permettent &agrave; la Soci&eacute;t&eacute;, par exemple, de compter les utilisateurs ayant visit&eacute; ces pages ou ouvert un courriel et d'obtenir d'autres statistiques relatives au site Web (par exemple, enregistrer la popularit&eacute; d'une certaine section et v&eacute;rifier l'int&eacute;grit&eacute; du syst&egrave;me et du serveur).</li>
+    </ul>
+    <p>Les cookies peuvent &ecirc;tre &laquo;&nbsp;persistants&nbsp;&raquo; ou &laquo;&nbsp;de session&nbsp;&raquo;. Les cookies persistants restent sur votre ordinateur personnel ou votre appareil mobile lorsque vous vous d&eacute;connectez, tandis que les cookies de session sont supprim&eacute;s d&egrave;s que vous fermez votre navigateur Web.</p>
+    <p>Lorsque la loi l'exige, nous n'utilisons des cookies non essentiels (tels que les cookies d'analyse, de publicit&eacute; et de reciblage) qu'avec votre consentement. Vous pouvez retirer ou modifier votre consentement &agrave; tout moment en utilisant notre outil de pr&eacute;f&eacute;rences de cookies (si disponible) ou via les param&egrave;tres de votre navigateur ou appareil. Le retrait du consentement n'affecte pas la lic&eacute;it&eacute; du traitement fond&eacute; sur le consentement avant son retrait.</p>
+    <p>Nous utilisons &agrave; la fois des cookies de session et des cookies persistants aux fins d&eacute;crites ci-dessous :</p>
+    <ul>
+      <li>
+        <p><strong>Cookies n&eacute;cessaires / essentiels</strong></p>
+        <p>Type : Cookies de session</p>
+        <p>Administr&eacute;s par : Nous</p>
+        <p>Finalit&eacute; : Ces cookies sont essentiels pour vous fournir les services disponibles sur le Site Web et vous permettre d'en utiliser certaines fonctionnalit&eacute;s. Ils aident &agrave; authentifier les utilisateurs et &agrave; pr&eacute;venir l'utilisation frauduleuse des comptes. Sans ces cookies, les services que vous avez demand&eacute;s ne peuvent pas &ecirc;tre fournis.</p>
+      </li>
+      <li>
+        <p><strong>Cookies d'acceptation de la politique de cookies</strong></p>
+        <p>Type : Cookies persistants</p>
+        <p>Administr&eacute;s par : Nous</p>
+        <p>Finalit&eacute; : Ces cookies permettent de d&eacute;terminer si les utilisateurs ont accept&eacute; l'utilisation des cookies sur le Site Web.</p>
+      </li>
+      <li>
+        <p><strong>Cookies de fonctionnalit&eacute;</strong></p>
+        <p>Type : Cookies persistants</p>
+        <p>Administr&eacute;s par : Nous</p>
+        <p>Finalit&eacute; : Ces cookies nous permettent de m&eacute;moriser les choix que vous effectuez lorsque vous utilisez le Site Web, comme vos pr&eacute;f&eacute;rences de langue. Ils ont pour but de vous offrir une exp&eacute;rience plus personnalis&eacute;e et d'&eacute;viter que vous deviez saisir &agrave; nouveau vos pr&eacute;f&eacute;rences &agrave; chaque utilisation du Site Web.</p>
+      </li>
+    </ul>
+    <p>Pour plus d'informations sur les cookies que nous utilisons et vos choix concernant les cookies, veuillez consulter notre Politique de cookies.</p>
+
+    <h3>Utilisation de vos donn&eacute;es personnelles</h3>
+    <p>La Soci&eacute;t&eacute; peut utiliser les donn&eacute;es personnelles aux fins suivantes :</p>
+    <ul>
+      <li><p><strong>Pour fournir et maintenir notre Service</strong>, notamment pour surveiller l'utilisation de notre Service.</p></li>
+      <li><p><strong>Pour g&eacute;rer votre compte :</strong> pour g&eacute;rer votre inscription en tant qu'utilisateur du Service.</p></li>
+      <li><p><strong>Pour l'ex&eacute;cution d'un contrat :</strong> l'&eacute;laboration, le respect et l'ex&eacute;cution du contrat de prestation de services que vous avez conclus avec nous via le Service.</p></li>
+      <li><p><strong>Pour vous contacter :</strong> pour vous contacter par courriel ou d'autres formes &eacute;quivalentes de communication &eacute;lectronique concernant les mises &agrave; jour ou les communications informatives relatives aux fonctionnalit&eacute;s ou aux services contract&eacute;s.</p></li>
+      <li><p><strong>Pour vous fournir</strong> des informations sur d'autres biens, services et &eacute;v&eacute;nements similaires &agrave; ceux que vous avez d&eacute;j&agrave; achet&eacute;s ou sur lesquels vous vous &ecirc;tes renseign&eacute;, sauf si vous avez choisi de ne pas recevoir ces informations.</p></li>
+      <li><p><strong>Pour g&eacute;rer vos demandes :</strong> pour traiter et g&eacute;rer vos demandes aupr&egrave;s de nous.</p></li>
+      <li><p><strong>Pour les transferts d'entreprise :</strong> nous pouvons utiliser vos donn&eacute;es personnelles dans le cadre d'une fusion, d'une cession, d'une restructuration ou d'une autre vente ou transfert de tout ou partie de nos actifs.</p></li>
+      <li><p><strong>&Agrave; d'autres fins</strong> : nous pouvons utiliser vos informations &agrave; d'autres fins, telles que l'analyse de donn&eacute;es, l'identification des tendances d'utilisation et l'&eacute;valuation et l'am&eacute;lioration de notre Service.</p></li>
+    </ul>
+    <p>Nous pouvons partager vos donn&eacute;es personnelles dans les situations suivantes :</p>
+    <ul>
+      <li><strong>Avec les Fournisseurs de services :</strong> nous pouvons partager vos donn&eacute;es personnelles avec des Fournisseurs de services pour surveiller et analyser l'utilisation de notre Service et pour vous contacter.</li>
+      <li><strong>Pour les transferts d'entreprise :</strong> nous pouvons partager ou transf&eacute;rer vos donn&eacute;es personnelles dans le cadre de n&eacute;gociations relatives &agrave; une fusion, une vente d'actifs, un financement ou une acquisition de tout ou partie de notre activit&eacute;.</li>
+      <li><strong>Avec les Affili&eacute;s :</strong> nous pouvons partager vos donn&eacute;es personnelles avec nos affili&eacute;s, auquel cas nous exigerons de ces affili&eacute;s qu'ils respectent la pr&eacute;sente Politique de confidentialit&eacute;.</li>
+      <li><strong>Avec des partenaires commerciaux :</strong> nous pouvons partager vos donn&eacute;es personnelles avec nos partenaires commerciaux pour vous proposer certains produits, services ou promotions.</li>
+      <li><strong>Avec votre consentement :</strong> nous pouvons divulguer vos donn&eacute;es personnelles &agrave; toute autre fin avec votre consentement.</li>
+    </ul>
+
+    <h3>Conservation de vos donn&eacute;es personnelles</h3>
+    <p>La Soci&eacute;t&eacute; conservera vos donn&eacute;es personnelles uniquement aussi longtemps que n&eacute;cessaire aux fins &eacute;nonc&eacute;es dans la pr&eacute;sente Politique de confidentialit&eacute;.</p>
+    <p>Dans la mesure du possible, nous appliquons des p&eacute;riodes de conservation plus courtes et/ou r&eacute;duisons l'identifiabilit&eacute; en supprimant, en agr&eacute;geant ou en anonymisant les donn&eacute;es. Les p&eacute;riodes de conservation ci-dessous sont des p&eacute;riodes maximales (&laquo;&nbsp;jusqu'&agrave;&nbsp;&raquo;) :</p>
+    <ul>
+      <li>
+        <p>Informations de contact (formulaire et Calendly)</p>
+        <ul><li>Conserv&eacute;es pendant 24 mois &agrave; compter du dernier &eacute;change, afin de traiter les demandes de suivi et de d&eacute;fendre d'&eacute;ventuelles r&eacute;clamations.</li></ul>
+      </li>
+      <li>
+        <p>Donn&eacute;es d'utilisation</p>
+        <ul>
+          <li>Donn&eacute;es d'analyse du site Web (cookies, adresses IP, identifiants d'appareils) : jusqu'&agrave; 24 mois &agrave; compter de la date de collecte.</li>
+          <li>Journaux de serveur (adresses IP, heures d'acc&egrave;s) : jusqu'&agrave; 24 mois &agrave; des fins de surveillance de la s&eacute;curit&eacute;.</li>
+        </ul>
+      </li>
+      <li>
+        <p>Donn&eacute;es marketing</p>
+        <ul><li>Conserv&eacute;es jusqu'&agrave; votre d&eacute;sabonnement ou jusqu'&agrave; 24 mois &agrave; compter de votre dernier engagement, selon la premi&egrave;re &eacute;ventualit&eacute;.</li></ul>
+      </li>
+    </ul>
+    <p>Nous pouvons conserver les donn&eacute;es personnelles au-del&agrave; des p&eacute;riodes indiqu&eacute;es ci-dessus pour des raisons l&eacute;gales, pour d&eacute;fendre des r&eacute;clamations juridiques, &agrave; votre demande explicite, ou en raison de limitations techniques li&eacute;es aux syst&egrave;mes de sauvegarde.</p>
+    <p>&Agrave; l'expiration des p&eacute;riodes de conservation, nous supprimons ou anonymisons les donn&eacute;es personnelles de mani&egrave;re s&eacute;curis&eacute;e.</p>
+
+    <h3>Transfert de vos donn&eacute;es personnelles</h3>
+    <p>Vos informations, y compris les donn&eacute;es personnelles, sont trait&eacute;es dans les bureaux d'exploitation de la Soci&eacute;t&eacute; et dans tout autre endroit o&ugrave; se trouvent les parties impliqu&eacute;es dans le traitement. Cela signifie que ces informations peuvent &ecirc;tre transf&eacute;r&eacute;es vers des ordinateurs situ&eacute;s en dehors de votre province, pays ou autre juridiction gouvernementale o&ugrave; les lois sur la protection des donn&eacute;es peuvent diff&eacute;rer.</p>
+    <p>Lorsque la loi applicable l'exige, nous veillons &agrave; ce que les transferts internationaux de vos donn&eacute;es personnelles soient soumis &agrave; des garanties appropri&eacute;es.</p>
+
+    <h3>Suppression de vos donn&eacute;es personnelles</h3>
+    <p>Vous avez le droit de supprimer ou de demander que nous aidions &agrave; supprimer les donn&eacute;es personnelles que nous avons collect&eacute;es &agrave; votre sujet.</p>
+    <p>Vous pouvez nous contacter pour demander l'acc&egrave;s, la correction ou la suppression de toute donn&eacute;e personnelle que vous nous avez fournie.</p>
+    <p>Veuillez noter, toutefois, que nous pouvons &ecirc;tre amen&eacute;s &agrave; conserver certaines informations lorsque nous avons une obligation l&eacute;gale ou un fondement juridique pour le faire.</p>
+
+    <h3>Divulgation de vos donn&eacute;es personnelles</h3>
+
+    <h4>Transactions commerciales</h4>
+    <p>Si la Soci&eacute;t&eacute; est impliqu&eacute;e dans une fusion, une acquisition ou une vente d'actifs, vos donn&eacute;es personnelles pourront &ecirc;tre transf&eacute;r&eacute;es. Nous vous en informerons avant que vos donn&eacute;es personnelles ne soient transf&eacute;r&eacute;es et soumises &agrave; une politique de confidentialit&eacute; diff&eacute;rente.</p>
+
+    <h4>Application de la loi</h4>
+    <p>Dans certaines circonstances, la Soci&eacute;t&eacute; peut &ecirc;tre tenue de divulguer vos donn&eacute;es personnelles si la loi l'exige ou en r&eacute;ponse &agrave; des demandes valides d'autorit&eacute;s publiques (p.&nbsp;ex. un tribunal ou un organisme gouvernemental).</p>
+
+    <h4>Autres exigences l&eacute;gales</h4>
+    <p>La Soci&eacute;t&eacute; peut divulguer vos donn&eacute;es personnelles en croyant de bonne foi qu'une telle action est n&eacute;cessaire pour :</p>
+    <ul>
+      <li>Se conformer &agrave; une obligation l&eacute;gale</li>
+      <li>Prot&eacute;ger et d&eacute;fendre les droits ou la propri&eacute;t&eacute; de la Soci&eacute;t&eacute;</li>
+      <li>Pr&eacute;venir ou enqu&ecirc;ter sur d'&eacute;ventuels actes r&eacute;pr&eacute;hensibles li&eacute;s au Service</li>
+      <li>Prot&eacute;ger la s&eacute;curit&eacute; personnelle des utilisateurs du Service ou du public</li>
+      <li>Se prot&eacute;ger contre la responsabilit&eacute; l&eacute;gale</li>
+    </ul>
+
+    <h3>S&eacute;curit&eacute; de vos donn&eacute;es personnelles</h3>
+    <p>La s&eacute;curit&eacute; de vos donn&eacute;es personnelles est importante pour nous, mais n'oubliez pas qu'aucune m&eacute;thode de transmission sur Internet ou de stockage &eacute;lectronique n'est s&eacute;curis&eacute;e &agrave; 100&nbsp;%. Bien que nous nous efforcions d'utiliser des moyens commercialement raisonnables pour prot&eacute;ger vos donn&eacute;es personnelles, nous ne pouvons pas garantir leur s&eacute;curit&eacute; absolue.</p>
+
+    <h2>Informations d&eacute;taill&eacute;es sur le traitement de vos donn&eacute;es personnelles</h2>
+    <p>Les Fournisseurs de services que nous utilisons peuvent avoir acc&egrave;s &agrave; vos donn&eacute;es personnelles. Ces fournisseurs tiers collectent, stockent, utilisent, traitent et transf&egrave;rent des informations sur votre activit&eacute; sur notre Service conform&eacute;ment &agrave; leurs politiques de confidentialit&eacute;.</p>
+
+    <h3>Communications par courriel</h3>
+    <p>Nous pouvons utiliser vos donn&eacute;es personnelles pour vous contacter avec des informations relatives &agrave; votre demande ou &agrave; votre r&eacute;servation. Vous pouvez vous d&eacute;sabonner de ces communications en nous contactant directement.</p>
+    <p>Nous utilisons les Fournisseurs de services suivants pour g&eacute;rer les communications par courriel :</p>
+    <ul>
+      <li>
+        <p><strong>Calendly</strong></p>
+        <p>Leur Politique de confidentialit&eacute; est disponible &agrave; l'adresse : <a href="https://calendly.com/legal/privacy-notice" rel="external nofollow noopener" target="_blank">https://calendly.com/legal/privacy-notice</a></p>
+      </li>
+    </ul>
+
+    <h2>Confidentialit&eacute; selon le RGPD</h2>
+
+    <h3>Base juridique du traitement des donn&eacute;es personnelles en vertu du RGPD</h3>
+    <p>Nous pouvons traiter des donn&eacute;es personnelles dans les conditions suivantes :</p>
+    <ul>
+      <li><strong>Consentement :</strong> vous avez donn&eacute; votre consentement au traitement de vos donn&eacute;es personnelles &agrave; une ou plusieurs fins sp&eacute;cifiques.</li>
+      <li><strong>Ex&eacute;cution d'un contrat :</strong> la fourniture de donn&eacute;es personnelles est n&eacute;cessaire &agrave; l'ex&eacute;cution d'un accord avec vous et/ou &agrave; tout obligation pr&eacute;contractuelle.</li>
+      <li><strong>Obligations l&eacute;gales :</strong> le traitement des donn&eacute;es personnelles est n&eacute;cessaire au respect d'une obligation l&eacute;gale &agrave; laquelle la Soci&eacute;t&eacute; est soumise.</li>
+      <li><strong>Int&eacute;r&ecirc;ts vitaux :</strong> le traitement des donn&eacute;es personnelles est n&eacute;cessaire pour prot&eacute;ger vos int&eacute;r&ecirc;ts vitaux ou ceux d'une autre personne physique.</li>
+      <li><strong>Int&eacute;r&ecirc;ts publics :</strong> le traitement des donn&eacute;es personnelles est li&eacute; &agrave; une mission d'int&eacute;r&ecirc;t public ou &agrave; l'exercice de l'autorit&eacute; publique d&eacute;volue &agrave; la Soci&eacute;t&eacute;.</li>
+      <li><strong>Int&eacute;r&ecirc;ts l&eacute;gitimes :</strong> le traitement des donn&eacute;es personnelles est n&eacute;cessaire aux fins des int&eacute;r&ecirc;ts l&eacute;gitimes poursuivis par la Soci&eacute;t&eacute;.</li>
+    </ul>
+    <p>Dans tous les cas, la Soci&eacute;t&eacute; se fera un plaisir de clarifier la base juridique sp&eacute;cifique qui s'applique au traitement, et notamment si la fourniture de donn&eacute;es personnelles est une exigence l&eacute;gale ou contractuelle.</p>
+
+    <h3>Transfert international de donn&eacute;es personnelles</h3>
+    <p>Nous pouvons transf&eacute;rer, stocker et traiter des donn&eacute;es personnelles dans des pays autres que celui dans lequel vous vous trouvez, y compris des pays en dehors de l'Espace &eacute;conomique europ&eacute;en (&laquo;&nbsp;EEE&nbsp;&raquo;) et du Royaume-Uni, o&ugrave; les lois sur la protection des donn&eacute;es peuvent diff&eacute;rer.</p>
+    <p>Lorsque nous transf&eacute;rons des donn&eacute;es personnelles en dehors de l'EEE/RU vers un pays n'offrant pas un niveau de protection ad&eacute;quat reconnu, nous nous appuyons sur des garanties appropri&eacute;es, telles que les Clauses contractuelles types (&laquo;&nbsp;CCT&nbsp;&raquo;) de la Commission europ&eacute;enne.</p>
+
+    <h3>Vos droits en vertu du RGPD</h3>
+    <p>La Soci&eacute;t&eacute; s'engage &agrave; respecter la confidentialit&eacute; de vos donn&eacute;es personnelles et &agrave; vous garantir l'exercice de vos droits.</p>
+    <p>Vous avez le droit, en vertu de la pr&eacute;sente Politique de confidentialit&eacute; et de la loi si vous &ecirc;tes dans l'UE, de :</p>
+    <ul>
+      <li><strong>Demander l'acc&egrave;s &agrave; vos donn&eacute;es personnelles.</strong> Le droit d'acc&eacute;der, de mettre &agrave; jour ou de supprimer les informations que nous d&eacute;tenons sur vous.</li>
+      <li><strong>Demander la limitation du traitement.</strong> Vous avez le droit de nous demander de limiter le traitement de vos donn&eacute;es personnelles dans certaines circonstances.</li>
+      <li><strong>Demander la correction de vos donn&eacute;es personnelles.</strong> Vous avez le droit de faire corriger toute information incompl&egrave;te ou inexacte que nous d&eacute;tenons sur vous.</li>
+      <li><strong>Vous opposer au traitement de vos donn&eacute;es personnelles.</strong> Ce droit existe lorsque nous nous appuyons sur un int&eacute;r&ecirc;t l&eacute;gitime comme base juridique de notre traitement.</li>
+      <li><strong>Demander l'effacement de vos donn&eacute;es personnelles.</strong> Vous avez le droit de nous demander de supprimer vos donn&eacute;es personnelles lorsqu'il n'y a aucune raison valable de continuer &agrave; les traiter.</li>
+      <li><strong>Demander le transfert de vos donn&eacute;es personnelles.</strong> Nous vous fournirons, ou fournirons &agrave; un tiers de votre choix, vos donn&eacute;es personnelles dans un format structur&eacute;, couramment utilis&eacute; et lisible par machine.</li>
+      <li><strong>Retirer votre consentement.</strong> Vous avez le droit de retirer votre consentement &agrave; l'utilisation de vos donn&eacute;es personnelles &agrave; tout moment.</li>
+    </ul>
+
+    <h3>Exercice de vos droits de protection des donn&eacute;es en vertu du RGPD</h3>
+    <p>Vous pouvez exercer vos droits d'acc&egrave;s, de rectification, d'annulation et d'opposition en nous contactant. Nous r&eacute;pondons g&eacute;n&eacute;ralement dans un d&eacute;lai d'un mois, pouvant &ecirc;tre prolong&eacute; de deux mois suppl&eacute;mentaires si n&eacute;cessaire, conform&eacute;ment &agrave; la loi applicable.</p>
+    <p>Vous avez le droit de d&eacute;poser une plainte aupr&egrave;s d'une autorit&eacute; de protection des donn&eacute;es concernant notre collecte et utilisation de vos donn&eacute;es personnelles.</p>
+
+    <h2>Protection de la vie priv&eacute;e des enfants</h2>
+    <p>Notre Service ne s'adresse pas aux personnes de moins de 16 ans. Nous ne collectons pas sciemment d'informations personnellement identifiables aupr&egrave;s de personnes de moins de 16 ans. Si vous &ecirc;tes un parent ou un tuteur et que vous savez que votre enfant nous a fourni des donn&eacute;es personnelles, veuillez nous contacter. Si nous apprenons que nous avons collect&eacute; des donn&eacute;es personnelles d'une personne de moins de 16 ans sans v&eacute;rification du consentement parental, nous prendrons des mesures pour supprimer ces informations de nos serveurs.</p>
+
+    <h2>Liens vers d'autres sites Web</h2>
+    <p>Notre Service peut contenir des liens vers d'autres sites Web qui ne sont pas exploit&eacute;s par nous. Si vous cliquez sur un lien tiers, vous serez dirig&eacute; vers le site de ce tiers. Nous vous conseillons vivement de consulter la Politique de confidentialit&eacute; de chaque site que vous visitez.</p>
+    <p>Nous n'avons aucun contr&ocirc;le sur le contenu, les politiques de confidentialit&eacute; ou les pratiques des sites ou services tiers et n'assumons aucune responsabilit&eacute; &agrave; leur &eacute;gard.</p>
+
+    <h2>Modifications de la pr&eacute;sente Politique de confidentialit&eacute;</h2>
+    <p>Nous pouvons mettre &agrave; jour notre Politique de confidentialit&eacute; de temps &agrave; autre. Nous vous informerons de tout changement en publiant la nouvelle Politique de confidentialit&eacute; sur cette page.</p>
+    <p>Nous vous informerons par courriel et/ou par un avis bien visible sur notre Service avant que le changement n'entre en vigueur, et nous mettrons &agrave; jour la date de &laquo;&nbsp;Derni&egrave;re mise &agrave; jour&nbsp;&raquo; en haut de la pr&eacute;sente Politique de confidentialit&eacute;.</p>
+    <p>Nous vous conseillons de consulter r&eacute;guli&egrave;rement la pr&eacute;sente Politique de confidentialit&eacute; pour prendre connaissance de tout changement.</p>
+
+    <h2>Nous contacter</h2>
+    <p>Si vous avez des questions concernant la pr&eacute;sente Politique de confidentialit&eacute;, vous pouvez nous contacter :</p>
+    <ul>
+      <li>Par courriel : <a href="mailto:privacy@drakarian.tech">privacy@drakarian.tech</a></li>
+    </ul>
+  </article>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__copy">&copy; 2026 Services Drakarian Inc.</div>
+      <div class="footer__links">
+        <a href="./politique-confidentialite.html">Politique de confidentialit&eacute;</a>
+        <a href="./conditions-utilisation.html">Conditions d&rsquo;utilisation</a>
+        <a href="./politique-cookies.html">Politique de cookies</a>
+      </div>
+      <button class="cc-prefs-link">Pr&eacute;f&eacute;rences cookies</button>
+      <a href="./#contact" class="footer__cta">
+        D&eacute;marrer un projet
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function setTheme(theme) { document.documentElement.setAttribute('data-theme', theme); localStorage.setItem('drak-theme', theme); }
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.theme-toggle').forEach(btn => btn.addEventListener('click', () => setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')));
+      document.querySelectorAll('.lang-toggle').forEach(btn => btn.addEventListener('click', () => { localStorage.setItem('drak-lang', 'en'); window.location.href = './privacy-policy.html'; }));
+      const nav = document.getElementById('nav');
+      if (nav) window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+      const burger = document.getElementById('burger'), mobileMenu = document.getElementById('mobile-menu');
+      if (burger && mobileMenu) {
+        burger.addEventListener('click', () => { burger.classList.toggle('active'); mobileMenu.classList.toggle('active'); document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : ''; });
+        document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { burger.classList.remove('active'); mobileMenu.classList.remove('active'); document.body.style.overflow = ''; }); });
+      }
+    });
+  </script>
+  <script src="./cookie-consent.js"></script>
+</body>
+</html>

@@ -855,8 +855,9 @@
     <div class="footer-bottom">
       <div class="footer-bottom__copy" data-i18n="footer.copy">&copy; 2026 Drakarian Services Inc.</div>
       <div class="footer-bottom__links">
-        <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-        <a href="#" data-i18n="footer.terms">Terms &amp; Conditions</a>
+        <a href="./privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="./terms-and-conditions.html" data-i18n="footer.terms">Terms &amp; Conditions</a>
+        <a href="./cookie-policy.html" data-i18n="footer.cookies">Cookies Policy</a>
         <!-- Cookie consent preferences reset link -->
         <button class="cc-prefs-link">Cookie Preferences</button>
       </div>
@@ -907,6 +908,7 @@
         "footer.copy": "\u00a9 2026 Drakarian Services Inc.",
         "footer.privacy": "Privacy Policy",
         "footer.terms": "Terms & Conditions",
+        "footer.cookies": "Cookies Policy",
         "form.title": "Send us a message",
         "form.subtitle": "Have a question or want to discuss a project? Fill out the form and we\u2019ll get back to you within 24\u00a0hours.",
         "form.name": "Name",
@@ -989,6 +991,7 @@
         "footer.copy": "\u00a9 2026 Services Drakarian Inc.",
         "footer.privacy": "Politique de confidentialit\u00e9",
         "footer.terms": "Conditions g\u00e9n\u00e9rales",
+        "footer.cookies": "Politique de cookies",
         "form.title": "Envoyez-nous un message",
         "form.subtitle": "Une question ou un projet \u00e0 discuter\u00a0? Remplissez le formulaire et nous vous r\u00e9pondrons sous 24\u00a0heures.",
         "form.name": "Nom",
@@ -1059,6 +1062,17 @@
 
       // Update cookie consent link text on language switch
       if (typeof window.cookieConsentUpdateLang === 'function') window.cookieConsentUpdateLang();
+
+      // Update legal page link hrefs based on language
+      const legalHrefs = {
+        "footer.privacy": { en: "./privacy-policy.html", fr: "./politique-confidentialite.html" },
+        "footer.terms":   { en: "./terms-and-conditions.html", fr: "./conditions-utilisation.html" },
+        "footer.cookies": { en: "./cookie-policy.html", fr: "./politique-cookies.html" }
+      };
+      Object.keys(legalHrefs).forEach(key => {
+        const el = document.querySelector('[data-i18n="' + key + '"]');
+        if (el) el.href = legalHrefs[key][lang];
+      });
     }
 
     /* ========== Theme ========== */

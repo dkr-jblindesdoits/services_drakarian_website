@@ -156,6 +156,9 @@
     .footer__cta { display:inline-flex; align-items:center; gap:0.5rem; padding:0.7rem 1.5rem; background:var(--color-accent); color:#fff; border-radius:var(--radius); font-size:0.88rem; font-weight:500; transition:all var(--transition); }
     .footer__cta:hover { background:var(--color-accent-hover); transform:translateY(-1px); }
     .footer__cta svg { width:14px; height:14px; }
+    .footer__links { display:flex; align-items:center; gap:1.2rem; }
+    .footer__links a { font-size:0.82rem; color:rgba(255,255,255,0.4); transition:color var(--transition); }
+    .footer__links a:hover { color:rgba(255,255,255,0.7); }
     @media (max-width: 640px) { .footer__inner { flex-direction:column; gap:1rem; text-align:center; } }
   </style>
 </head>
@@ -416,6 +419,11 @@
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__copy" data-i18n="footer.copy">&copy; 2026 Drakarian Services Inc.</div>
+      <div class="footer__links">
+        <a href="./privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="./terms-and-conditions.html" data-i18n="footer.terms">Terms &amp; Conditions</a>
+        <a href="./cookie-policy.html" data-i18n="footer.cookies">Cookies Policy</a>
+      </div>
       <!-- Cookie consent preferences reset link -->
       <button class="cc-prefs-link">Cookie Preferences</button>
       <a href="./#contact" class="footer__cta" data-i18n="footer.cta">
@@ -447,6 +455,7 @@
         "o2.h3": "Deal Aggregator Platform", "o2.p": "Automated web scraping with FastAPI to aggregate retail promotions, served through a WordPress frontend.",
         "o3.h3": "Curated Travel Application", "o3.p": "A mobile app delivering curated \u201cPlaylists of Moments\u201d with a FastAPI backend and cross-platform mobile client.",
         "footer.copy": "\u00a9 2026 Drakarian Services Inc.", "footer.cta": "Start a Project",
+        "footer.privacy": "Privacy Policy", "footer.terms": "Terms & Conditions", "footer.cookies": "Cookies Policy",
         "nav.services": "Services", "nav.projects": "Projects", "nav.process": "Process", "nav.contact": "Contact", "nav.cta": "Book a Call",
         "breadcrumb.home": "Home", "breadcrumb.projects": "Projects",
         "d1.b1.t": "Designer's View", "d1.b1.1": "Open SolidWorks Assembly", "d1.b1.2": "Run Automation Tool", "d1.b1.3": "Ready-to-Simulate Model",
@@ -480,6 +489,7 @@
         "o2.h3": "Plateforme d\u2019agr\u00e9gation de promotions", "o2.p": "Syst\u00e8me de scraping automatis\u00e9 avec FastAPI pour agr\u00e9ger des promotions, servi via un frontend WordPress.",
         "o3.h3": "Application voyage curated", "o3.p": "Application mobile proposant des \u00ab\u00a0Playlists de Moments\u00a0\u00bb avec un backend FastAPI et un client mobile multiplateforme.",
         "footer.copy": "\u00a9 2026 Services Drakarian Inc.", "footer.cta": "D\u00e9marrer un projet",
+        "footer.privacy": "Politique de confidentialit\u00e9", "footer.terms": "Conditions d\u2019utilisation", "footer.cookies": "Politique de cookies",
         "nav.services": "Services", "nav.projects": "Projets", "nav.process": "Processus", "nav.contact": "Contact", "nav.cta": "R\u00e9server un appel",
         "breadcrumb.home": "Accueil", "breadcrumb.projects": "Projets",
         "d1.b1.t": "Vue du concepteur", "d1.b1.1": "Ouvrir l\u2019assemblage SolidWorks", "d1.b1.2": "Lancer l\u2019outil d\u2019automatisation", "d1.b1.3": "Mod\u00e8le pr\u00eat \u00e0 simuler",
@@ -506,6 +516,17 @@
         if (el.tagName === 'OPTION') { el.textContent = val; } else { el.innerHTML = val; if (svg) el.appendChild(svg); }
       });
       document.querySelectorAll('.lang-toggle').forEach(b => b.textContent = lang === 'en' ? 'FR' : 'EN');
+
+      // Update legal page hrefs for the current language
+      const legalHrefs = {
+        "footer.privacy": { en: "./privacy-policy.html", fr: "./politique-confidentialite.html" },
+        "footer.terms":   { en: "./terms-and-conditions.html", fr: "./conditions-utilisation.html" },
+        "footer.cookies": { en: "./cookie-policy.html", fr: "./politique-cookies.html" }
+      };
+      Object.keys(legalHrefs).forEach(key => {
+        const el = document.querySelector('[data-i18n="' + key + '"]');
+        if (el) el.href = legalHrefs[key][lang];
+      });
 
       // Update cookie consent link text on language switch
       if (typeof window.cookieConsentUpdateLang === 'function') window.cookieConsentUpdateLang();

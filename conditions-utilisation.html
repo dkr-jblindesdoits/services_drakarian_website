@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditions d'utilisation — Services Drakarian Inc.</title>
+  <meta name="description" content="Conditions d'utilisation de Services Drakarian Inc. — consultez les conditions r&eacute;gissant l'acc&egrave;s et l'utilisation de notre site Web.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://drakarian.tech/conditions-utilisation.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <script>
+    (function(){
+      var t = localStorage.getItem('drak-theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+
+  <!-- Cookie Consent (GDPR / Law 25) -->
+  <link rel="stylesheet" href="./cookie-consent.css">
+
+  <style>
+    :root {
+      --color-bg: #FAFAF8; --color-bg-alt: #F0EFEB; --color-bg-dark: #0F1923; --color-bg-dark-alt: #162231;
+      --color-text: #1E2A38; --color-text-secondary: #4A5568; --color-text-light: #CBD5E0; --color-text-on-dark: #E8ECF0;
+      --color-accent: #0052CC; --color-accent-hover: #003D99; --color-accent-subtle: rgba(0,82,204,0.08);
+      --color-border: #D8D6D0; --color-border-light: #E8E6E2; --color-card-bg: #FFFFFF;
+      --color-nav-scrolled: rgba(250,250,248,0.92); --color-stat-bg: #FFFFFF;
+      --font-heading: 'Instrument Serif', Georgia, serif; --font-body: 'DM Sans', -apple-system, sans-serif;
+      --container: min(1200px, 90vw); --container-narrow: min(900px, 90vw);
+      --space-xs: 0.5rem; --space-sm: 1rem; --space-md: 1.5rem; --space-lg: 3rem; --space-xl: 5rem; --space-2xl: 8rem;
+      --radius: 6px; --radius-lg: 12px; --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    [data-theme="dark"] {
+      --color-bg: #0D1117; --color-bg-alt: #151B23; --color-bg-dark: #010409; --color-bg-dark-alt: #0D1117;
+      --color-text: #E6EDF3; --color-text-secondary: #8B949E; --color-text-light: #8B949E; --color-text-on-dark: #E6EDF3;
+      --color-accent: #4493F8; --color-accent-hover: #6DB1FF; --color-accent-subtle: rgba(68,147,248,0.1);
+      --color-border: #30363D; --color-border-light: #21262D; --color-card-bg: #151B23;
+      --color-nav-scrolled: rgba(13,17,23,0.92); --color-stat-bg: #151B23;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; font-size: 16px; }
+    body { font-family: var(--font-body); color: var(--color-text); background: var(--color-bg); line-height: 1.7; font-weight: 400; -webkit-font-smoothing: antialiased; overflow-x: hidden; transition: background 0.4s ease, color 0.4s ease; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; }
+    p { color: var(--color-text-secondary); transition: color 0.4s ease; }
+
+    /* Nav */
+    .nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:1rem 0; transition:all var(--transition); background:transparent; }
+    .nav.scrolled { background: var(--color-nav-scrolled); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--color-border-light); padding:0.7rem 0; }
+    .nav__inner { width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
+    .nav__logo { font-family:var(--font-body); font-size:1.05rem; font-weight:600; letter-spacing:-0.02em; color:var(--color-text); }
+    .nav__logo span { color:var(--color-accent); }
+    .nav__links { display:flex; align-items:center; gap:2rem; list-style:none; }
+    .nav__links a:not(.btn) { font-size:0.88rem; font-weight:500; color:var(--color-text-secondary); transition:color var(--transition); }
+    .nav__links a:not(.btn):hover { color:var(--color-text); }
+    .btn { display:inline-flex; align-items:center; gap:0.5rem; padding:0.85rem 1.8rem; border-radius:var(--radius); font-family:var(--font-body); font-size:0.9rem; font-weight:500; letter-spacing:0.02em; cursor:pointer; border:none; transition:all var(--transition); white-space:nowrap; }
+    .btn--primary { background:var(--color-accent); color:#fff; }
+    .btn--primary:hover { background:var(--color-accent-hover); transform:translateY(-1px); box-shadow:0 4px 20px rgba(0,82,204,0.3); }
+    [data-theme="dark"] .btn--primary:hover { box-shadow:0 4px 20px rgba(68,147,248,0.25); }
+    .btn svg { width:16px; height:16px; }
+
+    /* Toggles */
+    .nav__toggles { display:flex; align-items:center; gap:0.6rem; }
+    .theme-toggle {
+      background:none; border:1.5px solid var(--color-border); border-radius:50px;
+      cursor:pointer; width:42px; height:24px; position:relative; transition:all var(--transition); padding:0; flex-shrink:0;
+    }
+    .theme-toggle:hover { border-color:var(--color-accent); }
+    .theme-toggle__thumb {
+      width:16px; height:16px; border-radius:50%; background:var(--color-text);
+      position:absolute; top:2.5px; left:3px; transition:all 0.4s cubic-bezier(0.68,-0.55,0.27,1.55);
+    }
+    [data-theme="dark"] .theme-toggle__thumb { left:21px; background:var(--color-accent); }
+    .theme-toggle__icons { position:absolute; inset:0; display:flex; align-items:center; justify-content:space-between; padding:0 5px; pointer-events:none; }
+    .theme-toggle__icons svg { width:11px; height:11px; opacity:0.5; }
+    .theme-toggle__icons .icon-sun { stroke:#F59E0B; fill:none; }
+    .theme-toggle__icons .icon-moon { stroke:#8B949E; fill:none; }
+    .lang-toggle {
+      background:none; border:1.5px solid var(--color-border); border-radius:var(--radius);
+      cursor:pointer; padding:0.2rem 0.55rem; font-family:var(--font-body);
+      font-size:0.72rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
+      color:var(--color-text-secondary); transition:all var(--transition); line-height:1.5; flex-shrink:0;
+    }
+    .lang-toggle:hover { border-color:var(--color-accent); color:var(--color-accent); }
+
+    .nav__right-group { display:flex; align-items:center; gap:0.6rem; }
+    .nav__burger { display:none; background:none; border:none; cursor:pointer; padding:0.5rem; z-index:1001; }
+    .nav__burger span { display:block; width:22px; height:1.5px; background:var(--color-text); margin:5px 0; transition:all var(--transition); }
+    .nav__burger.active span:nth-child(1) { transform:rotate(45deg) translate(4px,4px); }
+    .nav__burger.active span:nth-child(2) { opacity:0; }
+    .nav__burger.active span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+    .nav__mobile { display:none; position:fixed; inset:0; background:var(--color-bg); z-index:999; flex-direction:column; align-items:center; justify-content:center; gap:2rem; transition:background 0.4s ease; }
+    .nav__mobile.active { display:flex; }
+    .nav__mobile a { font-family:var(--font-heading); font-size:2rem; color:var(--color-text); }
+    @media (max-width: 768px) { .nav__links { display:none; } .nav__burger { display:block; } }
+    @media (min-width: 769px) { .nav__toggles--mobile { display:none !important; } }
+
+    /* Breadcrumb */
+    .breadcrumb { padding-top:calc(70px + 1.5rem); padding-bottom:0; width:var(--container); margin:0 auto; }
+    .breadcrumb a { display:inline-flex; align-items:center; gap:0.35rem; font-size:0.82rem; font-weight:500; color:var(--color-text-secondary); transition:color var(--transition); }
+    .breadcrumb a:hover { color:var(--color-accent); }
+    .breadcrumb svg { width:14px; height:14px; }
+    .breadcrumb span { font-size:0.82rem; color:var(--color-text-secondary); }
+
+    /* Page header */
+    .page-header { padding:var(--space-lg) 0 var(--space-lg); text-align:center; }
+    .page-header h1 { font-size:clamp(2.2rem,4.5vw,3.2rem); margin-bottom:var(--space-sm); }
+
+    /* Policy content */
+    .policy { width:var(--container-narrow); margin:0 auto; padding:0 0 var(--space-xl); }
+    .policy h2 { font-size:clamp(1.4rem,2.5vw,1.8rem); margin-top:var(--space-lg); margin-bottom:var(--space-sm); }
+    .policy h3 { font-size:clamp(1.1rem,2vw,1.3rem); margin-top:var(--space-md); margin-bottom:var(--space-xs); }
+    .policy p { font-size:0.95rem; line-height:1.85; margin-bottom:var(--space-sm); }
+    .policy ul { list-style:none; margin-bottom:var(--space-sm); padding-left:0; }
+    .policy ul li { font-size:0.95rem; line-height:1.85; color:var(--color-text-secondary); padding:0.3rem 0 0.3rem 1.2rem; position:relative; }
+    .policy ul li::before { content:'\2022'; color:var(--color-accent); position:absolute; left:0; }
+    .policy ul li strong { color:var(--color-text); }
+    .policy a { color:var(--color-accent); text-decoration:underline; text-underline-offset:2px; }
+    .policy a:hover { color:var(--color-accent-hover); }
+    .policy .updated { font-size:0.88rem; color:var(--color-text-secondary); margin-bottom:var(--space-md); }
+
+    /* Footer */
+    .footer { padding:var(--space-lg) 0; background:var(--color-bg-dark); }
+    .footer__inner { width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+    .footer__copy { font-size:0.82rem; color:rgba(255,255,255,0.4); }
+    .footer__links { display:flex; gap:1.5rem; flex-wrap:wrap; }
+    .footer__links a { font-size:0.82rem; color:rgba(255,255,255,0.4); transition:color var(--transition); }
+    .footer__links a:hover { color:#fff; }
+    .footer__cta { display:inline-flex; align-items:center; gap:0.5rem; padding:0.7rem 1.5rem; background:var(--color-accent); color:#fff; border-radius:var(--radius); font-size:0.88rem; font-weight:500; transition:all var(--transition); }
+    .footer__cta:hover { background:var(--color-accent-hover); transform:translateY(-1px); }
+    .footer__cta svg { width:14px; height:14px; }
+    @media (max-width: 640px) { .footer__inner { flex-direction:column; text-align:center; } .footer__links { justify-content:center; } }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="nav" id="nav" aria-label="Navigation principale">
+    <div class="nav__inner">
+      <a href="./" class="nav__logo">Services <span>Drakarian</span> Inc.</a>
+
+      <ul class="nav__links">
+        <li><a href="./#services">Services</a></li>
+        <li><a href="./#projects">Projets</a></li>
+        <li><a href="./#process">Processus</a></li>
+        <li><a href="./#contact">Contact</a></li>
+        <li>
+          <div class="nav__toggles">
+            <button class="theme-toggle" aria-label="Basculer le mode sombre">
+              <div class="theme-toggle__icons">
+                <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              </div>
+              <div class="theme-toggle__thumb"></div>
+            </button>
+            <button class="lang-toggle">EN</button>
+          </div>
+        </li>
+        <li><a href="./#contact" class="btn btn--primary">R&eacute;server un appel</a></li>
+      </ul>
+
+      <div class="nav__right-group nav__toggles--mobile">
+        <div class="nav__toggles">
+          <button class="theme-toggle" aria-label="Basculer le mode sombre">
+            <div class="theme-toggle__icons">
+              <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </div>
+            <div class="theme-toggle__thumb"></div>
+          </button>
+          <button class="lang-toggle">EN</button>
+        </div>
+        <button class="nav__burger" id="burger" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="mobile-menu">
+    <a href="./#services" class="mobile-link">Services</a>
+    <a href="./#projects" class="mobile-link">Projets</a>
+    <a href="./#process" class="mobile-link">Processus</a>
+    <a href="./#contact" class="mobile-link">Contact</a>
+    <a href="./#contact" class="btn btn--primary mobile-link">R&eacute;server un appel</a>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="./">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Accueil
+    </a>
+    <span>&nbsp;/&nbsp;</span>
+    <span>Conditions d'utilisation</span>
+  </div>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>Conditions d'utilisation</h1>
+  </header>
+
+  <!-- Policy content -->
+  <article class="policy">
+    <p class="updated">Derni&egrave;re mise &agrave; jour : 2 mars 2026</p>
+    <p>Veuillez lire attentivement ces conditions d'utilisation avant d'utiliser notre Service.</p>
+
+    <h2>Interpr&eacute;tation et d&eacute;finitions</h2>
+    <h3>Interpr&eacute;tation</h3>
+    <p>Les mots dont la premi&egrave;re lettre est en majuscule ont des significations d&eacute;finies dans les conditions suivantes. Les d&eacute;finitions suivantes ont la m&ecirc;me signification qu'elles apparaissent au singulier ou au pluriel.</p>
+    <h3>D&eacute;finitions</h3>
+    <p>Aux fins des pr&eacute;sentes Conditions d'utilisation :</p>
+    <ul>
+      <li><strong>Affili&eacute;</strong> d&eacute;signe une entit&eacute; qui contr&ocirc;le, est contr&ocirc;l&eacute;e par, ou est sous contr&ocirc;le commun avec une partie, o&ugrave; &laquo;&nbsp;contr&ocirc;le&nbsp;&raquo; signifie la propri&eacute;t&eacute; de 50 % ou plus des actions, participations ou autres titres donnant droit de vote pour l'&eacute;lection des administrateurs ou autre autorit&eacute; de gestion.</li>
+      <li><strong>Pays</strong> d&eacute;signe : Qu&eacute;bec, Canada</li>
+      <li><strong>Soci&eacute;t&eacute;</strong> (d&eacute;sign&eacute;e par &laquo;&nbsp;la Soci&eacute;t&eacute;&nbsp;&raquo;, &laquo;&nbsp;Nous&nbsp;&raquo;, &laquo;&nbsp;Notre&nbsp;&raquo; ou &laquo;&nbsp;Nos&nbsp;&raquo; dans les pr&eacute;sentes Conditions d'utilisation) d&eacute;signe Services Drakarian Inc., 913-1310 rue Ottawa, H3C 0W9, Montr&eacute;al, QC, Canada.</li>
+      <li><strong>Appareil</strong> d&eacute;signe tout appareil pouvant acc&eacute;der au Service, tel qu'un ordinateur, un t&eacute;l&eacute;phone cellulaire ou une tablette num&eacute;rique.</li>
+      <li><strong>R&eacute;troaction</strong> d&eacute;signe les commentaires, innovations ou suggestions que Vous envoyez &agrave; la Soci&eacute;t&eacute; concernant les attributs, la performance ou les fonctionnalit&eacute;s de notre Service.</li>
+      <li><strong>Service</strong> d&eacute;signe le Site Web.</li>
+      <li><strong>Conditions d'utilisation</strong> (&eacute;galement d&eacute;sign&eacute;es par &laquo;&nbsp;Conditions&nbsp;&raquo;) d&eacute;signent les pr&eacute;sentes Conditions d'utilisation, y compris tout document express&eacute;ment incorpor&eacute; par r&eacute;f&eacute;rence, qui r&eacute;gissent votre acc&egrave;s au Service et son utilisation, et constituent l'int&eacute;gralit&eacute; de l'accord entre Vous et la Soci&eacute;t&eacute; concernant le Service.</li>
+      <li><strong>Service de m&eacute;dias sociaux tiers</strong> d&eacute;signe tout service ou contenu (y compris les donn&eacute;es, informations, produits ou services) fourni par un tiers et affich&eacute;, inclus, rendu disponible ou li&eacute; au Service.</li>
+      <li><strong>Site Web</strong> d&eacute;signe Services Drakarian Inc., accessible depuis <a href="https://www.drakarian.tech" rel="external nofollow noopener" target="_blank">www.drakarian.tech</a></li>
+      <li><strong>Vous</strong> d&eacute;signe la personne physique acc&eacute;dant au Service ou l'utilisant, ou la soci&eacute;t&eacute;, ou toute autre entit&eacute; juridique au nom de laquelle cette personne acc&egrave;de au Service ou l'utilise, selon le cas.</li>
+    </ul>
+
+    <h2>Reconnaissance</h2>
+    <p>Les pr&eacute;sentes sont les Conditions d'utilisation r&eacute;gissant l'utilisation de ce Service et l'accord entre Vous et la Soci&eacute;t&eacute;. Ces Conditions d'utilisation d&eacute;finissent les droits et obligations de tous les utilisateurs concernant l'utilisation du Service.</p>
+    <p>Votre acc&egrave;s au Service et son utilisation sont conditionn&eacute;s &agrave; votre acceptation et &agrave; votre respect des pr&eacute;sentes Conditions d'utilisation. Ces Conditions s'appliquent &agrave; tous les visiteurs, utilisateurs et autres personnes qui acc&egrave;dent au Service ou l'utilisent.</p>
+    <p>En acc&eacute;dant au Service ou en l'utilisant, Vous acceptez d'&ecirc;tre li&eacute; par les pr&eacute;sentes Conditions d'utilisation. Si Vous n'&ecirc;tes pas d'accord avec une partie de ces Conditions, Vous ne pouvez pas acc&eacute;der au Service.</p>
+    <p>Vous d&eacute;clarez avoir plus de 18 ans. La Soci&eacute;t&eacute; ne permet pas aux personnes de moins de 18 ans d'utiliser le Service.</p>
+    <p>Votre acc&egrave;s au Service et son utilisation sont &eacute;galement soumis &agrave; notre Politique de confidentialit&eacute;, qui d&eacute;crit la fa&ccedil;on dont nous collectons, utilisons et divulguons les informations personnelles. Veuillez lire attentivement notre Politique de confidentialit&eacute; avant d'utiliser notre Service.</p>
+
+    <h2>Propri&eacute;t&eacute; intellectuelle</h2>
+    <p>Le Service et son contenu original (&agrave; l'exclusion du contenu fourni par Vous ou d'autres utilisateurs), ses fonctionnalit&eacute;s et caract&eacute;ristiques sont et resteront la propri&eacute;t&eacute; exclusive de la Soci&eacute;t&eacute; et de ses conc&eacute;dants de licence.</p>
+    <p>Le Service est prot&eacute;g&eacute; par le droit d'auteur, les marques de commerce et d'autres lois du Pays et des pays &eacute;trangers.</p>
+    <p>Nos marques de commerce et notre image de marque ne peuvent &ecirc;tre utilis&eacute;es en lien avec un produit ou service sans le consentement &eacute;crit pr&eacute;alable de la Soci&eacute;t&eacute;.</p>
+
+    <h2>Votre r&eacute;troaction</h2>
+    <p>Vous c&eacute;dez &agrave; la Soci&eacute;t&eacute; tous les droits, titres et int&eacute;r&ecirc;ts relatifs &agrave; toute R&eacute;troaction que Vous lui fournissez. Si, pour quelque raison que ce soit, cette cession s'av&egrave;re inefficace, Vous acceptez d'accorder &agrave; la Soci&eacute;t&eacute; un droit et une licence non exclusifs, perp&eacute;tuels, irr&eacute;vocables, sans redevance et mondiaux pour utiliser, reproduire, divulguer, sous-licencier, distribuer, modifier et exploiter cette R&eacute;troaction sans restriction.</p>
+
+    <h2>Liens vers d'autres sites Web</h2>
+    <p>Notre Service peut contenir des liens vers des sites Web ou des services tiers qui ne sont pas d&eacute;tenus ou contr&ocirc;l&eacute;s par la Soci&eacute;t&eacute;.</p>
+    <p>La Soci&eacute;t&eacute; n'exerce aucun contr&ocirc;le sur le contenu, les politiques de confidentialit&eacute; ou les pratiques des sites Web ou services tiers et n'assume aucune responsabilit&eacute; &agrave; leur &eacute;gard. Vous reconnaissez et acceptez en outre que la Soci&eacute;t&eacute; ne sera pas responsable, directement ou indirectement, de tout dommage ou perte caus&eacute; ou pr&eacute;sum&eacute; caus&eacute; par ou en lien avec l'utilisation ou la confiance accord&eacute;e &agrave; tout contenu, bien ou service disponible sur ou via ces sites Web ou services.</p>
+    <p>Nous vous conseillons vivement de lire les conditions d'utilisation et les politiques de confidentialit&eacute; de tout site Web ou service tiers que Vous visitez.</p>
+    <h3>Liens depuis un service de m&eacute;dias sociaux tiers</h3>
+    <p>Le Service peut afficher, inclure, rendre disponible ou lier du contenu ou des services fournis par un Service de m&eacute;dias sociaux tiers. Un Service de m&eacute;dias sociaux tiers n'est pas d&eacute;tenu ou contr&ocirc;l&eacute; par la Soci&eacute;t&eacute;, et la Soci&eacute;t&eacute; n'approuve pas et n'assume aucune responsabilit&eacute; &agrave; l'&eacute;gard de tout Service de m&eacute;dias sociaux tiers.</p>
+    <p>Vous reconnaissez et acceptez que la Soci&eacute;t&eacute; ne sera pas responsable, directement ou indirectement, de tout dommage ou perte caus&eacute; ou pr&eacute;sum&eacute; caus&eacute; par ou en lien avec votre acc&egrave;s &agrave; tout Service de m&eacute;dias sociaux tiers ou son utilisation, y compris tout contenu, bien ou service mis &agrave; disposition par leur interm&eacute;diaire. Votre utilisation de tout Service de m&eacute;dias sociaux tiers est r&eacute;gie par les conditions d'utilisation et les politiques de confidentialit&eacute; de ce service.</p>
+
+    <h2>R&eacute;siliation</h2>
+    <p>Nous pouvons r&eacute;silier ou suspendre votre acc&egrave;s imm&eacute;diatement, sans pr&eacute;avis ni responsabilit&eacute;, pour quelque raison que ce soit, notamment si Vous violez les pr&eacute;sentes Conditions d'utilisation.</p>
+    <p>&Agrave; la r&eacute;siliation, votre droit d'utiliser le Service cessera imm&eacute;diatement.</p>
+
+    <h2>Limitation de responsabilit&eacute;</h2>
+    <p>Nonobstant tout dommage que Vous pourriez subir, l'enti&egrave;re responsabilit&eacute; de la Soci&eacute;t&eacute; et de ses fournisseurs en vertu de toute disposition des pr&eacute;sentes Conditions et votre recours exclusif pour tout ce qui pr&eacute;c&egrave;de sera limit&eacute; au montant que Vous avez effectivement pay&eacute; via le Service, ou &agrave; 100 USD si Vous n'avez rien achet&eacute; via le Service.</p>
+    <p>Dans la mesure maximale permise par la loi applicable, en aucun cas la Soci&eacute;t&eacute; ou ses fournisseurs ne seront responsables de dommages sp&eacute;ciaux, accessoires, indirects ou cons&eacute;cutifs quels qu'ils soient (incluant, sans s'y limiter, les dommages pour perte de profits, perte de donn&eacute;es ou d'autres informations, interruption des affaires, pr&eacute;judice corporel, atteinte &agrave; la vie priv&eacute;e d&eacute;coulant de l'utilisation ou de l'impossibilit&eacute; d'utiliser le Service), m&ecirc;me si la Soci&eacute;t&eacute; a &eacute;t&eacute; avis&eacute;e de la possibilit&eacute; de tels dommages.</p>
+    <p>Certaines juridictions ne permettent pas l'exclusion des garanties implicites ou la limitation de responsabilit&eacute; pour les dommages accessoires ou cons&eacute;cutifs, ce qui signifie que certaines des limitations ci-dessus peuvent ne pas s'appliquer. Dans ces juridictions, la responsabilit&eacute; de chaque partie sera limit&eacute;e dans la plus grande mesure permise par la loi.</p>
+
+    <h2>Avis de non-responsabilit&eacute; &laquo;&nbsp;TEL QUEL&nbsp;&raquo; et &laquo;&nbsp;TEL QUE DISPONIBLE&nbsp;&raquo;</h2>
+    <p>Le Service vous est fourni &laquo;&nbsp;TEL QUEL&nbsp;&raquo; et &laquo;&nbsp;TEL QUE DISPONIBLE&nbsp;&raquo;, avec tous ses d&eacute;fauts et sans garantie d'aucune sorte. Dans la mesure maximale permise par la loi applicable, la Soci&eacute;t&eacute; d&eacute;cline express&eacute;ment toutes les garanties, qu'elles soient expresses, implicites, l&eacute;gales ou autres, concernant le Service.</p>
+    <p>Sans limiter ce qui pr&eacute;c&egrave;de, ni la Soci&eacute;t&eacute; ni aucun de ses fournisseurs ne font de d&eacute;claration ou de garantie de quelque nature que ce soit : (i) quant au fonctionnement ou &agrave; la disponibilit&eacute; du Service ; (ii) que le Service sera ininterrompu ou sans erreur ; (iii) quant &agrave; l'exactitude ou la fiabilit&eacute; des informations fournies via le Service ; ou (iv) que le Service est exempt de virus ou d'autres composants nuisibles.</p>
+    <p>Certaines juridictions ne permettent pas l'exclusion de certains types de garanties, de sorte que certaines ou toutes les exclusions et limitations ci-dessus peuvent ne pas s'appliquer &agrave; Vous.</p>
+
+    <h2>Droit applicable</h2>
+    <p>Les lois du Pays, &agrave; l'exclusion de ses r&egrave;gles de conflits de lois, r&eacute;giront les pr&eacute;sentes Conditions et votre utilisation du Service. Votre utilisation du Service peut &eacute;galement &ecirc;tre soumise &agrave; d'autres lois locales, provinciales, nationales ou internationales.</p>
+
+    <h2>R&eacute;solution des diff&eacute;rends</h2>
+    <p>Si Vous avez une pr&eacute;occupation ou un diff&eacute;rend concernant le Service, Vous acceptez de d'abord tenter de r&eacute;soudre le diff&eacute;rend de fa&ccedil;on informelle en contactant la Soci&eacute;t&eacute;.</p>
+
+    <h2>Pour les utilisateurs de l'Union europ&eacute;enne (UE)</h2>
+    <p>Si Vous &ecirc;tes un consommateur de l'Union europ&eacute;enne, Vous b&eacute;n&eacute;ficierez des dispositions obligatoires de la loi du pays dans lequel Vous r&eacute;sidez.</p>
+
+    <h2>Conformit&eacute; juridique aux &Eacute;tats-Unis</h2>
+    <p>Vous d&eacute;clarez et garantissez que (i) Vous n'&ecirc;tes pas situ&eacute; dans un pays soumis &agrave; un embargo du gouvernement des &Eacute;tats-Unis, ou d&eacute;sign&eacute; par le gouvernement des &Eacute;tats-Unis comme un pays &laquo;&nbsp;soutenant le terrorisme&nbsp;&raquo;, et (ii) Vous ne figurez sur aucune liste de parties interdites ou restreintes du gouvernement des &Eacute;tats-Unis.</p>
+
+    <h2>Divisibilit&eacute; et renonciation</h2>
+    <h3>Divisibilit&eacute;</h3>
+    <p>Si une disposition des pr&eacute;sentes Conditions est jug&eacute;e inapplicable ou invalide, cette disposition sera modifi&eacute;e et interpr&eacute;t&eacute;e de mani&egrave;re &agrave; atteindre les objectifs de cette disposition dans toute la mesure possible en vertu de la loi applicable, et les dispositions restantes demeureront en pleine vigueur.</p>
+    <h3>Renonciation</h3>
+    <p>Sauf disposition contraire, le fait de ne pas exercer un droit ou d'exiger l'ex&eacute;cution d'une obligation en vertu des pr&eacute;sentes Conditions n'affectera pas la capacit&eacute; d'une partie &agrave; exercer ce droit ou &agrave; exiger cette ex&eacute;cution &agrave; tout moment par la suite, et la renonciation &agrave; une violation ne constituera pas une renonciation &agrave; toute violation ult&eacute;rieure.</p>
+
+    <h2>Interpr&eacute;tation de la traduction</h2>
+    <p>Ces Conditions d'utilisation peuvent avoir &eacute;t&eacute; traduites si nous les avons mises &agrave; votre disposition sur notre Service. En cas de divergence, la version fran&ccedil;aise pr&eacute;vaudra conform&eacute;ment &agrave; la <em>Charte de la langue fran&ccedil;aise</em> du Qu&eacute;bec.</p>
+
+    <h2>Modifications des pr&eacute;sentes Conditions d'utilisation</h2>
+    <p>Nous nous r&eacute;servons le droit, &agrave; notre seule discr&eacute;tion, de modifier ou de remplacer les pr&eacute;sentes Conditions &agrave; tout moment. Si une r&eacute;vision est importante, nous ferons des efforts raisonnables pour fournir un pr&eacute;avis d'au moins 30 jours avant l'entr&eacute;e en vigueur des nouvelles conditions. Ce qui constitue un changement important sera d&eacute;termin&eacute; &agrave; notre seule discr&eacute;tion.</p>
+    <p>En continuant &agrave; acc&eacute;der au Service ou &agrave; l'utiliser apr&egrave;s l'entr&eacute;e en vigueur de ces r&eacute;visions, Vous acceptez d'&ecirc;tre li&eacute; par les conditions r&eacute;vis&eacute;es. Si Vous n'acceptez pas les nouvelles conditions, en tout ou en partie, veuillez cesser d'utiliser le Service.</p>
+
+    <h2>Nous contacter</h2>
+    <p>Si vous avez des questions concernant ces Conditions d'utilisation, vous pouvez nous contacter :</p>
+    <ul>
+      <li>Par courriel : <a href="mailto:privacy@drakarian.tech">privacy@drakarian.tech</a></li>
+    </ul>
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__copy">&copy; 2026 Services Drakarian Inc.</div>
+      <div class="footer__links">
+        <a href="./politique-confidentialite.html">Politique de confidentialit&eacute;</a>
+        <a href="./conditions-utilisation.html">Conditions d&rsquo;utilisation</a>
+        <a href="./politique-cookies.html">Politique de cookies</a>
+      </div>
+      <button class="cc-prefs-link">Pr&eacute;f&eacute;rences cookies</button>
+      <a href="./#contact" class="footer__cta">
+        D&eacute;marrer un projet
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    // This page is statically French — lang toggle redirects to the English version
+    function setTheme(theme) { document.documentElement.setAttribute('data-theme', theme); localStorage.setItem('drak-theme', theme); }
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.theme-toggle').forEach(btn => btn.addEventListener('click', () => setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')));
+      document.querySelectorAll('.lang-toggle').forEach(btn => btn.addEventListener('click', () => {
+        localStorage.setItem('drak-lang', 'en');
+        window.location.href = './terms-and-conditions.html';
+      }));
+
+      // Sticky nav
+      const nav = document.getElementById('nav');
+      if (nav) window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+
+      // Mobile burger
+      const burger = document.getElementById('burger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (burger && mobileMenu) {
+        burger.addEventListener('click', () => {
+          burger.classList.toggle('active');
+          mobileMenu.classList.toggle('active');
+          document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+          link.addEventListener('click', () => {
+            burger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+          });
+        });
+      }
+    });
+  </script>
+
+  <!-- Cookie Consent (GDPR / Law 25) -->
+  <script src="./cookie-consent.js"></script>
+</body>
+</html>
