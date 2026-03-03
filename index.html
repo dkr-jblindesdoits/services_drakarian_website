@@ -808,10 +808,10 @@
     </div>
 
     <div class="contact-grid">
-      <!-- Calendly Embed — script loading is gated behind cookie consent (cookie-consent.js) -->
+      <!-- Calendly Embed — loads unconditionally -->
       <div id="calendly-embed" class="animate">
         <div class="calendly-inline-widget" data-url="https://calendly.com/jblindesdoits-drakarian/30min?background_color=f0efeb&text_color=1e2a38&primary_color=0052cc" style="min-width:320px;height:700px;"></div>
-        <!-- Calendly widget.js is loaded dynamically by cookie-consent.js after user accepts cookies -->
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
       </div>
 
       <!-- Contact Form -->
