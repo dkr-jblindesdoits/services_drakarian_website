@@ -10,13 +10,13 @@
   /* ---------- i18n ---------- */
   var STRINGS = {
     en: {
-      bannerText: 'This site uses cookies to improve your experience and for analytics purposes. You can accept or decline — the site works without cookies. <a href="./cookie-policy.html" style="color:var(--color-accent);text-decoration:underline;text-underline-offset:2px">Learn more</a>',
+      bannerText: 'This site uses cookies to improve your experience and for analytics purposes. You can accept or decline — the site works without cookies. <a href="./cookie-policy.html" style="color:var(--color-accent);text-decoration:underline;text-underline-offset:2px">Read our Cookie Policy</a>',
       accept: 'Accept',
       decline: 'Decline',
       prefsLink: 'Cookie Preferences'
     },
     fr: {
-      bannerText: 'Ce site utilise des cookies pour améliorer votre expérience et à des fins d\u2019analyse. Vous pouvez accepter ou refuser — le site fonctionne sans cookies. <a href="./politique-cookies.html" style="color:var(--color-accent);text-decoration:underline;text-underline-offset:2px">En savoir plus</a>',
+      bannerText: 'Ce site utilise des cookies pour améliorer votre expérience et à des fins d\u2019analyse. Vous pouvez accepter ou refuser — le site fonctionne sans cookies. <a href="./politique-cookies.html" style="color:var(--color-accent);text-decoration:underline;text-underline-offset:2px">Lire notre Politique de cookies</a>',
       accept: 'Accepter',
       decline: 'Refuser',
       prefsLink: 'Préférences cookies'
