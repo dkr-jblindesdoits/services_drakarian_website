@@ -12,4 +12,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://drakarian.tech/privacy-policy.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://drakarian.tech/politique-confidentialite.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://drakarian.tech/terms-and-conditions.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://drakarian.tech/conditions-utilisation.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://drakarian.tech/cookie-policy.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://drakarian.tech/politique-cookies.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
