@@ -383,9 +383,8 @@
     @media (max-width: 900px) { .services__grid { grid-template-columns:1fr; max-width:500px; margin:0 auto; } }
 
     /* ===== AI ===== */
-    .ai { padding:var(--space-2xl) 0; background:var(--color-bg-alt); position:relative; overflow:hidden; transition:background 0.4s ease; }
+    .ai { padding:var(--space-2xl) 0; background:var(--color-bg-alt); position:relative; transition:background 0.4s ease; }
     .ai::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--color-border),transparent); }
-    .ai::after { content:''; position:absolute; top:-18%; right:-8%; width:480px; height:480px; background:radial-gradient(circle,var(--color-accent-subtle) 0%,transparent 70%); border-radius:50%; pointer-events:none; }
     .ai__intro { width:var(--container-narrow); margin:0 auto var(--space-xl); text-align:center; }
     .ai__intro p { font-size:1.05rem; line-height:1.85; margin-top:var(--space-sm); }
     .ai__grid { width:var(--container); max-width:900px; margin:0 auto; display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
