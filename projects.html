@@ -17,13 +17,13 @@
       document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
-  <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="icon" type="image/png" href="./assets/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
   <link rel="shortcut icon" href="./favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
 
   <!-- Cookie Consent (GDPR / Law 25) -->
-  <link rel="stylesheet" href="./cookie-consent.css">
+  <link rel="stylesheet" href="./assets/cookie-consent.css">
 
   <style>
     :root {
@@ -122,7 +122,12 @@
     .project h2 { font-size:clamp(1.6rem,3vw,2.2rem); margin-bottom:var(--space-sm); }
     .project__meta { display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:var(--space-md); }
     .project__tag { font-size:0.72rem; font-weight:600; letter-spacing:0.04em; padding:0.25rem 0.7rem; background:var(--color-accent-subtle); color:var(--color-accent); border-radius:50px; }
-    .project__desc { font-size:1rem; line-height:1.85; margin-bottom:var(--space-lg); max-width:750px; }
+    .project__desc { font-size:1rem; line-height:1.85; margin-bottom:var(--space-md); max-width:750px; }
+    /* Project KPIs */
+    .project__kpis { display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:var(--space-lg); }
+    .kpi { flex:1; min-width:150px; background:var(--color-card-bg); border:1px solid var(--color-border-light); border-left:3px solid var(--color-accent); border-radius:var(--radius); padding:1.1rem 1.25rem; }
+    .kpi__num { font-family:var(--font-heading); font-size:1.9rem; line-height:1.05; color:var(--color-accent); margin-bottom:0.35rem; }
+    .kpi__label { font-size:0.8rem; color:var(--color-text-secondary); line-height:1.45; }
     .project__diagram { background:var(--color-card-bg); border:1px solid var(--color-border-light); border-radius:var(--radius-lg); padding:2rem; margin-bottom:var(--space-md); overflow-x:auto; }
     .project__diagram-label { font-size:0.78rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--color-text-secondary); margin-bottom:var(--space-sm); }
 
@@ -243,6 +248,12 @@
       </div>
       <p class="project__desc" data-i18n="p1.desc">This standalone executable interfaces directly with the SolidWorks API to programmatically automate thermal flow simulation setup. Design engineers who previously spent hours manually configuring simulation parameters for each assembly can now trigger the entire process with a single click. The tool scans assemblies, queries a material database, applies the correct flow simulation properties to each component, and handles edge cases like fasteners and missing data — all automatically.</p>
 
+      <div class="project__kpis">
+        <div class="kpi"><div class="kpi__num" data-i18n="p1.kpi1.n">4 h → 10 min</div><div class="kpi__label" data-i18n="p1.kpi1.l">setup time per assembly</div></div>
+        <div class="kpi"><div class="kpi__num" data-i18n="p1.kpi2.n">~96%</div><div class="kpi__label" data-i18n="p1.kpi2.l">less manual prep time</div></div>
+        <div class="kpi"><div class="kpi__num" data-i18n="p1.kpi3.n">1 click</div><div class="kpi__label" data-i18n="p1.kpi3.l">to launch a full simulation setup</div></div>
+      </div>
+
       <div class="project__diagram-label" data-i18n="p1.diagram">System Architecture</div>
       <div class="project__diagram">
         <div class="arch-flow">
@@ -291,6 +302,12 @@
       </div>
       <p class="project__desc" data-i18n="p2.desc">A serverless data pipeline triggered by massive XML file exports from the Bluestar product configurator. Python scripts running on Azure Functions parse the raw XML, fully reconstruct complex 150% Bills of Materials, and load the structured output into SQL databases for downstream reporting. The system includes real-time monitoring through Microsoft Teams notifications for errors, validation issues, and data integrity checks — and feeds directly into Power BI dashboards.</p>
 
+      <div class="project__kpis">
+        <div class="kpi"><div class="kpi__num" data-i18n="p2.kpi1.n">5-person team</div><div class="kpi__label" data-i18n="p2.kpi1.l">of full-time manual effort replaced</div></div>
+        <div class="kpi"><div class="kpi__num" data-i18n="p2.kpi2.n">600+</div><div class="kpi__label" data-i18n="p2.kpi2.l">products with live, nested BOMs</div></div>
+        <div class="kpi"><div class="kpi__num" data-i18n="p2.kpi3.n">0</div><div class="kpi__label" data-i18n="p2.kpi3.l">manual hours — runs fully in the background</div></div>
+      </div>
+
       <div class="project__diagram-label" data-i18n="p2.diagram">Pipeline Architecture</div>
       <div class="project__diagram">
         <div class="arch-flow">
@@ -336,6 +353,12 @@
         <span class="project__tag">Power BI</span>
       </div>
       <p class="project__desc" data-i18n="p3.desc">A strict Medallion architecture implementation where data flows sequentially through Bronze (raw JSON ingestion), Silver (cleansed and validated Delta Parquet tables), and Gold (business-level star schema aggregations) layers. The entire pipeline is orchestrated using Python Notebooks within Microsoft Fabric, with the Gold layer feeding Power BI reports via Direct Lake mode for near-instant query performance.</p>
+
+      <div class="project__kpis">
+        <div class="kpi"><div class="kpi__num" data-i18n="p3.kpi1.n">1 FTE</div><div class="kpi__label" data-i18n="p3.kpi1.l">full-time data role eliminated</div></div>
+        <div class="kpi"><div class="kpi__num" data-i18n="p3.kpi2.n">1</div><div class="kpi__label" data-i18n="p3.kpi2.l">source of truth across all tools</div></div>
+        <div class="kpi"><div class="kpi__num" data-i18n="p3.kpi3.n">0</div><div class="kpi__label" data-i18n="p3.kpi3.l">manual imports, exports or de-duplication</div></div>
+      </div>
 
       <div class="project__diagram-label" data-i18n="p3.diagram">Medallion Architecture</div>
       <div class="project__diagram">
@@ -387,6 +410,12 @@
         <span class="project__tag">Enterprise</span>
       </div>
       <p class="project__desc" data-i18n="p4.desc">An internal web application and REST API built for a global lighting manufacturer. The system serves as a centralized hub for engineering data, providing programmatic access to retrieve, convert, and manage critical technical specifications and component data. It eliminates manual lookups across disconnected spreadsheets and legacy systems, giving engineering teams a single source of truth accessible from any internal tool or script.</p>
+
+      <div class="project__kpis">
+        <div class="kpi"><div class="kpi__num" data-i18n="p4.kpi1.n">1</div><div class="kpi__label" data-i18n="p4.kpi1.l">source of truth for engineering data</div></div>
+        <div class="kpi"><div class="kpi__num" data-i18n="p4.kpi2.n">0</div><div class="kpi__label" data-i18n="p4.kpi2.l">spreadsheet sync errors or stale records</div></div>
+        <div class="kpi"><div class="kpi__num" data-i18n="p4.kpi3.n">~2 h/wk</div><div class="kpi__label" data-i18n="p4.kpi3.l">recovered per engineer (estimated)</div></div>
+      </div>
     </div>
   </section>
 
@@ -439,6 +468,18 @@
         "back": "Back to Home",
         "page.h1": "Projects & Case Studies",
         "page.p": "A selection of engineering automation and data pipeline projects delivered for manufacturing, R&D, and operations\u00a0teams.",
+        "p1.kpi1.n": "4 h \u2192 10 min", "p1.kpi1.l": "setup time per assembly",
+        "p1.kpi2.n": "~96%", "p1.kpi2.l": "less manual prep time",
+        "p1.kpi3.n": "1 click", "p1.kpi3.l": "to launch a full simulation setup",
+        "p2.kpi1.n": "5-person team", "p2.kpi1.l": "of full-time manual effort replaced",
+        "p2.kpi2.n": "600+", "p2.kpi2.l": "products with live, nested BOMs",
+        "p2.kpi3.n": "0", "p2.kpi3.l": "manual hours \u2014 runs fully in the background",
+        "p3.kpi1.n": "1 FTE", "p3.kpi1.l": "full-time data role eliminated",
+        "p3.kpi2.n": "1", "p3.kpi2.l": "source of truth across all tools",
+        "p3.kpi3.n": "0", "p3.kpi3.l": "manual imports, exports or de-duplication",
+        "p4.kpi1.n": "1", "p4.kpi1.l": "source of truth for engineering data",
+        "p4.kpi2.n": "0", "p4.kpi2.l": "spreadsheet sync errors or stale records",
+        "p4.kpi3.n": "~2 h/wk", "p4.kpi3.l": "recovered per engineer (estimated)",
         "p1.cat": "Engineering & CAD Automation", "p1.h2": "Automated CAD Flow Simulation Tool",
         "p1.desc": "This standalone executable interfaces directly with the SolidWorks API to programmatically automate thermal flow simulation setup. Design engineers who previously spent hours manually configuring simulation parameters can now trigger the entire process with a single click. The tool scans assemblies, queries a material database, applies flow simulation properties, and handles edge cases like fasteners and missing data \u2014 all automatically.",
         "p1.diagram": "System Architecture",
@@ -473,6 +514,18 @@
         "back": "Retour \u00e0 l\u2019accueil",
         "page.h1": "Projets et \u00e9tudes de cas",
         "page.p": "Une s\u00e9lection de projets d\u2019automatisation et de pipelines de donn\u00e9es livr\u00e9s pour des \u00e9quipes de fabrication, R&D et\u00a0op\u00e9rations.",
+        "p1.kpi1.n": "4 h \u2192 10 min", "p1.kpi1.l": "de configuration par assemblage",
+        "p1.kpi2.n": "~96\u00a0%", "p1.kpi2.l": "de pr\u00e9paration manuelle en moins",
+        "p1.kpi3.n": "1 clic", "p1.kpi3.l": "pour lancer une configuration compl\u00e8te",
+        "p2.kpi1.n": "\u00c9quipe de 5", "p2.kpi1.l": "personnes \u00e0 temps plein remplac\u00e9es",
+        "p2.kpi2.n": "600+", "p2.kpi2.l": "produits aux nomenclatures imbriqu\u00e9es \u00e0 jour",
+        "p2.kpi3.n": "0", "p2.kpi3.l": "heure manuelle \u2014 tourne en arri\u00e8re-plan",
+        "p3.kpi1.n": "1 ETP", "p3.kpi1.l": "poste \u00e0 temps plein \u00e9limin\u00e9",
+        "p3.kpi2.n": "1", "p3.kpi2.l": "source de v\u00e9rit\u00e9 pour tous les outils",
+        "p3.kpi3.n": "0", "p3.kpi3.l": "import, export ou d\u00e9doublonnage manuel",
+        "p4.kpi1.n": "1", "p4.kpi1.l": "source de v\u00e9rit\u00e9 pour les donn\u00e9es d\u2019ing\u00e9nierie",
+        "p4.kpi2.n": "0", "p4.kpi2.l": "erreur de synchronisation ou donn\u00e9e p\u00e9rim\u00e9e",
+        "p4.kpi3.n": "~2 h/sem", "p4.kpi3.l": "r\u00e9cup\u00e9r\u00e9es par ing\u00e9nieur (estimation)",
         "p1.cat": "Automatisation ing\u00e9nierie et CAO", "p1.h2": "Outil d\u2019automatisation de simulation thermique CAO",
         "p1.desc": "Cet ex\u00e9cutable autonome interagit directement avec l\u2019API SolidWorks pour automatiser la configuration de simulations thermiques. Les ing\u00e9nieurs qui passaient des heures \u00e0 configurer manuellement les param\u00e8tres peuvent d\u00e9sormais lancer le processus en un seul clic. L\u2019outil scanne les assemblages, interroge une base de mat\u00e9riaux, applique les propri\u00e9t\u00e9s de simulation et g\u00e8re les cas particuliers \u2014 automatiquement.",
         "p1.diagram": "Architecture du syst\u00e8me",
@@ -562,6 +615,6 @@
   </script>
 
   <!-- Cookie Consent (GDPR / Law 25) -->
-  <script src="./cookie-consent.js"></script>
+  <script src="./assets/cookie-consent.js"></script>
 </body>
 </html>
