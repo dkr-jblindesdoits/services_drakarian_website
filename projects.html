@@ -170,55 +170,9 @@
 <body>
 
   <!-- ===== Navigation (same as index) ===== -->
-  <nav class="nav" id="nav" aria-label="Main navigation">
-    <div class="nav__inner">
-      <a href="./" class="nav__logo">Services <span>Drakarian</span> Inc.</a>
-
-      <ul class="nav__links">
-        <li><a href="./#services" data-i18n="nav.services">Services</a></li>
-        <li><a href="./#process" data-i18n="nav.process">Process</a></li>
-        <li><a href="./#projects" data-i18n="nav.projects">Projects</a></li>
-        <li><a href="./#contact" data-i18n="nav.contact">Contact</a></li>
-        <li>
-          <div class="nav__toggles">
-            <button class="theme-toggle" aria-label="Toggle dark mode">
-              <div class="theme-toggle__icons">
-                <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-                <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-              </div>
-              <div class="theme-toggle__thumb"></div>
-            </button>
-            <button class="lang-toggle">FR</button>
-          </div>
-        </li>
-        <li><a href="./#contact" class="btn btn--primary" data-i18n="nav.cta">Book a Call</a></li>
-      </ul>
-
-      <div class="nav__right-group nav__toggles--mobile">
-        <div class="nav__toggles">
-          <button class="theme-toggle" aria-label="Toggle dark mode">
-            <div class="theme-toggle__icons">
-              <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-              <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            </div>
-            <div class="theme-toggle__thumb"></div>
-          </button>
-          <button class="lang-toggle">FR</button>
-        </div>
-        <button class="nav__burger" id="burger" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <div class="nav__mobile" id="mobile-menu">
-    <a href="./#services" class="mobile-link" data-i18n="nav.services">Services</a>
-    <a href="./#projects" class="mobile-link" data-i18n="nav.projects">Projects</a>
-    <a href="./#process" class="mobile-link" data-i18n="nav.process">Process</a>
-    <a href="./#contact" class="mobile-link" data-i18n="nav.contact">Contact</a>
-    <a href="./#contact" class="btn btn--primary mobile-link" data-i18n="nav.cta">Book a Call</a>
-  </div>
+  <!-- Shared navigation injected by assets/site-nav.js (single source of truth) -->
+  <div id="site-nav"></div>
+  <script src="./assets/site-nav.js"></script>
 
   <!-- Breadcrumb -->
   <div class="breadcrumb">
@@ -592,7 +546,7 @@
         "o3.h3": "Curated Travel Application", "o3.p": "A mobile app delivering curated \u201cPlaylists of Moments\u201d with a FastAPI backend and cross-platform mobile client.",
         "footer.copy": "\u00a9 2026 Drakarian Services Inc.", "footer.cta": "Start a Project",
         "footer.privacy": "Privacy Policy", "footer.terms": "Terms & Conditions", "footer.cookies": "Cookies Policy",
-        "nav.services": "Services", "nav.projects": "Projects", "nav.process": "Process", "nav.contact": "Contact", "nav.cta": "Book a Call",
+        "nav.services": "Services", "nav.ai": "AI", "nav.projects": "Projects", "nav.process": "Process", "nav.contact": "Contact", "nav.cta": "Book a Call",
         "breadcrumb.home": "Home", "breadcrumb.projects": "Projects",
         "d1.b1.t": "Designer's View", "d1.b1.1": "Open SolidWorks Assembly", "d1.b1.2": "Run Automation Tool", "d1.b1.3": "Ready-to-Simulate Model",
         "d1.b2.t": "VB.NET Logic Engine", "d1.b2.1": "Assembly Scanner (Part Numbers)", "d1.b2.2": "Database Query \u2192 Material Mapping", "d1.b2.3": "Assign Flow Sim Properties", "d1.b2.4": "Handle Bolts/Nuts \u2192 Defaults", "d1.b2.5": "Log Warnings for Missing Data",
@@ -655,7 +609,7 @@
         "o3.h3": "Application voyage curated", "o3.p": "Application mobile proposant des \u00ab\u00a0Playlists de Moments\u00a0\u00bb avec un backend FastAPI et un client mobile multiplateforme.",
         "footer.copy": "\u00a9 2026 Services Drakarian Inc.", "footer.cta": "D\u00e9marrer un projet",
         "footer.privacy": "Politique de confidentialit\u00e9", "footer.terms": "Conditions d\u2019utilisation", "footer.cookies": "Politique de cookies",
-        "nav.services": "Services", "nav.projects": "Projets", "nav.process": "Processus", "nav.contact": "Contact", "nav.cta": "R\u00e9server un appel",
+        "nav.services": "Services", "nav.ai": "IA", "nav.projects": "Projets", "nav.process": "Processus", "nav.contact": "Contact", "nav.cta": "R\u00e9server un appel",
         "breadcrumb.home": "Accueil", "breadcrumb.projects": "Projets",
         "d1.b1.t": "Vue du concepteur", "d1.b1.1": "Ouvrir l\u2019assemblage SolidWorks", "d1.b1.2": "Lancer l\u2019outil d\u2019automatisation", "d1.b1.3": "Mod\u00e8le pr\u00eat \u00e0 simuler",
         "d1.b2.t": "Moteur logique VB.NET", "d1.b2.1": "Scan d\u2019assemblage (r\u00e9f\u00e9rences pi\u00e8ces)", "d1.b2.2": "Requ\u00eate base de donn\u00e9es \u2192 Mapping mat\u00e9riaux", "d1.b2.3": "Assignation propri\u00e9t\u00e9s Flow Sim", "d1.b2.4": "Boulons/\u00e9crous \u2192 Valeurs par d\u00e9faut", "d1.b2.5": "Journalisation des donn\u00e9es manquantes",

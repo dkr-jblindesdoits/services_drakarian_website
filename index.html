@@ -597,57 +597,9 @@
 <body>
 
   <!-- ===== Navigation ===== -->
-  <nav class="nav" id="nav" aria-label="Main navigation">
-    <div class="nav__inner">
-      <a href="#" class="nav__logo">Services <span>Drakarian</span> Inc.</a>
-
-      <ul class="nav__links">
-        <li><a href="#services" data-i18n="nav.services">Services</a></li>
-        <li><a href="#ai" data-i18n="nav.ai">AI</a></li>
-        <li><a href="#process" data-i18n="nav.process">Process</a></li>
-        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
-        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-        <li>
-          <div class="nav__toggles">
-            <button class="theme-toggle" aria-label="Toggle dark mode">
-              <div class="theme-toggle__icons">
-                <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-                <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-              </div>
-              <div class="theme-toggle__thumb"></div>
-            </button>
-            <button class="lang-toggle">FR</button>
-          </div>
-        </li>
-        <li><a href="#contact" class="btn btn--primary" data-i18n="nav.cta">Book an Audit</a></li>
-      </ul>
-
-      <div class="nav__right-group nav__toggles--mobile">
-        <div class="nav__toggles">
-          <button class="theme-toggle" aria-label="Toggle dark mode">
-            <div class="theme-toggle__icons">
-              <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-              <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            </div>
-            <div class="theme-toggle__thumb"></div>
-          </button>
-          <button class="lang-toggle">FR</button>
-        </div>
-        <button class="nav__burger" id="burger" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <div class="nav__mobile" id="mobile-menu">
-    <a href="#services" class="mobile-link" data-i18n="nav.services">Services</a>
-    <a href="#ai" class="mobile-link" data-i18n="nav.ai">AI</a>
-    <a href="#projects" class="mobile-link" data-i18n="nav.projects">Projects</a>
-    <a href="#process" class="mobile-link" data-i18n="nav.process">Process</a>
-    <a href="#contact" class="mobile-link" data-i18n="nav.contact">Contact</a>
-    <a href="#contact" class="btn btn--primary mobile-link" data-i18n="nav.cta">Book an Audit</a>
-  </div>
+  <!-- Shared navigation injected by assets/site-nav.js (single source of truth) -->
+  <div id="site-nav"></div>
+  <script src="./assets/site-nav.js"></script>
 
   <!-- ===== Hero ===== -->
   <section class="hero">
@@ -720,7 +672,7 @@
         <div class="service-card__icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3L12 3z"/></svg></div>
         <h3 data-i18n="card4.h3">AI-Augmented Automation</h3>
         <p data-i18n="card4.p">We embed AI directly into your workflows to handle the judgment-heavy steps rule-based automation can't — reading unstructured documents, making decisions, and adapting to exceptions instead of breaking.</p>
-        <a href="#ai" class="project-card__link" data-i18n="card4.link">Explore our AI approach <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <!-- <a href="#ai" class="project-card__link" data-i18n="card4.link">Explore our AI approach <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a> -->
       </div>
     </div>
   </section>
