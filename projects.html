@@ -471,6 +471,57 @@
     </div>
   </section>
 
+  <!-- ===== Project 6: Claudette (AI assistant) ===== -->
+  <section class="project" id="claudette">
+    <div class="project__inner">
+      <div class="project__category" data-i18n="p6.cat">AI-Augmented Automation</div>
+      <h2 data-i18n="p6.h2">Claudette — Internal AI Assistant</h2>
+      <div class="project__meta">
+        <span class="project__tag">Claude API</span>
+        <span class="project__tag">MCP</span>
+        <span class="project__tag">Python</span>
+        <span class="project__tag">Docker</span>
+      </div>
+      <p class="project__desc" data-i18n="p6.desc">An AI assistant we built and use internally at Drakarian — proof of the same approach we design for clients. Claudette connects a large language model directly to our day-to-day tools (calendar, task lists, email, and a knowledge base), so it can take instructions in plain language and act on them: planning the day, drafting emails, logging work, and recalling project context across sessions. It runs as a self-hosted service that exposes its tools through the Model Context Protocol (MCP) — the same architecture we build for clients who want AI wired into their own systems.</p>
+
+      <div class="project__kpis">
+        <div class="kpi"><div class="kpi__num" data-i18n="p6.kpi1.n">12+</div><div class="kpi__label" data-i18n="p6.kpi1.l">routine workflows turned into one-command skills</div></div>
+        <div class="kpi"><div class="kpi__num" data-i18n="p6.kpi2.n">1</div><div class="kpi__label" data-i18n="p6.kpi2.l">assistant across calendar, tasks, email and notes</div></div>
+        <div class="kpi"><div class="kpi__num" data-i18n="p6.kpi3.n">0</div><div class="kpi__label" data-i18n="p6.kpi3.l">new dashboards — operated in plain language</div></div>
+      </div>
+
+      <div class="project__diagram-label" data-i18n="p6.diagram">System Architecture</div>
+      <div class="project__diagram">
+        <div class="arch-flow">
+          <div class="arch-block" style="border-left:3px solid #455a64;">
+            <div class="arch-block__title" data-i18n="d6.b1.t">Conversational Interface</div>
+            <ul class="arch-block__items">
+              <li data-i18n="d6.b1.1">Plain-Language Requests</li>
+              <li data-i18n="d6.b1.2">Chat-Based — No UI to Learn</li>
+            </ul>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-block" style="border-left:3px solid #6a1b9a;">
+            <div class="arch-block__title" data-i18n="d6.b2.t">AI Agent Core</div>
+            <ul class="arch-block__items">
+              <li data-i18n="d6.b2.1">LLM Reasoning Loop (Claude)</li>
+              <li data-i18n="d6.b2.2">Autonomous Tool Selection</li>
+              <li data-i18n="d6.b2.3">Project Memory &amp; Context</li>
+            </ul>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-block" style="border-left:3px solid #1b5e20;">
+            <div class="arch-block__title" data-i18n="d6.b3.t">Connected Tools (MCP)</div>
+            <ul class="arch-block__items">
+              <li data-i18n="d6.b3.1">Calendar, Tasks &amp; Email</li>
+              <li data-i18n="d6.b3.2">Knowledge Base &amp; Notes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== Other Projects ===== -->
   <section class="other-projects">
     <div style="width:var(--container-narrow);margin:0 auto;">
@@ -561,7 +612,16 @@
         "p5.kpi3.n": "Daily", "p5.kpi3.l": "AI-curated top-deals selection",
         "d5.b1.t": "Automated Scraping", "d5.b1.1": "Multi-Retailer Scrapers (FastAPI)", "d5.b1.2": "Scheduled Daily Extraction", "d5.b1.3": "Price & Availability Parsing",
         "d5.b2.t": "AI Processing Layer", "d5.b2.1": "Bilingual Description Generation (EN/FR)", "d5.b2.2": "Audience-Relevance Filtering", "d5.b2.3": "Daily Featured-Deal Curation",
-        "d5.b3.t": "Bilingual Publishing", "d5.b3.1": "WordPress + Polylang", "d5.b3.2": "Consumer-Facing EN/FR Storefront"
+        "d5.b3.t": "Bilingual Publishing", "d5.b3.1": "WordPress + Polylang", "d5.b3.2": "Consumer-Facing EN/FR Storefront",
+        "p6.cat": "AI-Augmented Automation", "p6.h2": "Claudette — Internal AI Assistant",
+        "p6.desc": "An AI assistant we built and use internally at Drakarian — proof of the same approach we design for clients. Claudette connects a large language model directly to our day-to-day tools (calendar, task lists, email, and a knowledge base), so it can take instructions in plain language and act on them: planning the day, drafting emails, logging work, and recalling project context across sessions. It runs as a self-hosted service that exposes its tools through the Model Context Protocol (MCP) — the same architecture we build for clients who want AI wired into their own systems.",
+        "p6.diagram": "System Architecture",
+        "p6.kpi1.n": "12+", "p6.kpi1.l": "routine workflows turned into one-command skills",
+        "p6.kpi2.n": "1", "p6.kpi2.l": "assistant across calendar, tasks, email and notes",
+        "p6.kpi3.n": "0", "p6.kpi3.l": "new dashboards — operated in plain language",
+        "d6.b1.t": "Conversational Interface", "d6.b1.1": "Plain-Language Requests", "d6.b1.2": "Chat-Based — No UI to Learn",
+        "d6.b2.t": "AI Agent Core", "d6.b2.1": "LLM Reasoning Loop (Claude)", "d6.b2.2": "Autonomous Tool Selection", "d6.b2.3": "Project Memory & Context",
+        "d6.b3.t": "Connected Tools (MCP)", "d6.b3.1": "Calendar, Tasks & Email", "d6.b3.2": "Knowledge Base & Notes"
       },
       fr: {
         "back": "Retour \u00e0 l\u2019accueil",
@@ -615,7 +675,16 @@
         "p5.kpi3.n": "Quotidien", "p5.kpi3.l": "s\u00e9lection des meilleures offres cur\u00e9e par IA",
         "d5.b1.t": "Scraping automatis\u00e9", "d5.b1.1": "Scrapers multi-d\u00e9taillants (FastAPI)", "d5.b1.2": "Extraction quotidienne planifi\u00e9e", "d5.b1.3": "Analyse prix et disponibilit\u00e9",
         "d5.b2.t": "Couche de traitement IA", "d5.b2.1": "G\u00e9n\u00e9ration de descriptions bilingues (EN/FR)", "d5.b2.2": "Filtrage par pertinence d\u2019audience", "d5.b2.3": "Curation quotidienne des meilleures offres",
-        "d5.b3.t": "Publication bilingue", "d5.b3.1": "WordPress + Polylang", "d5.b3.2": "Vitrine EN/FR grand public"
+        "d5.b3.t": "Publication bilingue", "d5.b3.1": "WordPress + Polylang", "d5.b3.2": "Vitrine EN/FR grand public",
+        "p6.cat": "Automatisation augmentée par l’IA", "p6.h2": "Claudette — Assistant IA interne",
+        "p6.desc": "Un assistant IA que nous avons conçu et utilisons en interne chez Drakarian — la preuve concrète de l’approche que nous mettons en œuvre pour nos clients. Claudette connecte un grand modèle de langage directement à nos outils quotidiens (agenda, listes de tâches, courriel et base de connaissances) afin d’exécuter des consignes formulées en langage naturel : planifier la journée, rédiger des courriels, consigner le travail et retrouver le contexte d’un projet d’une session à l’autre. Il fonctionne comme un service auto-hébergé qui expose ses outils via le Model Context Protocol (MCP) — la même architecture que nous bâtissons pour les clients souhaitant intégrer l’IA à leurs propres systèmes.",
+        "p6.diagram": "Architecture du système",
+        "p6.kpi1.n": "12+", "p6.kpi1.l": "flux récurrents transformés en compétences en une commande",
+        "p6.kpi2.n": "1", "p6.kpi2.l": "assistant pour agenda, tâches, courriel et notes",
+        "p6.kpi3.n": "0", "p6.kpi3.l": "nouveau tableau de bord — piloté en langage naturel",
+        "d6.b1.t": "Interface conversationnelle", "d6.b1.1": "Requêtes en langage naturel", "d6.b1.2": "Par chat — aucune interface à apprendre",
+        "d6.b2.t": "Cœur agent IA", "d6.b2.1": "Boucle de raisonnement LLM (Claude)", "d6.b2.2": "Sélection autonome des outils", "d6.b2.3": "Mémoire et contexte de projet",
+        "d6.b3.t": "Outils connectés (MCP)", "d6.b3.1": "Agenda, tâches et courriel", "d6.b3.2": "Base de connaissances et notes"
       }
     };
     let currentLang = localStorage.getItem('drak-lang') || 'en';
