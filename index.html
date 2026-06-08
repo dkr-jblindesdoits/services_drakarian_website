@@ -397,6 +397,19 @@
     .ai-card__icon svg { width:22px; height:22px; stroke:var(--color-accent); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
     .ai-card h3 { font-size:1.2rem; margin-bottom:0.5rem; font-family:var(--font-heading); }
     .ai-card p { font-size:0.92rem; line-height:1.7; }
+    .ai__cases { width:var(--container); max-width:900px; margin:var(--space-xl) auto 0; }
+    .ai__cases-label { text-align:center; font-size:0.78rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent); margin-bottom:var(--space-md); }
+    .ai__cases-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
+    .ai-case { display:flex; flex-direction:column; background:var(--color-card-bg); border:1px solid var(--color-border-light); border-radius:var(--radius-lg); padding:2rem; transition:all 0.4s cubic-bezier(0.16,1,0.3,1); position:relative; overflow:hidden; }
+    .ai-case::after { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--color-accent); transform:scaleX(0); transform-origin:left; transition:transform 0.4s cubic-bezier(0.16,1,0.3,1); }
+    .ai-case:hover { border-color:var(--color-accent); transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,82,204,0.08); }
+    .ai-case:hover::after { transform:scaleX(1); }
+    .ai-case h3 { font-size:1.2rem; margin-bottom:0.5rem; font-family:var(--font-heading); }
+    .ai-case p { font-size:0.92rem; line-height:1.7; flex-grow:1; }
+    .ai-case__link { display:inline-flex; align-items:center; gap:0.3rem; font-size:0.85rem; font-weight:500; color:var(--color-accent); margin-top:var(--space-sm); transition:gap var(--transition); }
+    .ai-case:hover .ai-case__link { gap:0.6rem; }
+    .ai-case__link svg { width:14px; height:14px; }
+    @media (max-width: 700px) { .ai__cases-grid { grid-template-columns:1fr; max-width:480px; margin:0 auto; } }
     @media (max-width: 700px) { .ai__grid { grid-template-columns:1fr; max-width:480px; } }
 
     /* ===== Process ===== */
@@ -743,6 +756,21 @@
         <p data-i18n="ai.c4.p">Surface outliers, data-quality issues, and edge cases automatically — before they reach production or a customer.</p>
       </div>
     </div>
+    <div class="ai__cases animate">
+      <div class="ai__cases-label" data-i18n="ai.cases.label">See it in action</div>
+      <div class="ai__cases-grid">
+        <a href="./projects.html#deal-aggregator" class="ai-case">
+          <h3 data-i18n="ai.case1.h3">Deal Aggregator Platform</h3>
+          <p data-i18n="ai.case1.p">AI writes bilingual product descriptions, filters out off-audience items, and curates the best deals every&nbsp;day.</p>
+          <span class="ai-case__link" data-i18n="ai.case.viewmore">View case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </a>
+        <a href="./projects.html#claudette" class="ai-case">
+          <h3 data-i18n="ai.case2.h3">Claudette — Internal AI Assistant</h3>
+          <p data-i18n="ai.case2.p">An AI agent wired into our own calendar, tasks, email, and notes through MCP — the same approach we build for&nbsp;clients.</p>
+          <span class="ai-case__link" data-i18n="ai.case.viewmore">View case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- ===== Process ===== -->
@@ -1001,6 +1029,12 @@
         "ai.c3.p": "Let your team ask questions of your data and trigger workflows in plain English or French \u2014 no new dashboard to learn.",
         "ai.c4.h3": "Anomaly & Error Detection",
         "ai.c4.p": "Surface outliers, data-quality issues, and edge cases automatically \u2014 before they reach production or a customer.",
+        "ai.cases.label": "See it in action",
+        "ai.case1.h3": "Deal Aggregator Platform",
+        "ai.case1.p": "AI writes bilingual product descriptions, filters out off-audience items, and curates the best deals every day.",
+        "ai.case2.h3": "Claudette \u2014 Internal AI Assistant",
+        "ai.case2.p": "An AI agent wired into our own calendar, tasks, email, and notes through MCP \u2014 the same approach we build for clients.",
+        "ai.case.viewmore": "View case study",
         "projects.lead": "Across these builds, we\u2019ve automated away well over <strong>10,000 hours</strong> of manual engineering work every\u00a0year.",
         "proj1.kpi": "4 h \u2192 10 min per assembly",
         "proj2.kpi": "Replaces a 5-person team",
@@ -1105,6 +1139,12 @@
         "ai.c3.p": "Laissez votre \u00e9quipe interroger vos donn\u00e9es et d\u00e9clencher des flux en fran\u00e7ais ou en anglais \u2014 aucun nouveau tableau de bord \u00e0 apprendre.",
         "ai.c4.h3": "D\u00e9tection d\u2019anomalies et d\u2019erreurs",
         "ai.c4.p": "Rep\u00e9rez automatiquement les valeurs aberrantes, probl\u00e8mes de qualit\u00e9 et cas limites \u2014 avant qu\u2019ils n\u2019atteignent la production ou un client.",
+        "ai.cases.label": "Concr\u00e8tement",
+        "ai.case1.h3": "Plateforme d\u2019agr\u00e9gation de promotions",
+        "ai.case1.p": "L\u2019IA r\u00e9dige des descriptions produits bilingues, \u00e9carte les articles hors cible et s\u00e9lectionne chaque jour les meilleures offres.",
+        "ai.case2.h3": "Claudette \u2014 Assistant IA interne",
+        "ai.case2.p": "Un agent IA connect\u00e9 \u00e0 notre propre agenda, \u00e0 nos t\u00e2ches, courriels et notes via MCP \u2014 la m\u00eame approche que nous b\u00e2tissons pour nos clients.",
+        "ai.case.viewmore": "Voir l\u2019\u00e9tude de cas",
         "projects.lead": "Sur l\u2019ensemble de ces r\u00e9alisations, nous avons automatis\u00e9 plus de <strong>10 000 heures</strong> de travail manuel d\u2019ing\u00e9nierie chaque ann\u00e9e.",
         "proj1.kpi": "4 h \u2192 10 min par assemblage",
         "proj2.kpi": "Remplace une \u00e9quipe de 5 personnes",
