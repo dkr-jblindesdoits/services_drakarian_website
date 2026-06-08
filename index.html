@@ -285,6 +285,7 @@
     .animate.delay-1 { transition-delay: 0.1s; }
     .animate.delay-2 { transition-delay: 0.2s; }
     .animate.delay-3 { transition-delay: 0.3s; }
+    .animate.delay-4 { transition-delay: 0.4s; }
 
     /* ===== Navigation ===== */
     .nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:1rem 0; transition:all var(--transition); background:transparent; }
@@ -371,7 +372,7 @@
     .section-header { text-align:center; margin-bottom:var(--space-xl); }
     .section-header__label { font-size:0.78rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--color-accent); margin-bottom:var(--space-sm); }
     .section-header h2 { font-size:clamp(2rem,3.5vw,2.8rem); max-width:650px; margin:0 auto; }
-    .services__grid { width:var(--container); margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    .services__grid { width:var(--container); max-width:900px; margin:0 auto; display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
     .service-card { background:var(--color-card-bg); border:1px solid var(--color-border-light); border-radius:var(--radius-lg); padding:2.5rem 2rem; transition:all 0.4s cubic-bezier(0.16,1,0.3,1); position:relative; overflow:hidden; }
     .service-card::after { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--color-accent); transform:scaleX(0); transform-origin:left; transition:transform 0.4s cubic-bezier(0.16,1,0.3,1); }
     .service-card:hover { border-color:var(--color-accent); transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,82,204,0.08); }
@@ -702,6 +703,12 @@
         <h3 data-i18n="card3.h3">Cloud Architecture &amp; Data Pipelines</h3>
         <p data-i18n="card3.p">Serverless cloud architectures and automated data pipelines that centralize your operations, eliminate human error, and give you real-time&nbsp;visibility.</p>
       </div>
+      <div class="service-card animate delay-4">
+        <div class="service-card__icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3L12 3z"/></svg></div>
+        <h3 data-i18n="card4.h3">AI-Augmented Automation</h3>
+        <p data-i18n="card4.p">We embed AI directly into your workflows to handle the judgment-heavy steps rule-based automation can't — reading unstructured documents, making decisions, and adapting to exceptions instead of breaking.</p>
+        <a href="#ai" class="project-card__link" data-i18n="card4.link">Explore our AI approach <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
     </div>
   </section>
 
@@ -1006,6 +1013,9 @@
         "card2.p": "Robust data bridges that securely connect your mission-critical legacy infrastructure to modern web tools and cloud\u00a0environments.",
         "card3.h3": "Cloud Architecture & Data Pipelines",
         "card3.p": "Serverless cloud architectures and automated data pipelines that centralize your operations, eliminate human error, and give you real-time\u00a0visibility.",
+        "card4.h3": "AI-Augmented Automation",
+        "card4.p": "We embed AI directly into your workflows to handle the judgment-heavy steps rule-based automation can't \u2014 reading unstructured documents, making decisions, and adapting to exceptions instead of breaking.",
+        "card4.link": "Explore our AI approach",
         "process.label": "How We Work",
         "process.h2": "A transparent, predictable\u00a0workflow",
         "step1.h3": "The Discovery Call",
@@ -1102,11 +1112,14 @@
         "faq.q7": "Pouvez-vous ajouter de l\u2019IA \u00e0 nos automatisations existantes ?",
         "faq.a7": "Oui. Nous int\u00e9grons l\u2019IA l\u00e0 o\u00f9 elle apporte un vrai levier \u2014 extraction de donn\u00e9es depuis des documents non structur\u00e9s, classification et routage du travail, interfaces en langage naturel sur vos syst\u00e8mes et d\u00e9tection automatique d\u2019anomalies. Nous conservons d\u00e9lib\u00e9r\u00e9ment la logique \u00e0 base de r\u00e8gles l\u00e0 o\u00f9 elle est moins co\u00fbteuse et plus pr\u00e9visible, et n\u2019utilisons l\u2019IA que lorsque le jugement est r\u00e9ellement requis \u2014 pour une automatisation adaptative sans payer pour de l\u2019IA superflue.",
         "card1.h3": "Automatisation ing\u00e9nierie et\u00a0CAO",
-        "card1.p": "Des outils logiciels sur mesure qui interagissent directement avec vos API CAO existantes \u2014 automatisant les processus de conception r\u00e9p\u00e9titifs et r\u00e9duisant les temps de configuration de plusieurs heures \u00e0 quelques\u00a0minutes.",
+        "card1.p": "Des logiciels sur mesure qui interagissent directement avec les interfaces de programmation (API) de vos logiciels CAO existants \u2014 automatisant les processus de conception r\u00e9p\u00e9titifs et r\u00e9duisant les temps de configuration de plusieurs heures \u00e0 quelques\u00a0minutes.",
         "card2.h3": "Int\u00e9gration et modernisation des\u00a0syst\u00e8mes",
         "card2.p": "Des ponts de donn\u00e9es robustes qui connectent de mani\u00e8re s\u00e9curis\u00e9e votre infrastructure critique \u00e0 des outils web modernes et des environnements\u00a0cloud.",
         "card3.h3": "Architecture cloud et pipelines de\u00a0donn\u00e9es",
         "card3.p": "Des architectures cloud serverless et des pipelines automatis\u00e9s pour centraliser vos op\u00e9rations, \u00e9liminer les erreurs humaines et offrir une visibilit\u00e9 en temps\u00a0r\u00e9el.",
+        "card4.h3": "Automatisation augmentée par l’IA",
+        "card4.p": "Nous intégrons l’IA directement dans vos flux de travail pour prendre en charge les étapes qui exigent du jugement, là où l’automatisation à base de règles s’arrête — lire des documents non structurés, prendre des décisions et s’adapter aux exceptions au lieu de planter.",
+        "card4.link": "Découvrir notre approche IA",
         "process.label": "Notre approche",
         "process.h2": "Un processus transparent et\u00a0pr\u00e9visible",
         "step1.h3": "L\u2019appel d\u00e9couverte",
