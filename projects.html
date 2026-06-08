@@ -419,6 +419,58 @@
     </div>
   </section>
 
+  <!-- ===== Project 5: Deal Aggregator (AI) ===== -->
+  <section class="project" id="deal-aggregator">
+    <div class="project__inner">
+      <div class="project__category" data-i18n="p5.cat">AI-Augmented Automation</div>
+      <h2 data-i18n="p5.h2">Deal Aggregator Platform</h2>
+      <div class="project__meta">
+        <span class="project__tag">FastAPI</span>
+        <span class="project__tag">Claude AI</span>
+        <span class="project__tag">WordPress</span>
+        <span class="project__tag">Web Scraping</span>
+      </div>
+      <p class="project__desc" data-i18n="p5.desc">An automated deal-aggregation platform for Canadian parents, built on FastAPI. Scheduled scrapers collect product promotions across multiple retailers, then an AI layer writes bilingual (English/French) product descriptions, filters out items that aren't relevant to the target audience, and curates a daily selection of the best deals. Everything is published automatically to a bilingual WordPress storefront — with no manual copywriting or editorial work.</p>
+
+      <div class="project__kpis">
+        <div class="kpi"><div class="kpi__num" data-i18n="p5.kpi1.n">100%</div><div class="kpi__label" data-i18n="p5.kpi1.l">AI-written bilingual product descriptions</div></div>
+        <div class="kpi"><div class="kpi__num" data-i18n="p5.kpi2.n">0</div><div class="kpi__label" data-i18n="p5.kpi2.l">manual copywriting or translation hours</div></div>
+        <div class="kpi"><div class="kpi__num" data-i18n="p5.kpi3.n">Daily</div><div class="kpi__label" data-i18n="p5.kpi3.l">AI-curated top-deals selection</div></div>
+      </div>
+
+      <div class="project__diagram-label" data-i18n="p5.diagram">Pipeline Architecture</div>
+      <div class="project__diagram">
+        <div class="arch-flow">
+          <div class="arch-block" style="border-left:3px solid #455a64;">
+            <div class="arch-block__title" data-i18n="d5.b1.t">Automated Scraping</div>
+            <ul class="arch-block__items">
+              <li data-i18n="d5.b1.1">Multi-Retailer Scrapers (FastAPI)</li>
+              <li data-i18n="d5.b1.2">Scheduled Daily Extraction</li>
+              <li data-i18n="d5.b1.3">Price &amp; Availability Parsing</li>
+            </ul>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-block" style="border-left:3px solid #6a1b9a;">
+            <div class="arch-block__title" data-i18n="d5.b2.t">AI Processing Layer</div>
+            <ul class="arch-block__items">
+              <li data-i18n="d5.b2.1">Bilingual Description Generation (EN/FR)</li>
+              <li data-i18n="d5.b2.2">Audience-Relevance Filtering</li>
+              <li data-i18n="d5.b2.3">Daily Featured-Deal Curation</li>
+            </ul>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-block" style="border-left:3px solid #1b5e20;">
+            <div class="arch-block__title" data-i18n="d5.b3.t">Bilingual Publishing</div>
+            <ul class="arch-block__items">
+              <li data-i18n="d5.b3.1">WordPress + Polylang</li>
+              <li data-i18n="d5.b3.2">Consumer-Facing EN/FR Storefront</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== Other Projects ===== -->
   <section class="other-projects">
     <div style="width:var(--container-narrow);margin:0 auto;">
@@ -431,13 +483,6 @@
         <p data-i18n="o1.p">A full-stack Django web application with user authentication and custom forms for dynamically calculating CO2 emissions based on user-input data.</p>
         <div class="other-card__tags">
           <span class="other-card__tag">Python</span><span class="other-card__tag">Django</span><span class="other-card__tag">Full-Stack</span>
-        </div>
-      </div>
-      <div class="other-card">
-        <h3 data-i18n="o2.h3">Deal Aggregator Platform</h3>
-        <p data-i18n="o2.p">An automated web scraping system using FastAPI to aggregate promotions across multiple retail sites, with a WordPress frontend for consumer-facing display.</p>
-        <div class="other-card__tags">
-          <span class="other-card__tag">FastAPI</span><span class="other-card__tag">WordPress</span><span class="other-card__tag">Web Scraping</span>
         </div>
       </div>
 
@@ -493,7 +538,6 @@
         "p4.desc": "An internal REST API and web application built for a global lighting manufacturer. Centralizes engineering data access \u2014 eliminating manual lookups across disconnected spreadsheets and legacy systems, providing a single source of truth for technical specifications.",
         "other.label": "Other Projects", "other.h2": "Additional work",
         "o1.h3": "Carbon Footprint Calculator", "o1.p": "A full-stack Django web application with user authentication and custom forms for dynamically calculating CO2 emissions.",
-        "o2.h3": "Deal Aggregator Platform", "o2.p": "Automated web scraping with FastAPI to aggregate retail promotions, served through a WordPress frontend.",
         "o3.h3": "Curated Travel Application", "o3.p": "A mobile app delivering curated \u201cPlaylists of Moments\u201d with a FastAPI backend and cross-platform mobile client.",
         "footer.copy": "\u00a9 2026 Drakarian Services Inc.", "footer.cta": "Start a Project",
         "footer.privacy": "Privacy Policy", "footer.terms": "Terms & Conditions", "footer.cookies": "Cookies Policy",
@@ -508,7 +552,16 @@
         "d3.b1.t": "Source", "d3.b1.1": "Palma API", "d3.b1.2": "Scheduled Extraction",
         "d3.b2.t": "Bronze \u2014 Raw", "d3.b2.1": "Raw JSON Ingestion", "d3.b2.2": "No transformations",
         "d3.b3.t": "Silver \u2014 Validated", "d3.b3.1": "Cleansed & Filtered", "d3.b3.2": "Delta Parquet Format",
-        "d3.b4.t": "Gold \u2014 Analytics", "d3.b4.1": "Star Schema Aggregations", "d3.b4.2": "Direct Lake \u2192 Power BI"
+        "d3.b4.t": "Gold \u2014 Analytics", "d3.b4.1": "Star Schema Aggregations", "d3.b4.2": "Direct Lake \u2192 Power BI",
+        "p5.cat": "AI-Augmented Automation", "p5.h2": "Deal Aggregator Platform",
+        "p5.desc": "An automated deal-aggregation platform for Canadian parents, built on FastAPI. Scheduled scrapers collect product promotions across multiple retailers, then an AI layer writes bilingual (English/French) product descriptions, filters out items that aren't relevant to the target audience, and curates a daily selection of the best deals. Everything is published automatically to a bilingual WordPress storefront \u2014 with no manual copywriting or editorial work.",
+        "p5.diagram": "Pipeline Architecture",
+        "p5.kpi1.n": "100%", "p5.kpi1.l": "AI-written bilingual product descriptions",
+        "p5.kpi2.n": "0", "p5.kpi2.l": "manual copywriting or translation hours",
+        "p5.kpi3.n": "Daily", "p5.kpi3.l": "AI-curated top-deals selection",
+        "d5.b1.t": "Automated Scraping", "d5.b1.1": "Multi-Retailer Scrapers (FastAPI)", "d5.b1.2": "Scheduled Daily Extraction", "d5.b1.3": "Price & Availability Parsing",
+        "d5.b2.t": "AI Processing Layer", "d5.b2.1": "Bilingual Description Generation (EN/FR)", "d5.b2.2": "Audience-Relevance Filtering", "d5.b2.3": "Daily Featured-Deal Curation",
+        "d5.b3.t": "Bilingual Publishing", "d5.b3.1": "WordPress + Polylang", "d5.b3.2": "Consumer-Facing EN/FR Storefront"
       },
       fr: {
         "back": "Retour \u00e0 l\u2019accueil",
@@ -539,7 +592,6 @@
         "p4.desc": "Une API REST interne et application web con\u00e7ue pour un fabricant mondial d\u2019\u00e9clairage. Centralise l\u2019acc\u00e8s aux donn\u00e9es d\u2019ing\u00e9nierie \u2014 \u00e9liminant les recherches manuelles dans des tableurs d\u00e9connect\u00e9s et syst\u00e8mes h\u00e9rit\u00e9s.",
         "other.label": "Autres projets", "other.h2": "Travaux compl\u00e9mentaires",
         "o1.h3": "Calculateur d\u2019empreinte carbone", "o1.p": "Application web Django full-stack avec authentification et formulaires personnalis\u00e9s pour calculer dynamiquement les \u00e9missions de CO2.",
-        "o2.h3": "Plateforme d\u2019agr\u00e9gation de promotions", "o2.p": "Syst\u00e8me de scraping automatis\u00e9 avec FastAPI pour agr\u00e9ger des promotions, servi via un frontend WordPress.",
         "o3.h3": "Application voyage curated", "o3.p": "Application mobile proposant des \u00ab\u00a0Playlists de Moments\u00a0\u00bb avec un backend FastAPI et un client mobile multiplateforme.",
         "footer.copy": "\u00a9 2026 Services Drakarian Inc.", "footer.cta": "D\u00e9marrer un projet",
         "footer.privacy": "Politique de confidentialit\u00e9", "footer.terms": "Conditions d\u2019utilisation", "footer.cookies": "Politique de cookies",
@@ -554,7 +606,16 @@
         "d3.b1.t": "Source", "d3.b1.1": "API Palma", "d3.b1.2": "Extraction planifi\u00e9e",
         "d3.b2.t": "Bronze \u2014 Brut", "d3.b2.1": "Ingestion JSON brut", "d3.b2.2": "Aucune transformation",
         "d3.b3.t": "Silver \u2014 Valid\u00e9", "d3.b3.1": "Nettoy\u00e9 et filtr\u00e9", "d3.b3.2": "Format Delta Parquet",
-        "d3.b4.t": "Gold \u2014 Analytique", "d3.b4.1": "Agr\u00e9gations en sch\u00e9ma \u00e9toile", "d3.b4.2": "Direct Lake \u2192 Power BI"
+        "d3.b4.t": "Gold \u2014 Analytique", "d3.b4.1": "Agr\u00e9gations en sch\u00e9ma \u00e9toile", "d3.b4.2": "Direct Lake \u2192 Power BI",
+        "p5.cat": "Automatisation augment\u00e9e par l\u2019IA", "p5.h2": "Plateforme d\u2019agr\u00e9gation de promotions",
+        "p5.desc": "Une plateforme d\u2019agr\u00e9gation de promotions pour les parents canadiens, b\u00e2tie sur FastAPI. Des scrapers planifi\u00e9s collectent les promotions de plusieurs d\u00e9taillants, puis une couche d\u2019IA r\u00e9dige des descriptions produits bilingues (anglais/fran\u00e7ais), \u00e9carte les articles non pertinents pour le public cible et s\u00e9lectionne chaque jour les meilleures offres. Le tout est publi\u00e9 automatiquement sur une vitrine WordPress bilingue \u2014 sans aucune r\u00e9daction ni travail \u00e9ditorial manuel.",
+        "p5.diagram": "Architecture du pipeline",
+        "p5.kpi1.n": "100 %", "p5.kpi1.l": "descriptions produits bilingues r\u00e9dig\u00e9es par IA",
+        "p5.kpi2.n": "0", "p5.kpi2.l": "heure de r\u00e9daction ou de traduction manuelle",
+        "p5.kpi3.n": "Quotidien", "p5.kpi3.l": "s\u00e9lection des meilleures offres cur\u00e9e par IA",
+        "d5.b1.t": "Scraping automatis\u00e9", "d5.b1.1": "Scrapers multi-d\u00e9taillants (FastAPI)", "d5.b1.2": "Extraction quotidienne planifi\u00e9e", "d5.b1.3": "Analyse prix et disponibilit\u00e9",
+        "d5.b2.t": "Couche de traitement IA", "d5.b2.1": "G\u00e9n\u00e9ration de descriptions bilingues (EN/FR)", "d5.b2.2": "Filtrage par pertinence d\u2019audience", "d5.b2.3": "Curation quotidienne des meilleures offres",
+        "d5.b3.t": "Publication bilingue", "d5.b3.1": "WordPress + Polylang", "d5.b3.2": "Vitrine EN/FR grand public"
       }
     };
     let currentLang = localStorage.getItem('drak-lang') || 'en';
